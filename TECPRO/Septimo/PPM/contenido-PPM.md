@@ -1,6 +1,5 @@
 ## FUNDAMENTACION
 
-<justify>
 
 - En la actualidad, internet y la tecnología tienen un papel fundamental en
 nuestras vidas y en la sociedad en general. Las aplicaciones web móviles
@@ -123,7 +122,7 @@ ___
   - Operadores
   - Estructuras de control
   - Funciones
-  
+
 - **Clases**:
 
 - **Clase 1**: Introducción a JavaScript y tipos de datos primitivos.
@@ -132,7 +131,7 @@ ___
     - Tipos de datos primitivos: números, cadenas, booleanos, null, undefined.
   - Práctica:
     - Crear variables para cada tipo de dato y mostrar sus valores en la consola.
-  - [Detalle](1erCuatrimestre/SemanaN1/ClaseN1.md)
+  - [Detalle](1erCuatrimestre/Abril/SemanaN1/ClaseN1.md)
 
 - **Clase 2**: Variables y alcance.
   - Teoría:
@@ -140,7 +139,7 @@ ___
     - Ámbito global, local y de bloque.
   - Práctica:
     - Comparar el comportamiento de var, let y const dentro y fuera de bloques.
-  - [Detalle](1erCuatrimestre/SemanaN1/ClaseN2.md)
+  - [Detalle](1erCuatrimestre/Abril/SemanaN1/ClaseN2.md)
 
 - **Clase 3**: Operadores.
   - Teoría:
@@ -163,7 +162,7 @@ ___
     - Escribir funciones que resuelvan problemas simples como calcular el área de un círculo.
   
 - **Clase 6**: Evaluación.
-
+  - [Detalle](1erCuatrimestre/)
 ### Módulo 2: Manipulación de datos
 
 - **Duración**: 2 semanas
@@ -306,4 +305,13 @@ ___
 ___
 #### REACT
 ___
-</justify>
+
+## Evaluación
+- Exámenes cortos: Evaluar comprensión teórica en puntos clave de cada módulo.
+- Tareas prácticas: Entrega de pequeñas implementaciones relacionadas con los temas tratados.
+#### Proyecto final:
+- Creación de una aplicación funcional que incluya:
+- Múltiples pantallas con navegación.
+- Conexión a Firebase Firestore para manejar datos en tiempo real.
+- Estilización básica y diseño responsivo.
+- Presentación del proyecto destacando los aprendizajes obtenidos.
