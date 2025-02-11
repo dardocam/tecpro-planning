@@ -2,7 +2,7 @@
 - 16 semanas en total, 4 horas semanales (2 clases de 2 horas cada una), lo que da 64 horas en total.
 - Se deberá reducir o comprimir algunos contenidos teóricos/prácticos previos para liberar más horas para el proyecto final.
 
-### **Proyecto Final ( 4 Semanas)**
+### **Proyecto Final ( 4 Semanas )**
 
 ### **Semana 13: Planificación y Diseño del Proyecto Final (4 horas)**
 
