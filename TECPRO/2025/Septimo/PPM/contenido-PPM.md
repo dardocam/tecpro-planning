@@ -15,10 +15,21 @@ parte del mundo.
 utiliza ampliamente en la creación de aplicaciones web.
 
 - Este espacio curricular es moderno y desafiante tanto para docentes como
-estudiantes quienes deberán incurrir en la totalidad de conocimientos
+estudiantes quienes deberán incurrir en conocimientos
 inherentes a espacios curriculares anteriores para su realización.
 
-### Conocimientos mínimos necesarios para abordar React Native
+- Basado en el Régimen Academico 2025
+
+## Conocimientos mínimos necesarios para comprender la realización de software para aplicaciónes móviles con React Native
+- **Espacios Curriculares Correlativos**
+  - LDW
+  - LRI
+  - DWD
+  - DWE
+  - PROGRAMACIÓN
+  - SEGURIDAD INF
+  - SISTEMAS OPERATIVOS
+
 - **JavaScript**
 
   - Dominio de ES6+ (promesas, funciones flecha, destructuración).Conocer los conceptos básicos de asincronía (async/await, manejo de eventos).
@@ -99,13 +110,15 @@ concretas de la sociedad.
 
 
 ## CONTENIDOS
-Los contenidos trabajados pertenecen al Eje Temático del Diseño Curricular.
+- Los contenidos trabajados pertenecen al Eje Temático del Diseño Curricular.
+- La distribución del tiempo esta basada en fechas previamente establecidas que contemplan, períodos de intensificacion, eventos anuales obligatorios (exposiciones, olimpiadas, etc) y un mínimo de imponderables. 
+
 ### Primer Cuatrimestre
 ___
 
 ### Módulo 1: Fundamentos básicos de JavaScript
 
-- **Duración**: 3 semanas
+- **Duración**: Mes de Abril - 2 semanas
 
 - **Objetivo general**: Dominar los conceptos fundamentales de JavaScript para escribir código funcional y entender las bases del lenguaje.
 
@@ -133,39 +146,33 @@ ___
     - Crear variables para cada tipo de dato y mostrar sus valores en la consola.
   - [Detalle](1erCuatrimestre/Abril/SemanaN1/ClaseN1.md)
 
-- **Clase 2**: Variables y alcance.
+- **Clase 2**: Variables, alcance y operadores.
   - Teoría:
     - Declaración de variables: var, let, const.
     - Ámbito global, local y de bloque.
-  - Práctica:
-    - Comparar el comportamiento de var, let y const dentro y fuera de bloques.
-  - [Detalle](1erCuatrimestre/Abril/SemanaN1/ClaseN2.md)
-
-- **Clase 3**: Operadores.
-  - Teoría:
     - Operadores aritméticos, lógicos, relacionales y el operador ternario.
   - Práctica:
+    - Comparar el comportamiento de var, let y const dentro y fuera de bloques.
     - Resolver problemas matemáticos y condiciones complejas con operadores.
+  - [Detalle](1erCuatrimestre/Abril/SemanaN1/ClaseN2.md)
 
-- **Clase 4**: Estructuras de control.
+- **Clase 3**: Estructuras de control y Funciónes.
   - Teoría:
     - Condicionales (if, else, switch).
     - Bucles (for, while, for...of, for...in).
-  - Práctica:
-    - Crear un programa que use bucles y condicionales para procesar datos.
-
-- **Clase 5**: Funciones.
-  - Teoría:
     - Declaración y expresión de funciones.
     - Parámetros, argumentos y funciones flecha.
   - Práctica:
+    - Crear un programa que use bucles y condicionales para procesar datos.
     - Escribir funciones que resuelvan problemas simples como calcular el área de un círculo.
-  
-- **Clase 6**: Evaluación.
+
+- **Clase 4**: Evaluación.
   - [Detalle](1erCuatrimestre/)
+
+
 ### Módulo 2: Manipulación de datos
 
-- **Duración**: 2 semanas
+- **Duración**: Mes Abril - 2 semanas
 
 - **Objetivo general**: Aprender a trabajar con estructuras de datos como objetos, arreglos, cadenas y fechas, utilizando métodos útiles para transformar y procesar información.
 
@@ -204,9 +211,11 @@ ___
 
 - **Clase 4**: Evaluación.
 
+
+
 ### Módulo 3: Conceptos avanzados de JavaScript
 
-- **Duración**: 3 semanas
+- **Duración**: Mes de Mayo - 3 semanas
 
 - **Objetivo general**: Profundizar en conceptos avanzados como asincronía, clases, destructuración y módulos para desarrollar aplicaciones más robustas y modernas.
 
