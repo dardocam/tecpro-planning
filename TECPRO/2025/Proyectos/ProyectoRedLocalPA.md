@@ -4,11 +4,9 @@ La solución propuesta es técnicamente posible, pero tiene varias limitaciones 
 
 ### 1. Problemas de doble NAT y configuración en cascada  
 Al conectar routers en serie sin la debida configuración, es probable que se active el doble NAT (Network Address Translation). Esto puede generar inconvenientes con algunas aplicaciones y complicar la gestión de la red. Una práctica recomendada es configurar los routers secundarios en modo punto de acceso (AP) o desactivar sus funciones de enrutamiento y DHCP, dejando que un único dispositivo (preferiblemente de nivel empresarial) se encargue de la asignación de IP y la administración del tráfico.  
-citeturn0search0
 
 ### 2. Limitaciones de equipos hogareños  
 El TP-Link WR840N es un router diseñado para entornos domésticos con una carga limitada de dispositivos. En un edificio con tres espacios amplios y una zona wifi compartida, es posible que estos equipos se vean sobrepasados en cuanto a rendimiento, gestión de múltiples usuarios y estabilidad de la conexión. Además, el uso de switches no administrables impide la posibilidad de implementar políticas de calidad de servicio (QoS) o monitorear el tráfico de forma centralizada, lo que puede ser crucial en entornos con alta demanda.  
-citeturn0search0
 
 ### 3. Recomendaciones para una red más robusta  
 - **Reconfiguración de los routers:** Si se decide usar los TP-Link WR840N, es aconsejable reconfigurarlos como puntos de acceso para evitar problemas de doble NAT y simplificar la administración de la red.  
@@ -17,14 +15,12 @@ El TP-Link WR840N es un router diseñado para entornos domésticos con una carga
 
 ### Conclusión  
 Aunque la solución de encadenar routers hogareños junto con switches no administrables puede funcionar en un entorno muy limitado o de baja demanda, para un edificio con las características descritas se recomienda optar por una arquitectura de red más profesional. Esto garantizará un mejor desempeño, mayor estabilidad y facilidad de gestión a largo plazo.  
-citeturn0search0
 
 
 La solución es técnicamente viable, pero hay varios aspectos críticos que deben evaluarse:
 
 ### 1. Rendimiento del Hardware  
 Utilizar una PC anticuada con OPNsense puede funcionar en entornos de baja a moderada carga. Sin embargo, es fundamental confirmar que la máquina cumpla con los requisitos mínimos de OPNsense en términos de CPU, memoria y capacidad de red. Si la PC no tiene suficiente potencia, podrías enfrentar cuellos de botella y problemas de rendimiento, especialmente en picos de tráfico.  
-citeturn0search0
 
 ### 2. Ventajas y Limitaciones del Switch Administrable  
 Contar con un switch administrable es positivo, ya que te permitirá configurar VLANs, gestionar el tráfico, y aplicar políticas de calidad de servicio (QoS) para optimizar la red. Sin embargo, al conectar switches no administrables a este equipo, perderás la capacidad de gestionar de forma centralizada esos segmentos. Esto puede ser aceptable para áreas con baja demanda o tráfico, pero si se requiere un control granular, lo ideal sería que todos los switches sean administrables.
@@ -41,7 +37,6 @@ La propuesta es viable para un entorno donde la carga de tráfico no sea demasia
 - Evaluar si la combinación de un switch administrable con switches no administrables cumple con las necesidades de control y segmentación del tráfico.
   
 Con estas consideraciones y pruebas previas, podrás determinar si la solución se ajusta a los requerimientos del entorno del edificio.  
-citeturn0search0
 
 
 A continuación se presenta una comparación entre las dos soluciones, poniendo especial énfasis en cómo se gestionaría el área WiFi en común, cuya banda ancha es limitada:
@@ -92,7 +87,7 @@ A continuación se presenta una comparación entre las dos soluciones, poniendo 
 
 ### Conclusión
 
-Si bien ambas soluciones pueden funcionar en entornos de baja a moderada demanda, **la solución basada en OPNsense con un switch administrable ofrece mayores ventajas para gestionar el área WiFi en común con ancho de banda limitado**. Esto se debe a su capacidad de aplicar políticas de QoS, una administración centralizada y mayor flexibilidad para adaptarse a futuras necesidades. Sin embargo, es fundamental asegurarse de que el hardware (la PC anticuada) tenga la capacidad suficiente para soportar la carga de tráfico prevista. En cambio, la solución con routers domésticos y switches no administrables, aunque es más económica y simple de implementar inicialmente, podría enfrentarse a problemas de rendimiento, escalabilidad y administración en un entorno donde el control del ancho de banda es crítico citeturn0search0.
+Si bien ambas soluciones pueden funcionar en entornos de baja a moderada demanda, **la solución basada en OPNsense con un switch administrable ofrece mayores ventajas para gestionar el área WiFi en común con ancho de banda limitado**. Esto se debe a su capacidad de aplicar políticas de QoS, una administración centralizada y mayor flexibilidad para adaptarse a futuras necesidades. Sin embargo, es fundamental asegurarse de que el hardware (la PC anticuada) tenga la capacidad suficiente para soportar la carga de tráfico prevista. En cambio, la solución con routers domésticos y switches no administrables, aunque es más económica y simple de implementar inicialmente, podría enfrentarse a problemas de rendimiento, escalabilidad y administración en un entorno donde el control del ancho de banda es crítico.
 
 A continuación se presenta una propuesta de hardware específica y los requisitos mínimos y recomendados para implementar la solución basada en OPNsense, considerando que se usará como firewall/router central y se integrará un switch administrable para gestionar los demás switches no administrables, con especial atención al control del ancho de banda en el área WiFi común.
 
@@ -176,7 +171,6 @@ Para la segunda solución con OPNsense se recomienda:
 - Emplear un switch administrable empresarial, como el **Cisco SG350-10** o una opción de **Ubiquiti UniFi**, que permita segmentar el tráfico y aplicar políticas de QoS para gestionar eficazmente el área WiFi en común de ancho de banda limitado.
 
 Esta combinación garantiza mayor control, escalabilidad y flexibilidad en la administración de la red, siendo ideal para entornos donde se requiere una gestión fina del tráfico y se anticipa una demanda moderada a alta.  
-citeturn0search0
 
 
 A continuación se presenta una propuesta detallada de especificaciones de hardware para armar un router basado en OPNsense, diseñado para entornos donde se requiera alta confiabilidad y capacidad de gestión avanzada del tráfico:
