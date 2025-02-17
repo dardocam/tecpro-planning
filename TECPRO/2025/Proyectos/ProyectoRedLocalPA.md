@@ -50,9 +50,9 @@ A continuación se presenta una comparación entre las dos soluciones, poniendo 
 - **Simplicidad de instalación:** La configuración puede resultar más directa en entornos pequeños o con poca carga.
 
 **Limitaciones:**
-- **Doble NAT y configuración en cascada:** Conectar routers en serie sin configurar correctamente (por ejemplo, modo punto de acceso) puede derivar en problemas de doble NAT, complicando la administración y afectando ciertas aplicaciones citeturn0search0.
+- **Doble NAT y configuración en cascada:** Conectar routers en serie sin configurar correctamente (por ejemplo, modo punto de acceso) puede derivar en problemas de doble NAT, complicando la administración y afectando ciertas aplicaciones 
 - **Falta de control granular:** Al usar switches no administrables, se pierde la capacidad de configurar políticas de calidad de servicio (QoS) o segmentar el tráfico, lo que es crucial cuando se necesita optimizar el uso de un área WiFi con ancho de banda limitado.
-- **Rendimiento y escalabilidad:** Los dispositivos diseñados para uso doméstico pueden no soportar cargas elevadas ni múltiples usuarios, lo que podría derivar en saturación, especialmente en el área WiFi compartida donde muchos dispositivos compiten por recursos citeturn0search0.
+- **Rendimiento y escalabilidad:** Los dispositivos diseñados para uso doméstico pueden no soportar cargas elevadas ni múltiples usuarios, lo que podría derivar en saturación, especialmente en el área WiFi compartida donde muchos dispositivos compiten por recursos.
 
 ---
 
@@ -60,7 +60,7 @@ A continuación se presenta una comparación entre las dos soluciones, poniendo 
 
 **Ventajas:**
 - **Mayor control y capacidad de gestión:** OPNsense ofrece potentes funciones de firewall, enrutamiento y, sobre todo, la posibilidad de implementar políticas de QoS y tráfico priorizado. Esto es fundamental para el área WiFi en común, donde se puede regular y optimizar el uso de la banda limitada.
-- **Flexibilidad y escalabilidad:** Aunque la PC sea anticuada, su uso como plataforma para OPNsense permite implementar configuraciones avanzadas, como reglas específicas para el tráfico WiFi, segmentación en VLAN y control de ancho de banda citeturn0search0.
+- **Flexibilidad y escalabilidad:** Aunque la PC sea anticuada, su uso como plataforma para OPNsense permite implementar configuraciones avanzadas, como reglas específicas para el tráfico WiFi, segmentación en VLAN y control de ancho de banda 
 - **Integración con switch administrable:** El switch administrable aporta la posibilidad de monitorizar y gestionar el tráfico en red, facilitando la identificación de cuellos de botella y permitiendo ajustes dinámicos en función de la demanda, algo que mejora el desempeño en el área WiFi.
 
 **Limitaciones:**
@@ -73,7 +73,7 @@ A continuación se presenta una comparación entre las dos soluciones, poniendo 
 
 - **Gestión del Ancho de Banda:**  
   - *Solución 1:* La limitación de ancho de banda en el área WiFi podría verse agravada por la falta de QoS y la saturación de los equipos domésticos. Los routers TP-Link, al no estar diseñados para ambientes de alta concurrencia, podrían no distribuir eficientemente el ancho de banda entre usuarios.
-  - *Solución 2:* Con OPNsense y un switch administrable, es posible implementar políticas de tráfico y priorización de datos. Esto permite asignar de manera más precisa el ancho de banda en el área WiFi, asegurando que los servicios críticos mantengan la calidad, aun en situaciones de alta demanda citeturn0search0.
+  - *Solución 2:* Con OPNsense y un switch administrable, es posible implementar políticas de tráfico y priorización de datos. Esto permite asignar de manera más precisa el ancho de banda en el área WiFi, asegurando que los servicios críticos mantengan la calidad, aun en situaciones de alta demanda 
 
 - **Escalabilidad y Adaptabilidad:**  
   - *Solución 1:* La configuración en cascada de routers domésticos presenta limitaciones a medida que crece la cantidad de dispositivos y el tráfico, haciendo difícil la adaptación a futuras necesidades.
