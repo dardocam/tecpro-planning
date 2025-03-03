@@ -113,12 +113,11 @@ concretas de la sociedad.
 - Los contenidos trabajados pertenecen al Eje Temático del Diseño Curricular.
 - La distribución del tiempo esta basada en fechas previamente establecidas que contemplan, períodos de intensificacion, eventos anuales obligatorios (exposiciones, olimpiadas, etc) y un mínimo de imponderables. 
 
-### Primer Cuatrimestre
-___
+---
 
 ### Módulo 1: Fundamentos básicos de JavaScript
 
-- **Duración**: Mes de Abril - 2 semanas
+- **Duración**: 2 semanas
 
 - **Objetivo general**: Dominar los conceptos fundamentales de JavaScript para escribir código funcional y entender las bases del lenguaje.
 
@@ -144,7 +143,6 @@ ___
     - Tipos de datos primitivos: números, cadenas, booleanos, null, undefined.
   - Práctica:
     - Crear variables para cada tipo de dato y mostrar sus valores en la consola.
-  - [Detalle](1erCuatrimestre/Abril/SemanaN1/ClaseN1.md)
 
 - **Clase 2**: Variables, alcance y operadores.
   - Teoría:
@@ -154,25 +152,25 @@ ___
   - Práctica:
     - Comparar el comportamiento de var, let y const dentro y fuera de bloques.
     - Resolver problemas matemáticos y condiciones complejas con operadores.
-  - [Detalle](1erCuatrimestre/Abril/SemanaN1/ClaseN2.md)
 
-- **Clase 3**: Estructuras de control y Funciónes.
+- **Clase 3**: Estructuras de control.
   - Teoría:
     - Condicionales (if, else, switch).
     - Bucles (for, while, for...of, for...in).
+  - Práctica:
+    - Crear un programa que use bucles y condicionales para procesar datos.
+
+- **Clase 4**: Funciónes.
+  - Teoría:
     - Declaración y expresión de funciones.
     - Parámetros, argumentos y funciones flecha.
   - Práctica:
-    - Crear un programa que use bucles y condicionales para procesar datos.
     - Escribir funciones que resuelvan problemas simples como calcular el área de un círculo.
-
-- **Clase 4**: Evaluación.
-  - [Detalle](1erCuatrimestre/)
 
 
 ### Módulo 2: Manipulación de datos
 
-- **Duración**: Mes Abril - 2 semanas
+- **Duración**: 2 semanas
 
 - **Objetivo general**: Aprender a trabajar con estructuras de datos como objetos, arreglos, cadenas y fechas, utilizando métodos útiles para transformar y procesar información.
 
@@ -215,7 +213,7 @@ ___
 
 ### Módulo 3: Conceptos avanzados de JavaScript
 
-- **Duración**: Mes de Mayo - 3 semanas
+- **Duración**: 3 semanas
 
 - **Objetivo general**: Profundizar en conceptos avanzados como asincronía, clases, destructuración y módulos para desarrollar aplicaciones más robustas y modernas.
 

@@ -352,3 +352,190 @@ La solución con el MikroTik RouterBOARD hEX GR3 RB750Gr3 es una opción interes
 El **MikroTik RouterBOARD hEX GR3 RB750Gr3** es una solución viable y efectiva para redes pequeñas a medianas, especialmente cuando se busca una implementación compacta, de bajo costo y con funcionalidades avanzadas integradas en RouterOS. Es especialmente adecuado si la carga de tráfico es moderada y se requiere un control básico del ancho de banda, como en el área WiFi en común con recursos limitados. Sin embargo, si se anticipa un crecimiento en la demanda o se requiere una administración y escalabilidad más robusta, la solución basada en OPNsense con hardware dedicado y switches administrables podría resultar más adecuada.
 
 Esta elección dependerá en última instancia de los requerimientos específicos del entorno y del equilibrio entre costo, complejidad y escalabilidad que se desee alcanzar.
+
+
+
+---
+## AISLAMIENTO DE TELEFONOS MÓVILES
+
+Utilizando las funciones avanzadas del router MikroTik. A continuación, te explico cómo lograrlo:
+
+---
+
+### **1. Segmentación mediante Subredes o VLANs**
+- **Creación de subredes separadas**:
+  - Asigna una subred específica para teléfonos móviles (ej: `192.168.88.0/25`) y otra para laptops y terminales cableados (ej: `192.168.88.128/25`). Esto se configura en `/ip address` del MikroTik, asignando direcciones IP a interfaces virtuales o físicas .
+  - Si el switch fuera administrable, podrías usar VLANs, pero al ser no administrable, la segmentación se realiza directamente en el MikroTik mediante reglas de firewall .
+
+- **Configuración de DHCP para asignaciones específicas**:
+  - Utiliza el servidor DHCP del MikroTik para asignar rangos de IP diferentes según el tipo de dispositivo. Por ejemplo, reserva un rango (ej: `192.168.88.50-192.168.88.100`) para móviles y otro para laptops .
+
+---
+
+### **2. Reglas de Firewall para Aislar Tráfico**
+- **Bloquear comunicación entre subredes**:
+  - En `/ip firewall filter`, crea reglas para **droppear** el tráfico entre la subred de móviles y la de laptops/cableados. Por ejemplo:
+    ```bash
+    /ip firewall filter add chain=forward src-address=192.168.88.0/25 dst-address=192.168.88.128/25 action=drop
+    /ip firewall filter add chain=forward src-address=192.168.88.128/25 dst-address=192.168.88.0/25 action=drop
+    ```
+    Esto evita que los móviles se comuniquen con otros dispositivos .
+
+- **Restricción por dirección MAC**:
+  - Identifica las direcciones MAC de los teléfonos móviles y crea reglas para limitar su acceso. Por ejemplo, en `/ip firewall filter`, bloquea tráfico desde esas MAC hacia las IPs de las laptops .
+
+---
+
+### **3. Uso de Bridge Filters (si hay puentes)**
+- Si has creado puentes para separar redes (ej: un puente para móviles y otro para laptops), aplica reglas en `/interface bridge filter` para aislar el tráfico:
+  ```bash
+  /interface bridge filter add chain=forward src-mac-address=00:11:22:33:44:55 action=drop
+  ```
+  Esto bloquea dispositivos específicos por su MAC .
+
+---
+
+### **4. Control mediante Wireless APs (TP-Link WR840N)**
+- **SSID separados**:
+  - Configura un SSID exclusivo para móviles en los TP-Link WR840N y habilita **Client Isolation** (si el firmware lo permite). Esto evita que los dispositivos conectados a ese SSID se comuniquen entre sí y con la red cableada .
+
+- **Filtrado MAC en los APs**:
+  - En los TP-Link, utiliza su panel de control para bloquear o permitir dispositivos por dirección MAC. Esto complementa las reglas del MikroTik .
+
+---
+
+### **5. Mejoras Adicionales**
+- **Segmentación física**:
+  - Si los APs están en el switch no administrable, conecta uno de ellos a un puerto específico del MikroTik y asígnalo a una subred diferente. Esto permite aplicar reglas de firewall por puerto .
+
+- **QoS para priorizar tráfico**:
+  - Usa `/queue simple` en el MikroTik para limitar el ancho de banda de los móviles, asegurando que no afecten a otros dispositivos .
+
+---
+
+### **Ejemplo Práctico de Configuración**
+1. **Crear subred para móviles**:
+   ```bash
+   /ip address add address=192.168.88.1/25 interface=ether2 network=192.168.88.0
+   ```
+2. **Configurar DHCP**:
+   ```bash
+   /ip pool add name=mobile_pool ranges=192.168.88.50-192.168.88.100
+   /ip dhcp-server network add address=192.168.88.0/25 gateway=192.168.88.1
+   ```
+3. **Reglas de firewall**:
+   ```bash
+   /ip firewall filter add chain=forward src-address=192.168.88.0/25 dst-address=192.168.88.128/25 action=drop
+   ```
+
+---
+
+### **Consideraciones Clave**
+- **Compatibilidad con el switch**: Al ser no administrable, la segmentación debe manejarse enteramente en el MikroTik .
+- **Rendimiento**: Asegúrate de que las reglas de firewall no sobrecarguen el CPU del router .
+- **Pruebas**: Verifica el aislamiento con herramientas como `ping` o escaneos de red desde dispositivos afectados.
+
+Con estas configuraciones, lograrás aislar eficientemente los teléfonos móviles, manteniendo la seguridad y el rendimiento de la red.
+
+## CONFIGURACION PROPUESTA
+
+Para crear **4 redes distintas con intercomunicación controlada y gestión de ancho de banda** en tu setup actual (MikroTik RB750Gr3 + switch no administrable + APs TP-Link), sigue estos pasos:
+
+---
+
+### **1. Configuración de VLANs en el MikroTik**
+Aunque el switch no es administrable, el MikroTik puede gestionar VLANs en su interfaz conectada al switch.  
+**Pasos:**  
+1. **Crear VLANs**:  
+   ```bash
+   /interface vlan add name=VLAN10 vlan-id=10 interface=ether2
+   /interface vlan add name=VLAN20 vlan-id=20 interface=ether2
+   /interface vlan add name=VLAN30 vlan-id=30 interface=ether2
+   /interface vlan add name=VLAN40 vlan-id=40 interface=ether2
+   ```  
+   - `ether2`: Puerto del MikroTik conectado al switch.  
+
+2. **Asignar subredes a cada VLAN**:  
+   ```bash
+   /ip address add address=192.168.10.1/24 interface=VLAN10
+   /ip address add address=192.168.20.1/24 interface=VLAN20
+   /ip address add address=192.168.30.1/24 interface=VLAN30
+   /ip address add address=192.168.40.1/24 interface=VLAN40
+   ```  
+
+3. **Habilitar DHCP para cada VLAN**:  
+   ```bash
+   /ip pool add name=pool10 ranges=192.168.10.100-192.168.10.200
+   /ip dhcp-server add name=dhcp10 interface=VLAN10 address-pool=pool10
+   /ip dhcp-server network add address=192.168.10.0/24 gateway=192.168.10.1
+   ```  
+   Repite para VLAN20, VLAN30 y VLAN40.
+
+---
+
+### **2. Reglas de Firewall para Intercomunicación**
+Permite o restringe el tráfico entre redes según necesidades.  
+**Ejemplo de reglas (para permitir todo):**  
+```bash
+/ip firewall filter add chain=forward action=accept
+```  
+**Para restringir comunicación entre VLAN10 y VLAN20:**  
+```bash
+/ip firewall filter add chain=forward src-address=192.168.10.0/24 dst-address=192.168.20.0/24 action=drop
+/ip firewall filter add chain=forward src-address=192.168.20.0/24 dst-address=192.168.10.0/24 action=drop
+```
+
+---
+
+### **3. Gestión de Ancho de Banda por VLAN**
+Usa **Queue Trees** en el MikroTik para priorizar o limitar tráfico.  
+**Ejemplo para limitar VLAN10 a 20 Mbps de subida y 50 Mbps de bajada:**  
+```bash
+/queue tree add name=LimitVLAN10 parent=global-in max-limit=50M
+/queue tree add name=LimitVLAN10-up parent=global-out max-limit=20M
+```  
+**Asocia las colas a cada VLAN:**  
+```bash
+/queue tree set LimitVLAN10 packet-mark=VLAN10-mark
+/ip firewall mangle add chain=prerouting action=mark-packet new-packet-mark=VLAN10-mark passthrough=no src-address=192.168.10.0/24
+```  
+Repite para las demás VLANs ajustando los límites.
+
+---
+
+### **4. Configuración de los TP-Link WR840N como APs Multi-SSID**
+Si los TP-Link soportan VLANs por SSID (requiere firmware modificado como OpenWRT):  
+1. **Asignar un SSID a cada VLAN**:  
+   - SSID "Red10" → VLAN10 (192.168.10.0/24)  
+   - SSID "Red20" → VLAN20 (192.168.20.0/24)  
+   - Repite para los demás SSIDs.  
+
+2. **Conectar los APs al switch**:  
+   - Configura los puertos de los APs para aceptar tráfico etiquetado (si es posible).  
+
+---
+
+### **5. Diagrama Final**  
+```
+Internet (WAN)
+│
+└── MikroTik RB750Gr3
+    │
+    ├── ether2 (Trunk con VLANs 10,20,30,40)
+    │   └── Switch no administrable
+    │       ├── AP1 (SSID: Red10 → VLAN10)
+    │       ├── AP2 (SSID: Red20 → VLAN20)
+    │       ├── Dispositivos cableados (VLAN30)
+    │       └── Dispositivos cableados (VLAN40)
+    │
+    └── Otras VLANs/Interfaces
+```
+
+---
+
+### **Consideraciones Clave**  
+- **Switch no administrable**: Las VLANs se gestionan solo en el MikroTik. El switch enviará tráfico sin etiquetar, pero los APs/dispositivos deben soportar VLANs.  
+- **Rendimiento**: Asegúrate de que el MikroTik tenga recursos suficientes para manejar 4 redes (CPU/RAM).  
+- **Pruebas**: Verifica la intercomunicación con `ping` y el control de ancho de banda con herramientas como iPerf.
+
+¡Con esto tendrás 4 redes aisladas pero intercomunicables, cada una con su propio ancho de banda! 😊
