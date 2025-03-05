@@ -27,25 +27,7 @@ inherentes a espacios curriculares anteriores para su realización.
   - DWD
   - DWE
   - PROGRAMACIÓN
-  - SEGURIDAD INF
   - SISTEMAS OPERATIVOS
-
-- **JavaScript**
-
-  - Dominio de ES6+ (promesas, funciones flecha, destructuración).Conocer los conceptos básicos de asincronía (async/await, manejo de eventos).
-
-- **React.js**
-
-  - Componentes funcionales y de clase.
-  - Uso de hooks (useState, useEffect).
-  - Manejo del estado global (context API). HTML y CSS básicos
-  - Aunque React Native no usa HTML y CSS directamente, su conocimiento ayuda a entender el diseño de interfaces. React Native utiliza JSX y StyleSheet, similares a HTML y CSS respectivamente.
-
-- **Bases del desarrollo móvil**
-
-  - Diferencias entre iOS y Android.
-  - Ciclo de vida de una aplicación móvil.
-  - Manejo de pantallas, navegación y diseño adaptable.
 
 - **Entornos de desarrollo**
 
@@ -73,18 +55,8 @@ inherentes a espacios curriculares anteriores para su realización.
 
 ## PROPUESTA PEDAGÓGICA
 
-- Presentar el lenguaje de programación JavaScript.
-- Modular e implementar estructuras de datos asociativas.
-- Realizar interfaces visuales interactivas.
-- Conectar con bases de datos externas.
-- Desarrollar aplicaciones móviles.
-- Realizar actividades prácticas relacionadas.
-- Contenido para el primer cuatrimestre
-  - Javascript
-  - React.js
-- Contenido para el segundo cuatrimestre
-  - React.js
-  - React Native   
+- Presentar la utilización del framework React Native para la creación de aplicaciónes móviles
+- Integración con microcontroladores
 
 
 ## PROPÓSITOS DEL PROFESOR
