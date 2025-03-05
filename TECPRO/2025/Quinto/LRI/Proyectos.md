@@ -130,24 +130,6 @@ Crear una experiencia inmersiva que combine tecnología, redes y valores humanos
 
 ---
 
-### **3. Integración Educativa**  
-- **Para 6to (Desarrollo Web):**  
-  - Diseñar una API REST con Node.js/Express para conectar los minijuegos con la base de datos.  
-  - Usar React o Vue.js para la interfaz dinámica, integrando animaciones CSS para feedback visual.  
-- **Para 5to (Redes):**  
-  - Simular fallos de red (ej.: cortes de conexión) y resolverlos en tiempo real durante el juego.  
-  - Optimizar la latencia usando QoS (Calidad de Servicio) para priorizar tráfico crítico (ej.: sensores de riego).  
-
----
-
-### **4. Innovación y Sostenibilidad**  
-- **Energías Renovables:**  
-  - Alimentar los microcontroladores con paneles solares en miniatura, vinculando el tema de sostenibilidad al gameplay.  
-- **Impacto Post-Juego:**  
-  - Los mensajes creados por los jugadores se imprimirán en tarjetas físicas para donar a hogares de ancianos o escuelas.  
-  - Opción de adoptar una planta real del jardín, promoviendo responsabilidad ambiental.  
-
----
 
 ### **5. Presupuesto y Materiales**  
 | **Componente**               | **Descripción**                                  | **Costo Estimado (USD)** |  
@@ -343,32 +325,6 @@ Este esquema garantiza que ambos equipos avancen en paralelo, manteniendo un equ
 - **Entregables:**  
   - Diagrama de red funcional (usando herramientas como Cisco Packet Tracer).  
   - Servidor Raspberry Pi operativo con acceso remoto.  
-
----
-
-#### **Sprint 2 (Clases 5-8): Implementación de Comunicación**  
-**Objetivo:** Establecer comunicación entre dispositivos IoT y la web.  
-- **Redes Básicas Team:**  
-  - Segmentar la red en VLANs (ej.: una para sensores, otra para usuarios).  
-  - Configurar balanceo de carga en el servidor para manejar múltiples conexiones.  
-- **Seguridad IoT Team:**  
-  - Implementar MQTT con autenticación básica (usando Mosquitto Broker).  
-  - Integrar WebSockets para sincronizar el jardín físico-virtual.  
-- **Web Liaison:**  
-  - Probar endpoints con el backend de 6to año (ej.: activar riego desde la web).  
-
----
-
-#### **Sprint 3 (Clases 9-12): Seguridad y Optimización**  
-**Objetivo:** Asegurar la red y optimizar rendimiento.  
-- **Redes Básicas Team:**  
-  - Configurar QoS para priorizar tráfico crítico (ej.: sensores de humedad).  
-  - Simular cortes de red y aplicar soluciones de redundancia.  
-- **Seguridad IoT Team:**  
-  - Implementar TLS para encriptar comunicaciones servidor-microcontroladores.  
-  - Agregar autenticación OAuth2 al dashboard de administración.  
-- **Testing:**  
-  - Realizar pruebas de estrés con 20+ dispositivos conectados simultáneamente.  
 
 ---
 

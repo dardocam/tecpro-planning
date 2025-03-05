@@ -115,207 +115,158 @@ concretas de la sociedad.
 
 ---
 
-### Módulo 1: Fundamentos básicos de JavaScript
+## Unidad 1: Fundamentos de React Native y Repaso de Microcontroladores (Clases 1-6)
 
-- **Duración**: 2 semanas
+**Objetivo:** Introducir a los estudiantes en el entorno de React Native y repasar los conceptos esenciales de microcontroladores, enfatizando aquellos que serán necesarios para la integración.
 
-- **Objetivo general**: Dominar los conceptos fundamentales de JavaScript para escribir código funcional y entender las bases del lenguaje.
+- **Clase 1:**  
+  - Presentación del curso, objetivos y alcance del proyecto final  
+  - Breve repaso de los conocimientos previos en microcontroladores (conceptos básicos, protocolos de comunicación)  
+  - Instalación de Node.js, Expo CLI y configuración del entorno de desarrollo (VSCode u otro IDE)
 
-- **Objetivos específicos**:
-  - Comprender la naturaleza de JavaScript y sus tipos de datos primitivos.
-  - Identificar las diferencias entre var, let y const para usar las variables adecuadamente según el alcance.
-  - Aplicar operadores aritméticos, lógicos y relacionales en expresiones y condiciones.
-  - Escribir estructuras de control eficientes para tomar decisiones y manejar bucles.
-  - Crear y utilizar funciones básicas y avanzadas, comprendiendo el concepto de parámetros y funciones flecha.
+- **Clase 2:**  
+  - Primeros pasos con Expo: creación y ejecución de la app “Hola Mundo”  
+  - Exploración de la estructura de un proyecto en React Native
 
-- **Contenido teórico**:
-  - Introducción a JavaScript y tipos de datos primitivos
-  - Variables y alcance
-  - Operadores
-  - Estructuras de control
-  - Funciones
+- **Clase 3:**  
+  - Fundamentos de React: Introducción a JSX y a los componentes funcionales  
+  - Uso de props para la comunicación entre componentes
 
-- **Clases**:
+- **Clase 4:**  
+  - Manejo de estado local con **useState**  
+  - Ejercicios prácticos de interacción y actualización de la interfaz
 
-- **Clase 1**: Introducción a JavaScript y tipos de datos primitivos.
-  - Teoría:
-    - ¿Qué es JavaScript? Historia y uso en la web.
-    - Tipos de datos primitivos: números, cadenas, booleanos, null, undefined.
-  - Práctica:
-    - Crear variables para cada tipo de dato y mostrar sus valores en la consola.
+- **Clase 5:**  
+  - Introducción al ciclo de vida de componentes con **useEffect**  
+  - Estilizado en React Native: uso de StyleSheet y fundamentos de Flexbox
 
-- **Clase 2**: Variables, alcance y operadores.
-  - Teoría:
-    - Declaración de variables: var, let, const.
-    - Ámbito global, local y de bloque.
-    - Operadores aritméticos, lógicos, relacionales y el operador ternario.
-  - Práctica:
-    - Comparar el comportamiento de var, let y const dentro y fuera de bloques.
-    - Resolver problemas matemáticos y condiciones complejas con operadores.
+- **Clase 6:**  
+  - Repaso y ejercicios integrados: combinación de componentes, estado y estilos  
+  - Conexión conceptual entre la app móvil y la comunicación con hardware (revisión de protocolos básicos)
 
-- **Clase 3**: Estructuras de control.
-  - Teoría:
-    - Condicionales (if, else, switch).
-    - Bucles (for, while, for...of, for...in).
-  - Práctica:
-    - Crear un programa que use bucles y condicionales para procesar datos.
+---
 
-- **Clase 4**: Funciónes.
-  - Teoría:
-    - Declaración y expresión de funciones.
-    - Parámetros, argumentos y funciones flecha.
-  - Práctica:
-    - Escribir funciones que resuelvan problemas simples como calcular el área de un círculo.
+## Unidad 2: Desarrollo de Aplicaciones Móviles con React Native (Clases 7-14)
 
+**Objetivo:** Profundizar en el desarrollo de aplicaciones móviles, abarcando navegación, manejo de datos y la construcción de interfaces interactivas.
 
-### Módulo 2: Manipulación de datos
+- **Clase 7:**  
+  - Introducción a la navegación en aplicaciones móviles  
+  - Instalación y configuración de **React Navigation**
 
-- **Duración**: 2 semanas
+- **Clase 8:**  
+  - Implementación de **Stack Navigation** y **Tab Navigation**  
+  - Diseño de flujos de navegación entre pantallas
 
-- **Objetivo general**: Aprender a trabajar con estructuras de datos como objetos, arreglos, cadenas y fechas, utilizando métodos útiles para transformar y procesar información.
+- **Clase 9:**  
+  - Manejo de formularios: uso de **TextInput**, **Button** y eventos táctiles  
+  - Validación básica de entradas de usuario
 
-- **Objetivos específicos**:
-  - Crear, acceder y modificar objetos dinámicamente.
-  - Manejar arreglos utilizando métodos funcionales como map, filter y reduce.
-  - Manipular cadenas de texto para tareas comunes como formateo y validación.
-  - Implementar y comprender el uso básico del objeto Date para trabajar con fechas y horas.
+- **Clase 10:**  
+  - Trabajo con listas: uso de **FlatList** y **SectionList**  
+  - Optimización de la renderización de grandes volúmenes de datos
 
-- **Contenido teórico**:
-  - Objetos
-  - Arreglos
-  - Strings y fechas
-  
-- **Clases**:
+- **Clase 11:**  
+  - Consumo de APIs REST: introducción a **fetch** y librerías como **Axios**  
+  - Ejercicios prácticos para obtener y visualizar datos desde servicios web
 
-- **Clase 1**: Objetos
-  - Teoría:
-    - Creación, acceso y modificación de propiedades.
-    - Métodos útiles: Object.keys, Object.values, Object.entries.
-  - Práctica:
-    - Crear un objeto "producto" y manipular sus propiedades.
+- **Clase 12:**  
+  - Gestión de datos asíncronos y persistencia con **AsyncStorage**  
+  - Manejo de estados y actualización dinámica de la interfaz
 
-- **Clase 2**: Arreglos
-  - Teoría:
-    - Métodos: map, filter, reduce, find, forEach, some, every.
-  - Práctica:
-    - Usar los métodos para transformar y filtrar datos de un arreglo de usuarios.
+- **Clase 13:**  
+  - Integración de librerías y módulos de terceros para mejorar la funcionalidad de la app  
+  - Taller práctico de consolidación de conceptos vistos
 
-- **Clase 3**: Strings y fechas.
-  - Teoría:
-    - Métodos comunes para cadenas: split, join, trim, toUpperCase, toLowerCase.
-    - Introducción al objeto Date.
-  - Práctica:
-    - Manipular cadenas de texto y calcular la diferencia entre dos fechas.
+- **Clase 14:**  
+  - Mini proyecto integrador: desarrollo de una aplicación básica que incluya navegación, manejo de formularios y consumo de datos  
+  - Feedback y revisión de buenas prácticas
 
-- **Clase 4**: Evaluación.
+---
 
+## Unidad 3: Integración de Microcontroladores en Aplicaciones Móviles (Clases 15-22)
 
+**Objetivo:** Capacitar a los estudiantes en la comunicación e integración de microcontroladores con aplicaciones móviles, aprovechando el conocimiento previo y centrando la práctica en la conexión entre hardware y software.
 
-### Módulo 3: Conceptos avanzados de JavaScript
+- **Clase 15:**  
+  - Introducción a la integración: revisión de conceptos de microcontroladores relevantes (protocolos, módulos de comunicación)  
+  - Planteamiento de casos de uso para la integración (domótica, monitoreo de sensores, control de actuadores)
 
-- **Duración**: 3 semanas
+- **Clase 16:**  
+  - Protocolos de comunicación: enfoque en Bluetooth y Wi-Fi para la conexión entre la app y el microcontrolador  
+  - Herramientas y librerías en React Native para comunicación con hardware
 
-- **Objetivo general**: Profundizar en conceptos avanzados como asincronía, clases, destructuración y módulos para desarrollar aplicaciones más robustas y modernas.
+- **Clase 17:**  
+  - Configuración de la comunicación Bluetooth en React Native  
+  - Ejercicios prácticos de emparejamiento y transmisión de datos
 
-- **Objetivos específicos**:
-  - Entender y aplicar asincronía con setTimeout, setInterval, promesas y async/await.
-  - Crear y manejar clases con métodos y propiedades, comprendiendo el modelo de herencia en JavaScript.
-  - Utilizar destructuración y los operadores spread y rest para escribir código más limpio y eficiente.
-  - Gestionar la modularidad en aplicaciones mediante import y export.
-  - Detectar y manejar errores de ejecución usando bloques try y catch.
+- **Clase 18:**  
+  - Integración de sensores y actuadores: cómo leer datos del microcontrolador y enviar comandos  
+  - Prácticas sobre el envío y recepción de datos en tiempo real
 
-- **Contenido teórico**:
-  - Asincronía (Parte 1)
-  - Asincronía (Parte 2)
-  - Clases y prototipos
-  - Destructuración y operador spread/rest
-  - Módulos y manejo de errores
-  
-- **Clases**:
+- **Clase 19:**  
+  - Implementación de módulos de control: estructuración de la comunicación bidireccional  
+  - Manejo de errores y sincronización de datos entre la app y el hardware
 
-- **Clase 1**: Asincronía (Parte 1)
-  - Teoría:
-    - Uso de setTimeout y setInterval.
-    - Concepto de promesas: then, catch, finally.
-  - Práctica:
-    - Crear un temporizador que imprima mensajes cada segundo.
+- **Clase 20:**  
+  - Desarrollo de una interfaz para el monitoreo y control de dispositivos conectados  
+  - Ejercicios de actualización dinámica de la UI en función de los datos recibidos
 
-- **Clase 2**: Asincronía (Parte 2)
-  - Teoría:
-    - Uso de async y await.
-  - Práctica:
-    - Escribir una función que simule una solicitud a un servidor usando fetch con async/await.
-    - 
-- **Clase 3**:  Clases y prototipos.
-  - Teoría:
-    - Creación de clases.
-    - Métodos, propiedades y herencia básica.
-  - Práctica:
-    - Crear una clase "Usuario" y generar instancias con diferentes atributos.
+- **Clase 21:**  
+  - Integración de casos de uso: ejemplo práctico de control de iluminación, temperatura u otros sensores  
+  - Análisis de retos y soluciones en la integración hardware-software
 
-- **Clase 4**: Destructuración y operador spread/rest
-  - Teoría:
-    - Destructuración de objetos y arreglos.
-    - Uso del operador ....
-  - Práctica:
-    - Usar destructuración para procesar datos de objetos y combinar arreglos con spread.
+- **Clase 22:**  
+  - Mini proyecto de integración: desarrollo de una funcionalidad que conecte la app con un microcontrolador (por ejemplo, controlar un LED o leer datos de un sensor)  
+  - Retroalimentación y consolidación de la integración de microcontroladores
 
-- **Clase 5**: Módulos y manejo de errores.
-  - Teoría:
-    - Importación y exportación de módulos.
-    - Manejo de errores con try y catch.
-  - Práctica:
-    - Dividir un programa en varios módulos y manejar errores al procesar datos.
-  
-- **Clase 6**: Evaluación.
+---
 
-### Módulo 4: Interacción con APIs y el DOM
+## Unidad 4: Desarrollo del Proyecto Final Integrado (Clases 23-32)
 
-- **Duración**: 2 semanas
+**Objetivo:** Aplicar de forma integral los conocimientos adquiridos en el curso para desarrollar una aplicación móvil real que interactúe con microcontroladores, desde la planificación hasta el despliegue.
 
-- **Objetivo general**: Desarrollar habilidades para interactuar con APIs y manipular el DOM, creando aplicaciones dinámicas que respondan a interacciones del usuario.
-  
-- **Objetivos específicos**:
-  - Realizar solicitudes HTTP a APIs externas utilizando fetch, manejando respuestas y errores.
-  - Seleccionar, crear y manipular elementos del DOM de forma dinámica.
-  - Escuchar y manejar eventos del usuario con addEventListener para agregar interactividad a la aplicación.
-  - Construir una interfaz que combine manipulación del DOM y datos obtenidos de una API.
+### Fase de Planificación y Diseño (Clases 23-24)
+- **Clase 23:**  
+  - Presentación y análisis del proyecto final: definir el alcance, funcionalidades clave y objetivos de la aplicación integrada  
+  - Formación de equipos (si se trabaja en grupo) y asignación de roles, considerando tanto el desarrollo de la app como la integración de hardware
 
-- **Contenido teórico**:
-  - Introducción a fetch y solicitudes HTTP
-  - Gestión del DOM (Parte 1)
-  - Gestión del DOM (Parte 2)
-  
-- **Clases**:
+- **Clase 24:**  
+  - Elaboración de wireframes y prototipos: diseño de la interfaz y planificación del flujo de comunicación entre la app y el microcontrolador  
+  - Revisión y feedback de los prototipos
 
-- **Clase 1**: Introducción a fetch y solicitudes HTTP
-  - Teoría:
-    - Realizar solicitudes HTTP: GET, POST, PUT, DELETE.
-    - Manejo de respuestas y errores.
-  - Práctica:
-    - Consumir una API pública y mostrar los datos en la consola.
+### Fase de Desarrollo y Integración (Clases 25-30)
+- **Clases 25-26:**  
+  - Configuración inicial del proyecto final: estructura del código, organización de carpetas y buenas prácticas de desarrollo  
+  - Implementación de la arquitectura de navegación y componentes básicos de la aplicación
 
-- **Clase 2**: Gestión del DOM (Parte 1)
-  - Teoría:
-    - Selección y manipulación de elementos HTML.
-    - Creación y eliminación dinámica de elementos.
-  - Práctica:
-    - Crear un formulario dinámico que agregue elementos a la página.
+- **Clases 27-28:**  
+  - Desarrollo de funcionalidades específicas de la integración: conexión, envío y recepción de datos entre la app y el microcontrolador  
+  - Pruebas y ajuste de la comunicación (uso de Bluetooth/Wi-Fi)
 
-- **Clase 3**: Gestión del DOM (Parte 1)
-  - Teoría:
-    - Manejo de eventos con addEventListener.
-  - Práctica:
-    - Crear un botón que cambie el estilo de los elementos de la página al hacer clic.
-  
-- **Clase 4**: Evaluación.
-___
-#### REACT
-___
+- **Clases 29-30:**  
+  - Integración de funcionalidades avanzadas: control de dispositivos, actualización en tiempo real y manejo de múltiples sensores o actuadores  
+  - Sesiones de debugging y optimización de la comunicación hardware-software
+
+### Fase de Despliegue y Presentación (Clases 31-32)
+- **Clase 31:**  
+  - Pruebas finales y ajustes en la aplicación: optimización de la experiencia de usuario y robustez en la integración  
+  - Preparación de la documentación del proyecto y definición de criterios de evaluación
+
+- **Clase 32:**  
+  - Presentación final del proyecto: demostración práctica de la aplicación y explicación de la integración con microcontroladores  
+  - Retroalimentación, evaluación final y cierre del curso
+
+---
 
 ## Evaluación
-- Exámenes cortos: Evaluar comprensión teórica en puntos clave de cada módulo.
-- Tareas prácticas: Entrega de pequeñas implementaciones relacionadas con los temas tratados.
+
+- **Participación y ejercicios prácticos:** 30%  
+- **Mini proyectos e integradores en unidades 1, 2 y 3:** 30%  
+- **Proyecto final (planificación, desarrollo, integración y presentación):** 40%
+
+---
+
 #### Proyecto final:
 - Creación de una aplicación funcional que incluya:
 - Múltiples pantallas con navegación.

@@ -167,7 +167,7 @@ concretas de la sociedad.
 
 ---
 
-### **Módulo 4: Proyecto Integrador – Conexión con “Proyecto de 6to año” **  
+### **Módulo 4: Proyecto Integrador – Articulación con “Proyecto de 6to año” **  
 **Objetivo:** Consolidar los conocimientos integrando la red local, los microcontroladores y el servidor Node.js en un proyecto que interactúe con el proyecto de 6to año para el día del programador, conectando acciones digitales con respuestas en dispositivos físicos dentro de una red local.
 
 21. **Clase 21 – Planificación del Proyecto Integrador**  
@@ -212,4 +212,4 @@ concretas de la sociedad.
 - **Estructura Secuencial:** Cada clase está constituida de forma correlativa.
 - **Estructura Modular:** Cada clase está dividida en dos bloques de 40 minutos, combinando teoría y práctica para reforzar el aprendizaje y permitir una aplicación inmediata de conceptos.
 - **Enfoque Práctico:** Se priorizan actividades de laboratorio y proyectos integradores que permitan al estudiante experimentar con la configuración de redes locales, el uso de microcontroladores y la integración con aplicaciones web.
-- **Conexión con el Proyecto de Desarrollo Web:** El sistema desarrollado en este curso servirá como soporte para el proyecto de 6to año, permitiendo la interacción entre el entorno digital y dispositivos físicos en una red local.
+- **Articulación con el Proyecto de Desarrollo Web:** El sistema desarrollado en este curso servirá como soporte para el proyecto de 6to año, permitiendo la interacción entre el entorno digital y dispositivos físicos en una red local.
