@@ -176,7 +176,7 @@ A continuación se presenta una propuesta de contenidos para un curso de program
 
 ### **Semana 16: Presentación y Evaluación del Proyecto Final**
 - **Temas:**
-  - Finalización y pulido del proyecto.
+  - Finalización del proyecto.
   - Preparación de la presentación (demostración y explicación del funcionamiento, así como de las medidas de seguridad implementadas).
 - **Actividades:**
   - Presentación ante el grupo y, de ser posible, ante un panel evaluador.

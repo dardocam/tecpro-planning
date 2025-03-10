@@ -6,9 +6,6 @@ El abordaje de este contenido tiene una fundamentación sólida tanto desde el p
 - **Alta Demanda de Profesionales en Redes:**  
   Las empresas de todos los sectores dependen cada vez más de una infraestructura de redes robusta y segura. Conocer y gestionar redes informáticas es esencial para roles como administrador de redes, ingeniero de sistemas, y especialista en ciberseguridad. La capacitación en temas como enrutamiento, configuración de VLANs y seguridad con herramientas como iptables es altamente valorada en el mercado laboral.
 
-- **Adaptación a Estándares y Certificaciones:**  
-  El contenido abordado está alineado con estándares internacionales y es la base para certificaciones reconocidas (por ejemplo, CCNA, CompTIA Network+), que son cruciales para acceder a mejores oportunidades profesionales. Esto permite que los estudiantes se inserten en un mercado globalizado.
-
 - **Fomento del Trabajo en Equipo y Resolución de Problemas:**  
   La metodología empleada (trabajo colaborativo, análisis de casos y proyectos integradores) no solo desarrolla competencias técnicas, sino también habilidades blandas esenciales como el trabajo en equipo, la comunicación efectiva y la capacidad de resolver problemas complejos, competencias muy valoradas en el ámbito profesional.
 
@@ -26,12 +23,6 @@ Además, el curso está diseñado para iniciar desde fundamentos básicos y refo
 
 - **Aprendizaje Activo y Significativo:**  
   El curso se organiza en clases que combinan sesiones teóricas con actividades prácticas en un simulador de redes basado en Linux. Esto permite que los estudiantes construyan su propio conocimiento a través de la resolución de problemas reales y casos de estudio, favoreciendo un aprendizaje profundo y significativo.
-
-- **Enfoque Integrador:**  
-  Se promueve la conexión entre conceptos básicos y avanzados, asegurando que los estudiantes comprendan la relevancia de cada tema dentro del panorama general de las redes informáticas. La metodología incluye debates, ejercicios colaborativos y proyectos integradores que facilitan la transferencia de conocimientos a contextos reales.
-
-- **Desarrollo de Competencias Técnicas y Blandas:**  
-  Además de los contenidos técnicos, la propuesta fomenta habilidades transversales como el trabajo en equipo, la comunicación y la capacidad de resolución de problemas, competencias altamente valoradas en el ámbito laboral.
 
 - **Adaptación al Nivel del Estudiante:**  
   Se utilizan recursos didácticos y ejemplos adaptados al contexto y a la edad de los alumnos (15 a 16 años), asegurando que el lenguaje y las actividades sean accesibles, dinámicas y motivadoras.
@@ -55,9 +46,6 @@ concretas de la sociedad.
 - **Dominio de Conceptos y Herramientas de Redes:**  
   Se espera que los estudiantes adquieran una comprensión sólida de los modelos OSI y TCP/IP, el direccionamiento IP, el subnetting, la configuración de dispositivos en Linux, así como la administración de servicios como DHCP y la configuración de seguridad básica.
 
-- **Capacidad para Aplicar Conocimientos en Escenarios Reales:**  
-  Los alumnos deberán ser capaces de configurar redes completas en un entorno real.
-
 - **Desarrollo de Habilidades Técnicas y Colaborativas:**  
   Se busca que los estudiantes mejoren no solo sus competencias técnicas, sino también su capacidad para trabajar en equipo, comunicar sus ideas y resolver problemas de manera autónoma y colaborativa.
 
@@ -67,9 +55,9 @@ concretas de la sociedad.
 
 ## CONTENIDOS
 - Los contenidos trabajados pertenecen al Eje Temático del Diseño Curricular.
-- La distribución del tiempo esta basada en fechas previamente establecidas que contemplan, períodos de intensificacion, eventos anuales obligatorios (exposiciones, olimpiadas, etc) y un mínimo de imponderables. 
+- La distribución del tiempo esta basada en fechas previamente establecidas que contemplan, períodos de intensificacion, eventos anuales obligatorios (exposiciones, olimpiadas, etc).
   
-### **Módulo 1: Fundamentos de Redes Locales **  
+### Módulo 1: Fundamentos de Redes Locales   
 **Objetivo:** Conocer los conceptos básicos de las redes locales, su configuración y administración en un entorno controlado (laboratorio y aula).  
 
 1. **Clase 1 – Introducción a las Redes Locales**  
@@ -103,11 +91,10 @@ concretas de la sociedad.
 
 8. **Clase 8 – Repaso y Evaluación de los contenidos del Módulo**  
    - Realización de una actividad integradora (ejemplo: simulación de red) donde se apliquen todos los conocimientos vistos.
-   - Realización de evaluación estilo *Multiple Choise*
 
 ---
 
-### **Módulo 2: Introducción a los Microcontroladores y Conectividad **  
+### Módulo 2: Introducción a los Microcontroladores y Conectividad   
 **Objetivo:** Familiarizar a los estudiantes con los microcontroladores y su conexión a redes locales, preparando el terreno para la comunicación IoT.
 
 9. **Clase 9 – Introducción a los Microcontroladores**  
@@ -145,7 +132,7 @@ concretas de la sociedad.
 
 ---
 
-### **Módulo 3: Integración con Node.js y Desarrollo del Servidor IoT **  
+### Módulo 3: Integración con Node.js y Desarrollo del Servidor IoT   
 **Objetivo:** Aprender a utilizar Node.js para crear un servidor que se comunique con el broker MQTT, recibiendo y procesando datos de microcontroladores.
 
 17. **Clase 17 – Introducción a Node.js**  
@@ -167,7 +154,7 @@ concretas de la sociedad.
 
 ---
 
-### **Módulo 4: Proyecto Integrador – Articulación con “Proyecto de 6to año” **  
+### Módulo 4: Proyecto Integrador – Articulación con “Proyecto de 6to año”   
 **Objetivo:** Consolidar los conocimientos integrando la red local, los microcontroladores y el servidor Node.js en un proyecto que interactúe con el proyecto de 6to año para el día del programador, conectando acciones digitales con respuestas en dispositivos físicos dentro de una red local.
 
 21. **Clase 21 – Planificación del Proyecto Integrador**  
@@ -207,9 +194,83 @@ concretas de la sociedad.
     - Presentación final, evaluación integral del aprendizaje.
 ---
 
+### Módulo 5: Proyecto Integrador – Expo Técnica” 
+32. **Clase 33 – Mejoras y ampliaciones para el proyecto integrador o desarrollo de un nuevo proyecto**  
+    - Presentación final en Expo Técnica.
+
 ## Consideraciones Adicionales
 
 - **Estructura Secuencial:** Cada clase está constituida de forma correlativa.
 - **Estructura Modular:** Cada clase está dividida en dos bloques de 40 minutos, combinando teoría y práctica para reforzar el aprendizaje y permitir una aplicación inmediata de conceptos.
 - **Enfoque Práctico:** Se priorizan actividades de laboratorio y proyectos integradores que permitan al estudiante experimentar con la configuración de redes locales, el uso de microcontroladores y la integración con aplicaciones web.
 - **Articulación con el Proyecto de Desarrollo Web:** El sistema desarrollado en este curso servirá como soporte para el proyecto de 6to año, permitiendo la interacción entre el entorno digital y dispositivos físicos en una red local.
+
+
+
+## ESTRATEGIAS DIDÁCTICAS
+- Organización de clases enmarcada desde un encuadre teórico-
+práctico, posibilitando el diálogo como forma de construir los conocimientos
+en un intercambio entre pares y docente.
+
+- Proposición de instancias de reflexión grupal e individual sobre los
+temas tratados.
+
+- Favorecer diversas oportunidades a lo largo de todo el año en las que
+el abordaje de temas resulten significativos
+
+- Realización de proyecto práctico integrador para el
+desarrollo de los conocimientos y las aptitudes requeridas a nivel práctico.
+
+- Implementación de los conocimientos adquiridos con máquinas físicas
+y hardware de redes en el laboratorio
+
+
+
+
+## RECURSOS
+- Filminas 
+- Laboratorio
+- Notebooks
+- Televisor
+- Conectividad a Internet
+- Cables UTP
+- Fichas RJ45
+- Kit de Herramientas de Red
+- Switch configurable
+- Router configurable
+- Componentes de hardware y software
+- Microcontroladores Arduino + Shield Ethernet - ESP32 - Raspberry PI
+
+
+## DISTRIBUCIÓN DEL TIEMPO
+
+
+| FECHAS       | MÓDULO          | CONTENIDOS                                               | ESTRATEGIA METODOLÓGICA                                       |
+|--------------|-----------------|----------------------------------------------------------|---------------------------------------------------------------|
+| ABRIL        | Módulo 1        | Fundamentos de Redes Locales                             | Clase expositiva + debate grupal + prácticos en máquina       |
+| MAYO         | Módulo 2        | Introducción a los Microcontroladores y Conectividad     | Clase expositiva + debate grupal + prácticos en máquina       |
+| JUNIO        | Módulo 3        | Integración con Node.js y Desarrollo del Servidor IoT    | Clase expositiva + debate grupal + prácticos en máquina       |
+| AGOSTO       | Módulo 4        | Proyecto Integrador – Articulación con “Proyecto de 6to año"    | Clase expositiva + debate grupal + prácticos en máquina       |
+| SEPTIEMBRE   | Módulo 4        | Proyecto Integrador – Articulación con “Proyecto de 6to año"    | Clase expositiva + debate grupal + prácticos en máquina       |
+| OCTUBRE      | Módulo 5        | Proyecto Integrador – Expo técnica                              | Clase expositiva + debate grupal + prácticos en máquina       |
+| NOVIEMBRE    | Módulo 5        | Proyecto Integrador – Expo técnica                              | Clase expositiva + debate grupal + prácticos en máquina       |
+
+## BIBLIOGRAFÍA
+- “Redes de computadoras 4ta Edición” Autor: Andrew S. Tanenbaum
+- “Linux Manual de Referencia” Autor: Richard Petersen
+- “Redes CISCO” Autor: Daniel Pérez Torres
+
+## EVALUACIÓN
+### Instrumentos de evaluación
+- Registro de las observaciones en clases
+- Presentación del trabajo práctico propuesto. Panel de discusión.
+- Evaluación escrita módulo I 
+### Criterios
+- Participación e intervención oportuna en las clases.
+- Conceptos y vocabulario preciso en la expresión oral.
+- Análisis, argumentación, crítica y reflexión sobre los saberes abordados.
+### Criterios a evaluar en el trabajo práctico propuesto
+- Redacción y coherencia.
+- Interpretación de consignas. Análisis, argumentación, crítica y reflexión sobre los saberes abordados.
+- Conceptos y vocabulario preciso en la expresión escrita.
+- Calidad de los saberes aprendidos por sobre la cantidad o amplio volumen de contenidos
