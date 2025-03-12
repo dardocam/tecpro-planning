@@ -1,17 +1,21 @@
-A continuación se presenta una propuesta de adaptación del curso de Programación Web Profesional en PHP para una duración total de 6 meses, estructurada en dos fases:
-
-- **Fase 1 (4 meses – 16 semanas):** Contenido teórico y práctico, en el que se imparten y refuerzan los fundamentos, conceptos avanzados y ejercicios prácticos en aula.  
-- **Fase 2 (2 meses – 8 semanas):** Desarrollo integral del proyecto final, en el que se aplicarán de forma autónoma y supervisada todos los conocimientos adquiridos, trabajando exclusivamente en el aula.
+A continuación se presenta una propuesta de planificación para el año 2025 del curso "Desarrollo de Aplicaciones Web Dinámicas-(DWD)" de 6to año de TECPRO 
 
 ---
+## **Fase Nivelatoria: Contenido Teórico-Práctico (2 Semanas)**
+  - **Temas:**  
+    - Arquitectura cliente-servidor, diferencias entre front-end y back-end.  
+    - Historia, aplicaciones y ventajas de PHP.  
+    - Instalación y configuración del entorno de desarrollo (XAMPP, WAMP o similar).  
+  - **Actividades:**  
+    - Configuración de un servidor local y primer “Hola Mundo” en PHP.
 
-## **Fase 1: Contenido Teórico y Práctico (16 Semanas)**
+## **Fase 1: Contenido Teórico-Práctico (13 Semanas)**
 
 ### **Objetivos Generales de la Fase 1**
 - Conocer la arquitectura del desarrollo web y el rol de PHP en el entorno back-end.
 - Dominar la sintaxis, estructuras de control, funciones, manejo de arrays y manipulación de cadenas en PHP.
 - Comprender y aplicar el procesamiento de formularios, uso de superglobales y técnicas de validación y sanitización de datos.
-- Integrar PHP con bases de datos (por ejemplo, MySQL) para desarrollar aplicaciones CRUD.
+- Integrar PHP con bases de datos MySQL para desarrollar aplicaciones CRUD.
 - Implementar conceptos de seguridad en el desarrollo web y una primera aproximación a la Programación Orientada a Objetos (OOP).
 
 ### **Cronograma Semanal y Contenidos**
@@ -107,7 +111,6 @@ A continuación se presenta una propuesta de adaptación del curso de Programaci
 
 
 ---
----
 ## **Fase 2: Desarrollo del Proyecto Final (8 Semanas)**
 
 ### **Objetivos Generales de la Fase 2**
@@ -162,19 +165,20 @@ A continuación se presenta una propuesta de adaptación del curso de Programaci
 ## **Consideraciones Generales**
 
 - **Enfoque en Aula:**  
-  Todo el trabajo—tanto los contenidos teóricos/prácticos como el desarrollo del proyecto final—se realizará estrictamente en el aula, garantizando el soporte inmediato del docente y la interacción constante entre los estudiantes.
+  Todo el trabajo, tanto los contenidos teóricos/prácticos como el desarrollo del proyecto final, se realizará estrictamente en el aula, garantizando el soporte inmediato del docente y la interacción constante entre los estudiantes.
 
 - **Evaluación Integral:**  
   La evaluación se realizará de forma continua:
   - Durante la Fase 1 se podrán aplicar quizzes, ejercicios prácticos y evaluaciones formativas.
-  - En la Fase 2, el seguimiento del proyecto incluirá revisiones semanales, pruebas de funcionamiento y una defensa final, que en conjunto garantizarán la integración y aplicación de los conocimientos.
+  - En la Fase 2, el seguimiento del proyecto incluirá revisiones semanales, pruebas de funcionamiento 
+  y una defensa final, que en conjunto garantizarán la integración y aplicación de los conocimientos.
 
 - **Soporte y Retroalimentación:**  
-  La planificación incluye momentos específicos para asesorías, tutorías y retroalimentación, de modo que los estudiantes puedan resolver dudas y mejorar de forma progresiva sus proyectos.
+  La planificación incluye momentos específicos para asesorías, tutorías y retroalimentación, 
+  de modo que los estudiantes puedan resolver dudas y mejorar de forma progresiva en períodos de intensificación.
 
 - **Documentación y Buenas Prácticas:**  
   Se enfatizará la importancia de documentar el código y el proceso de desarrollo, así como de aplicar buenas prácticas de programación, para consolidar la formación profesional.
 
 ---
 
-Esta reestructuración permite dedicar 4 meses a una sólida base de contenidos teóricos y prácticos, y 2 meses completos al desarrollo del proyecto final, garantizando un aprendizaje integral y la puesta en práctica de todos los conceptos impartidos durante el curso.
