@@ -159,3 +159,4 @@ La implementación de esta red cableada, junto con la configuración especializa
 
 - **Diagramas de Red:** Esquemas detallados del diseño físico y lógico.
 - **Factura de compra router MikroTik RouterBOARD hEX GR3 RB750Gr3:** [Factura](./factura-router.pdf)
+- **Documento para imprimir en papel:** [PDF](redPlantaAlta.pdf)
