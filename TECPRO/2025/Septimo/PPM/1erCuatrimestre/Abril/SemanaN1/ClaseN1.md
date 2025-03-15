@@ -60,17 +60,19 @@
   - **Expo CLI:** Herramienta que facilita el desarrollo y despliegue de aplicaciones React Native.
   - **IDE:** Recomendación de VSCode u otro editor de código.
 - **Pasos de Instalación:**
-  1. Descargar e instalar **Node.js** desde su sitio oficial.
-  2. Instalar **Expo CLI** mediante el comando:
-     ```bash
-     npm install -g expo-cli
-     ```
+  1. Descargar e instalar **Node.js** desde su sitio oficial. Version > 22
+        ```bash
+        node -v
+        ``` 
+    2. Instalar **Expo CLI** mediante el comando:
+        ```bash
+        npx create-expo-app@latest -t blank
+        ```
   3. Configurar el IDE (VSCode) y familiarizarse con sus extensiones para desarrollo en JavaScript y React.
   4. Crear y ejecutar una aplicación de ejemplo usando:
      ```bash
-     expo init MiPrimerApp
      cd MiPrimerApp
-     expo start
+     npm start
      ```
 
 ---
