@@ -157,6 +157,6 @@ La implementación de esta red cableada, junto con la configuración especializa
 
 ## 13. Anexos
 
-- **Diagramas de Red:** Esquemas detallados del diseño físico y lógico.
+- **Diagramas de Red:** [Diagrama-conexion](./red-pa.png)
 - **Factura de compra router MikroTik RouterBOARD hEX GR3 RB750Gr3:** [Factura](./factura-router.pdf)
 - **Documento para imprimir en papel:** [PDF](redPlantaAlta.pdf)
