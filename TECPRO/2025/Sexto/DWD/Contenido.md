@@ -1,6 +1,3 @@
-A continuación se presenta una propuesta de planificación para el año 2025 del curso "Desarrollo de Aplicaciones Web Dinámicas-(DWD)" de 6to año de TECPRO 
-
----
 ## **Fase 1: Desarrollo de aplicaciones Web utilizando los lenguajes PHP y MySQL**
 
 ### **Objetivos Generales de la Fase 1**
