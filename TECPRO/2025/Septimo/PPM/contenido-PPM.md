@@ -82,8 +82,7 @@ concretas de la sociedad.
 
 
 ## CONTENIDOS
-- Los contenidos trabajados pertenecen al Eje Temático del Diseño Curricular.
-- La distribución del tiempo esta basada en fechas previamente establecidas que contemplan, períodos de intensificacion, eventos anuales obligatorios (exposiciones, olimpiadas, etc) y un mínimo de imponderables. 
+- La distribución del tiempo esta basada en fechas previamente establecidas que contemplan, períodos de intensificacion, eventos anuales obligatorios (exposiciones, olimpiadas, etc). 
 
 ---
 
@@ -234,14 +233,15 @@ concretas de la sociedad.
 ## Evaluación
 
 - **Participación y ejercicios prácticos:** 30%  
-- **Mini proyectos e integradores en unidades 1, 2 y 3:** 30%  
+- **Mini proyectos integradores en unidades 1, 2 y 3:** 30%  
 - **Proyecto final (planificación, desarrollo, integración y presentación):** 40%
 
 ---
 
 #### Proyecto final:
-- Creación de una aplicación funcional que incluya:
+- Creación de una aplicación funcional que refiera unicidad, criterio y autoria que incluya como mínimo:
 - Múltiples pantallas con navegación.
 - Conexión a Firebase Firestore para manejar datos en tiempo real.
-- Estilización básica y diseño responsivo.
+- Estilización básica, amigable y funcional para el usuario.
+- Conexión con sensores y/o dispositivos internos del móvil y/o microcontroladores externos
 - Presentación del proyecto destacando los aprendizajes obtenidos.

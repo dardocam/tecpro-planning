@@ -1,15 +1,7 @@
 A continuación se presenta una propuesta de planificación para el año 2025 del curso "Desarrollo de Aplicaciones Web Dinámicas-(DWD)" de 6to año de TECPRO 
 
 ---
-## **Fase Nivelatoria: Contenido Teórico-Práctico (2 Semanas)**
-  - **Temas:**  
-    - Arquitectura cliente-servidor, diferencias entre front-end y back-end.  
-    - Historia, aplicaciones y ventajas de PHP.  
-    - Instalación y configuración del entorno de desarrollo (XAMPP, WAMP o similar).  
-  - **Actividades:**  
-    - Configuración de un servidor local y primer “Hola Mundo” en PHP.
-
-## **Fase 1: Contenido Teórico-Práctico (13 Semanas)**
+## **Fase 1: Desarrollo de aplicaciones Web utilizando los lenguajes PHP y MySQL**
 
 ### **Objetivos Generales de la Fase 1**
 - Conocer la arquitectura del desarrollo web y el rol de PHP en el entorno back-end.
@@ -111,7 +103,7 @@ A continuación se presenta una propuesta de planificación para el año 2025 de
 
 
 ---
-## **Fase 2: Desarrollo del Proyecto Final (8 Semanas)**
+## **Fase 2: Desarrollo Proyecto Integrador "Día del Programador"**
 
 ### **Objetivos Generales de la Fase 2**
 - Aplicar de forma integral y autónoma los conocimientos adquiridos durante la fase de contenidos.

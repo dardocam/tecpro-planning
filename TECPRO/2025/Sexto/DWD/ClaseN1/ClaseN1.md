@@ -1,7 +1,3 @@
-A continuación se presenta un conjunto de filminas (slides) estructuradas profesionalmente para una clase de 40 minutos de teoría y 40 minutos de práctica sobre "Introducción al Desarrollo Web y PHP".
-
----
-
 ### Filmina 1: Portada
 - **Título:** Clase 1: Introducción al Desarrollo Web y PHP
 - **Profesor:** Dardo Camaño

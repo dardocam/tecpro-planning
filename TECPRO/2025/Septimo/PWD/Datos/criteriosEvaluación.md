@@ -1,7 +1,3 @@
-A continuación se presenta un conjunto de criterios de evaluación estructurados y ponderados, que abarcan tanto aspectos técnicos como de gestión y documentación, para garantizar que el proyecto cumpla con los objetivos de aprendizaje y alcance los estándares requeridos para su aprobación.
-
----
-
 ## **1. Cumplimiento de Requisitos Funcionales (40%)**
 
 - **Registro e Inicio de Sesión de Usuarios (10%)**  

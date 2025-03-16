@@ -301,3 +301,21 @@ Este plan garantiza un dominio integral de Writer, ideal para entornos académic
 Este plan cubre habilidades clave para análisis de datos, reporting y automatización, esenciales en entornos empresariales y académicos. 📊🚀
 
 
+---
+
+
+Se puede retroalimentar la propuesta complementándola con contenidos prácticos y teóricos sobre herramientas en la nube, utilizando Google Drive para que los estudiantes comparen y contrasten con LibreOffice. Algunas estrategias podrían ser:
+
+- **Actividades de Comparación:**  
+  Invitar a los alumnos a crear un documento en Google Docs y una hoja de cálculo en Google Sheets para luego comparar la experiencia, las opciones de colaboración en tiempo real, la gestión de versiones y la accesibilidad desde distintos dispositivos. Esto les permitirá identificar ventajas y desafíos entre ambos entornos.
+
+- **Proyectos Colaborativos en la Nube:**  
+  Diseñar ejercicios prácticos donde los estudiantes, en grupos, deban trabajar en un mismo documento o proyecto compartido a través de Google Drive. Por ejemplo, elaborar un informe colaborativo o una planilla de seguimiento de datos que se integre en una presentación, aprovechando la facilidad para compartir, comentar y editar en tiempo real.
+
+- **Integración de Contenido Multimedial:**  
+  Incorporar tutoriales, videos y guías interactivas que expliquen el funcionamiento de Google Docs y Google Sheets, resaltando características como el almacenamiento automático, el historial de revisiones y la integración con otras aplicaciones de Google Workspace. Esto enriquece la experiencia de aprendizaje y brinda una perspectiva actualizada de las herramientas digitales.
+
+- **Reflexión y Retroalimentación:**  
+  Finalizar cada módulo con una sesión de análisis comparativo donde se discutan aspectos como la usabilidad, la flexibilidad y la aplicabilidad en contextos reales. Se puede hacer una lluvia de ideas sobre cómo cada herramienta (LibreOffice y Google Drive) responde a las necesidades de un entorno profesional moderno.
+
+Estas estrategias permiten ampliar el panorama de los estudiantes, preparándolos para un mundo en el que tanto las herramientas de escritorio como las basadas en la nube tienen su lugar. Además, refuerzan competencias digitales fundamentales como la colaboración, la gestión de información en la nube y el uso de aplicaciones integradas para optimizar el trabajo en equipo.

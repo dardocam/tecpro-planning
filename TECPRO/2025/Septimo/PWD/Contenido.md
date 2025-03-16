@@ -1,7 +1,3 @@
-A continuación se presenta un plan curricular profesional de 16 clases (2 horas cada una) diseñado para que, partiendo de conocimientos previos en PHP, MySQL, CSS y JavaScript, los estudiantes aprendan a aplicar el patrón MVC y a trabajar de forma colaborativa en equipo para desarrollar un proyecto real de e-commerce.
-
----
-
 ## Objetivos Generales del Curso
 
 - **Comprender y aplicar el patrón MVC en aplicaciones PHP.**
@@ -13,7 +9,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ## Plan de Clases
 
-### **Clase 1: Introducción al Curso y Planificación del Proyecto E-commerce**  
+### 1: Introducción al Curso y Planificación del Proyecto E-commerce**  
 - **Objetivos:**  
   - Presentar el curso, metodologías y expectativas.
   - Definir el alcance del proyecto e-commerce.
@@ -27,7 +23,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 2: Fundamentos del Patrón MVC y Arquitectura de Aplicaciones Web**  
+### 2: Fundamentos del Patrón MVC y Arquitectura de Aplicaciones Web**  
 - **Objetivos:**  
   - Comprender el concepto de separación de responsabilidades.
   - Conocer las ventajas y el flujo de trabajo en MVC.
@@ -40,7 +36,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 3: Estructura de un Proyecto MVC en PHP y Configuración Inicial**  
+### 3: Estructura de un Proyecto MVC en PHP y Configuración Inicial**  
 - **Objetivos:**  
   - Definir la estructura de directorios y archivos en un proyecto MVC.
   - Implementar un Front Controller básico.
@@ -53,7 +49,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 4: Desarrollo del Modelo – Conexión a Base de Datos y Operaciones CRUD**  
+### 4: Desarrollo del Modelo – Conexión a Base de Datos y Operaciones CRUD**  
 - **Objetivos:**  
   - Implementar la capa de acceso a datos usando PHP y MySQL.
   - Desarrollar un modelo base y ejemplos de CRUD.
@@ -66,7 +62,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 5: Desarrollo de Vistas – Plantillas, HTML, CSS y JavaScript**  
+### 5: Desarrollo de Vistas – Plantillas, HTML, CSS y JavaScript**  
 - **Objetivos:**  
   - Separar la capa de presentación utilizando plantillas.
   - Aplicar técnicas de diseño responsivo y usabilidad.
@@ -79,7 +75,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 6: Desarrollo de Controladores – Lógica de Negocio y Gestión de Solicitudes**  
+### 6: Desarrollo de Controladores – Lógica de Negocio y Gestión de Solicitudes**  
 - **Objetivos:**  
   - Crear controladores que coordinen modelos y vistas.
   - Gestionar la lógica de negocio y el flujo de la aplicación.
@@ -92,7 +88,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 7: Integración MVC – Unificando Modelo, Vista y Controlador**  
+### 7: Integración MVC – Unificando Modelo, Vista y Controlador**  
 - **Objetivos:**  
   - Integrar las tres capas en un módulo funcional.
   - Manejar el paso de parámetros y la gestión de errores.
@@ -105,7 +101,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 8: Introducción a Git y Gestión del Código en Equipo**  
+### 8: Introducción a Git y Gestión del Código en Equipo**  
 - **Objetivos:**  
   - Conocer las bases de Git y flujo de trabajo colaborativo.
   - Configurar un repositorio central para el proyecto.
@@ -118,7 +114,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 9: Metodologías Ágiles y Gestión de Proyectos en Equipos de Desarrollo**  
+### 9: Metodologías Ágiles y Gestión de Proyectos en Equipos de Desarrollo**  
 - **Objetivos:**  
   - Introducir conceptos ágiles aplicables al desarrollo web.
   - Planificar sprints y organizar tareas.
@@ -131,7 +127,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 10: Desarrollo Avanzado – Módulos de Productos, Usuarios y Carrito de Compras**  
+### 10: Desarrollo Avanzado – Módulos de Productos, Usuarios y Carrito de Compras**  
 - **Objetivos:**  
   - Diseñar y desarrollar módulos centrales de un e-commerce.
   - Gestionar la lógica de negocio compleja y la interacción entre módulos.
@@ -144,7 +140,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 11: Integración de Pagos y Seguridad en Aplicaciones E-commerce**  
+### 11: Integración de Pagos y Seguridad en Aplicaciones E-commerce**  
 - **Objetivos:**  
   - Conocer la integración de pasarelas de pago.
   - Implementar medidas de seguridad en el desarrollo web.
@@ -157,7 +153,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 12: Optimización, Rendimiento y Escalabilidad**  
+### 12: Optimización, Rendimiento y Escalabilidad**  
 - **Objetivos:**  
   - Mejorar el rendimiento de la aplicación e-commerce.
   - Implementar técnicas de optimización en el código y consultas.
@@ -170,7 +166,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 13: Testing y Aseguramiento de la Calidad**  
+### 13: Testing y Aseguramiento de la Calidad**  
 - **Objetivos:**  
   - Introducir pruebas unitarias y funcionales en PHP.
   - Garantizar la calidad del código a través de testing.
@@ -183,7 +179,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 14: Despliegue y Mantenimiento de la Aplicación**  
+### 14: Despliegue y Mantenimiento de la Aplicación**  
 - **Objetivos:**  
   - Preparar el entorno de producción y aprender técnicas de despliegue.
   - Conocer herramientas y procesos para el mantenimiento.
@@ -196,7 +192,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 15: Integración Final – Construcción del Proyecto E-commerce (Parte 1)**  
+### 15: Integración Final – Construcción del Proyecto E-commerce (Parte 1)**  
 - **Objetivos:**  
   - Integrar todos los módulos desarrollados por el equipo.
   - Realizar pruebas de integración y depuración conjunta.
@@ -209,7 +205,7 @@ A continuación se presenta un plan curricular profesional de 16 clases (2 horas
 
 ---
 
-### **Clase 16: Integración Final – Construcción del Proyecto E-commerce (Parte 2) y Presentación**  
+### 16: Integración Final – Construcción del Proyecto E-commerce (Parte 2) y Presentación**  
 - **Objetivos:**  
   - Finalizar los detalles del proyecto.
   - Presentar el producto final y realizar una retrospectiva del trabajo en equipo.

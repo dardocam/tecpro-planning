@@ -2,6 +2,12 @@
 - **Título:** Clase 1: Introducción al Curso y Planificación del Proyecto E-commerce
 - **Subtítulo:** Presentación, Metodologías y Definición de Alcance
 - **Profesor:** Dardo Camaño
+- **Conocimientos previos mínimos**
+  - Lenguaje PHP 
+  - Lenguaje SQL
+  - Diseño web HTML - CSS
+  - Lenguaje JavaScript
+  - Diagramas y documentación
 
 ---
 
