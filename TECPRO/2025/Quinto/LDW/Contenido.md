@@ -1,7 +1,3 @@
-Para abordar el curso de **Laboratorio de Diseño Web** para estudiantes de 15 años de manera profesional y acorde a su edad, se recomienda un enfoque práctico, creativo y progresivo. A continuación, los contenidos más relevantes estructurados en módulos:
-
----
-
 ### **1. Introducción al Diseño Web (Contextualización)**  
 - ¿Qué es el diseño web? Diferencias entre diseño, desarrollo frontend y backend.  
 - Evolución de la web: estática, dinámica, responsiva, y tendencias actuales.  
@@ -95,5 +91,3 @@ Para abordar el curso de **Laboratorio de Diseño Web** para estudiantes de 15 a
 - **Enfoque lúdico**: Usar analogías (ejemplo: comparar HTML/CSS con "estructura y decoración de una casa").  
 
 ---
-
-Este enfoque garantiza que los estudiantes adquieran habilidades técnicas, creativas y colaborativas, mientras se mantienen motivados mediante resultados tangibles y proyectos significativos.

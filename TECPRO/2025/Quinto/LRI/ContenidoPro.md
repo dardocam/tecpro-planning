@@ -1,7 +1,3 @@
-A continuación se presenta un plan de curso profesional que integra tanto los contenidos teóricos como los prácticos, diseñado para un curso de “Laboratorio de Redes Informáticas” dirigido a alumnos de 15 a 16 años de una escuela secundaria técnica en la provincia de Buenos Aires, Argentina. El plan abarca un período total de 3 meses, dividido en 2 módulos de 12 clases cada uno (10 clases regulares, 1 clase de evaluación y 1 clase de recuperación). Se prioriza abordar los conceptos y prácticas esenciales, dejando abierto el espacio para refuerzos o ampliaciones en instancias posteriores.
-
----
-
 ## Objetivos Generales del Curso
 
 - **Comprensión de Conceptos Fundamentales:** Lograr que los estudiantes entiendan la estructura, funcionamiento y componentes básicos de las redes informáticas, abarcando desde modelos teóricos (OSI y TCP/IP) hasta aspectos prácticos de configuración.
@@ -11,7 +7,7 @@ A continuación se presenta un plan de curso profesional que integra tanto los c
 
 ---
 
-## Módulo 1: Fundamentos y Configuración Básica (12 clases)
+## Módulo 1: Fundamentos y Configuración Básica
 
 ### Objetivo del Módulo 1
 Introducir los conceptos esenciales de redes, su infraestructura física y lógica, y proporcionar las primeras experiencias prácticas en configuración y diagnóstico básico.
@@ -65,7 +61,7 @@ Introducir los conceptos esenciales de redes, su infraestructura física y lógi
 
 ---
 
-## Módulo 2: Profundización y Aplicaciones Prácticas Avanzadas (12 clases)
+## Módulo 2: Profundización y Aplicaciones Prácticas Avanzadas
 
 ### Objetivo del Módulo 2
 Ampliar y profundizar los conocimientos en redes, incorporando configuraciones avanzadas, herramientas de monitoreo y un proyecto integrador que permita a los estudiantes aplicar de manera práctica lo aprendido.
