@@ -1,4 +1,3 @@
-(Due to technical issues, the search service is temporarily unavailable.)
 
 ### **Curso: Laboratorio de Aplicaciones – Procesador de Texto "Writer"**  
 **Duración:** 12 clases (40 minutos teóricos + 40 minutos prácticos por sesión).  
@@ -150,8 +149,6 @@ Este plan garantiza un dominio integral de Writer, ideal para entornos académic
 
 ---
 
-
-(Due to technical issues, the search service is temporarily unavailable.)
 
 ### **Curso: Laboratorio de Aplicaciones – Hojas de Cálculo "Calc"**  
 **Duración:** 12 clases (40 minutos teóricos + 40 minutos prácticos por sesión).  

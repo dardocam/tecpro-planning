@@ -114,6 +114,3 @@
   - Fomentar la participación activa a través de ejercicios prácticos y colaboración entre estudiantes.
   - Incentivar el uso de plantillas y macros para optimizar el flujo de trabajo.
 
----
-
-Esta estructura de filminas asegura que los estudiantes adquieran una comprensión sólida del entorno LibreOffice y Writer, preparándolos para crear documentos profesionales de forma eficiente y colaborativa.
