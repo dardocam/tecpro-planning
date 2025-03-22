@@ -1,9 +1,5 @@
 
 ### **Curso: Laboratorio de Aplicaciones – Procesador de Texto "Writer"**  
-**Duración:** 12 clases (40 minutos teóricos + 40 minutos prácticos por sesión).  
-**Objetivo:** Dominar las funciones esenciales y avanzadas de LibreOffice Writer para la creación, edición y gestión profesional de documentos.  
-
----
 
 #### **Clase 1: Introducción a Writer y Entorno de Trabajo**  
 **Teoría:**  
