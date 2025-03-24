@@ -110,3 +110,146 @@ A continuación se presentan dos conjuntos de filminas estructuradas profesional
   - Ejemplos en CodePen y GitHub de páginas HTML bien estructuradas.
 
 ---
+
+
+
+A continuación se presentan dos nuevas clases, ampliando tanto el contenido teórico como el práctico de HTML5 y CSS3, con un enfoque avanzado que profundiza en aspectos complementarios de estas tecnologías.
+
+---
+
+## **Clase 3: HTML5 Avanzado y Accesibilidad**
+
+### Filmina 1: Portada
+- **Título:** Clase 3: HTML5 Avanzado y Accesibilidad
+- **Subtítulo:** Mejora la experiencia del usuario y la visibilidad web mediante técnicas avanzadas
+- **Instructor:** [Nombre del Instructor]
+- **Fecha:** [Fecha de la Clase]
+
+---
+
+### Filmina 2: Agenda de la Clase
+- **Introducción (10 minutos):**
+  - Pregunta inicial: “¿Cómo se puede enriquecer una página web para mejorar la experiencia del usuario y la accesibilidad?”
+  - Importancia de utilizar tecnologías HTML5 avanzadas y técnicas de accesibilidad.
+- **Desarrollo (80 minutos):**
+  - **Temas Teóricos:**
+    - APIs Multimedia: `<video>`, `<audio>` y el elemento `<canvas>`.
+    - Accesibilidad en HTML5: ARIA, roles semánticos y atributos (alt, tabindex, etc.).
+    - Uso de Microdatos: Estructuración de contenido para SEO (Schema.org).
+  - **Ejemplos Prácticos:**
+    - Insertar y personalizar elementos multimedia.
+    - Implementar un canvas para gráficos simples.
+    - Añadir atributos ARIA y roles para mejorar la accesibilidad.
+    - Incorporar microdatos en contenido informativo.
+  - **Análisis de Casos de Uso:**
+    - Mejora de la experiencia del usuario y posicionamiento web.
+    - Ejemplos de sitios web accesibles y con datos estructurados.
+- **Cierre (10 minutos):**
+  - Resumen de los puntos clave y repaso de técnicas avanzadas.
+  - Sesión de preguntas y respuestas.
+- **Actividad Práctica – Sitio Web Accesible (30 minutos):**
+  - Crear una página que incluya:
+    - Un video y/o audio embebido.
+    - Un elemento `<canvas>` para mostrar un gráfico simple.
+    - Uso correcto de atributos ARIA y roles semánticos.
+    - Microdatos para marcar contenido relevante (por ejemplo, un artículo o reseña).
+
+---
+
+### Filmina 3: Objetivos de la Clase
+- **Objetivo General:**
+  - Profundizar en el uso avanzado de HTML5 y técnicas de accesibilidad para crear páginas web ricas y optimizadas.
+- **Objetivos Específicos:**
+  - Utilizar elementos multimedia y canvas para enriquecer la experiencia.
+  - Aplicar atributos ARIA y roles para garantizar accesibilidad.
+  - Implementar microdatos para mejorar la estructura de la información y SEO.
+
+---
+
+### Filmina 4: APIs Multimedia y Canvas
+- **Multimedia en HTML5:**
+  - Etiqueta `<video>` y `<audio>`:
+    - Atributos: `controls`, `autoplay`, `loop`, `muted`.
+    - Ejemplo:
+      ```html
+      <video controls width="320">
+        <source src="video.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+      ```
+- **El elemento `<canvas>`:**
+  - Uso para gráficos y dibujos dinámicos.
+  - Ejemplo básico:
+    ```html
+    <canvas id="miCanvas" width="300" height="150"></canvas>
+    <script>
+      const canvas = document.getElementById('miCanvas');
+      const ctx = canvas.getContext('2d');
+      ctx.fillStyle = 'green';
+      ctx.fillRect(10, 10, 100, 50);
+    </script>
+    ```
+
+---
+
+### Filmina 5: Accesibilidad en HTML5
+- **Atributos ARIA y Roles:**
+  - Definición de ARIA: Mejora la accesibilidad para usuarios con discapacidades.
+  - Ejemplos:
+    - `role="navigation"` para menús.
+    - `aria-label` para describir elementos.
+    - Uso de `alt` en imágenes.
+  - Ejemplo:
+    ```html
+    <nav role="navigation" aria-label="Menú principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+      </ul>
+    </nav>
+    ```
+
+---
+
+### Filmina 6: Uso de Microdatos
+- **Microdatos y Schema.org:**
+  - Permiten estructurar la información para que los motores de búsqueda la entiendan mejor.
+  - Ejemplo de un artículo:
+    ```html
+    <article itemscope itemtype="http://schema.org/Article">
+      <h1 itemprop="headline">Título del Artículo</h1>
+      <p itemprop="articleBody">Contenido del artículo...</p>
+    </article>
+    ```
+- **Beneficios:**
+  - Mejora del SEO y presentación en resultados enriquecidos.
+
+---
+
+### Filmina 7: Ejemplos Prácticos y Demostración en Vivo
+- **Demostración en Vivo:**
+  - Crear una página con multimedia, canvas, ARIA y microdatos.
+  - Mostrar en el editor la estructura completa y luego visualizarla en el navegador.
+- **Código de Ejemplo Integrado:**
+  - Combinar elementos vistos en la clase para una experiencia completa.
+
+---
+
+### Filmina 8: Cierre y Preguntas
+- **Resumen de Conceptos:**
+  - APIs multimedia, canvas, accesibilidad con ARIA y microdatos.
+  - Importancia de estas técnicas para una web moderna y accesible.
+- **Preguntas y Respuestas:**
+  - Espacio para aclarar dudas y discutir casos prácticos.
+
+---
+
+### Filmina 9: Recursos y Bibliografía
+- **Documentación y Tutoriales:**
+  - [MDN Web Docs – HTML5 Multimedia](https://developer.mozilla.org/es/docs/Web/Guide/HTML/Multimedia)
+  - [W3C ARIA Practices](https://www.w3.org/WAI/ARIA/apg/)
+  - [Schema.org](https://schema.org/)
+- **Enlaces Recomendados:**
+  - Ejemplos en CodePen y GitHub de sitios accesibles y multimedia.
+
+---

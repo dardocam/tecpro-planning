@@ -145,4 +145,181 @@
 
 ---
 
-Esta propuesta de dos clases proporciona un marco integral para que los estudiantes dominen las bases de HTML5 y CSS3, así como el uso de herramientas de desarrollo esenciales para crear páginas web modernas, semánticas, responsivas e interactivas.
+## **Clase 4: CSS3 Avanzado y Preprocesadores**
+
+### Filmina 1: Portada
+- **Título:** Clase 4: CSS3 Avanzado y Preprocesadores
+- **Subtítulo:** Variables, Animaciones Avanzadas y una introducción a SASS/LESS
+- **Instructor:** [Nombre del Instructor]
+- **Fecha:** [Fecha de la Clase]
+
+---
+
+### Filmina 2: Agenda de la Clase
+- **Introducción (10 minutos):**
+  - Pregunta inicial: “¿Qué ventajas ofrecen las técnicas avanzadas de CSS y los preprocesadores para el diseño moderno?”
+  - Importancia de usar CSS avanzado para crear interfaces más dinámicas y mantenibles.
+- **Desarrollo (80 minutos):**
+  - **Temas Teóricos:**
+    - Uso de variables CSS para temas y consistencia de estilos.
+    - Selectores avanzados, pseudo-clases y pseudo-elementos.
+    - Propiedades avanzadas: Transiciones, transformaciones y animaciones complejas.
+    - Introducción a preprocesadores: SASS/LESS – ventajas y sintaxis básica.
+  - **Ejemplos Prácticos:**
+    - Demostración en vivo de un layout con CSS Grid y Flexbox utilizando variables.
+    - Creación de animaciones complejas y transformaciones.
+    - Compilación de un archivo SASS para generar CSS.
+- **Cierre (10 minutos):**
+  - Resumen de los puntos clave.
+  - Sesión de preguntas y respuestas.
+- **Actividad Práctica – Proyecto de Estilizado Moderno (30 minutos):**
+  - Desarrollar una página web que utilice variables CSS, animaciones avanzadas y, opcionalmente, un preprocesador para estructurar el código.
+  - Comparar la versión con CSS tradicional y la versión con SASS/LESS.
+
+---
+
+### Filmina 3: Objetivos de la Clase
+- **Objetivo General:**
+  - Profundizar en CSS3 avanzado y familiarizarse con preprocesadores para mejorar el flujo de trabajo en el diseño web.
+- **Objetivos Específicos:**
+  - Utilizar variables, selectores avanzados y animaciones para crear interfaces dinámicas.
+  - Aplicar técnicas modernas como Flexbox y Grid en layouts complejos.
+  - Conocer las bases de SASS/LESS y su integración en proyectos.
+  - Mejorar la eficiencia y mantenibilidad del código CSS.
+
+---
+
+### Filmina 4: Variables y Selectores Avanzados en CSS3
+- **Variables CSS:**
+  - Definición y uso:
+    ```css
+    :root {
+      --color-primario: #3498db;
+      --padding-base: 16px;
+    }
+    .boton {
+      background-color: var(--color-primario);
+      padding: var(--padding-base);
+    }
+    ```
+- **Selectores Avanzados:**
+  - Uso de pseudo-clases (`:nth-child()`, `:hover`, `:focus`).
+  - Pseudo-elementos (`::before`, `::after`).
+  - Ejemplo:
+    ```css
+    .lista li:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+    ```
+
+---
+
+### Filmina 5: Animaciones, Transiciones y Transformaciones
+- **Transiciones:**
+  - Aplicar cambios suaves en propiedades:
+    ```css
+    .caja {
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .caja:hover {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    ```
+- **Animaciones y Keyframes:**
+  - Definir animaciones personalizadas:
+    ```css
+    @keyframes mover {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(100px); }
+    }
+    .animado {
+      animation: mover 2s infinite alternate;
+    }
+    ```
+
+---
+
+### Filmina 6: Introducción a Preprocesadores (SASS/LESS)
+- **¿Qué son los Preprocesadores?**
+  - Herramientas que permiten escribir CSS de manera más dinámica y estructurada.
+- **Ventajas de SASS/LESS:**
+  - Uso de variables, anidamiento, mixins y funciones.
+  - Mejora en la organización del código.
+- **Ejemplo SASS:**
+  ```scss
+  $color-base: #e74c3c;
+  .boton {
+    background-color: $color-base;
+    &:hover {
+      background-color: darken($color-base, 10%);
+    }
+  }
+  ```
+- **Compilación:**
+  - Introducción breve a herramientas de compilación (por ejemplo, Node-sass, Prepros).
+
+---
+
+### Filmina 7: Ejemplos Prácticos en Vivo
+- **Demostración en Vivo:**
+  - Crear un layout responsivo utilizando CSS Grid y Flexbox.
+  - Aplicar variables y animaciones avanzadas para dar dinamismo al diseño.
+  - Mostrar el flujo de trabajo de un preprocesador (SASS): edición, compilación y aplicación de estilos.
+- **Código de Ejemplo:**
+  - Mostrar fragmentos en el editor y ver el resultado en el navegador en tiempo real.
+
+---
+
+### Filmina 8: Cierre y Preguntas
+- **Resumen de Conceptos:**
+  - Repaso de variables, selectores avanzados, animaciones y preprocesadores.
+  - Ventajas de utilizar técnicas avanzadas para lograr un diseño moderno y responsivo.
+- **Preguntas y Respuestas:**
+  - Espacio para aclarar dudas y compartir experiencias sobre la implementación.
+
+---
+
+### Filmina 9: Recursos y Bibliografía
+- **Documentación Oficial:**
+  - [MDN Web Docs – CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+  - [SASS Documentation](https://sass-lang.com/documentation)
+- **Tutoriales y Ejercicios:**
+  - Videos en YouTube sobre Flexbox, Grid, animaciones y SASS.
+  - Recursos en CSS-Tricks y freeCodeCamp para animaciones avanzadas y preprocesadores.
+- **Enlaces Recomendados:**
+  - [Flexbox Froggy](https://flexboxfroggy.com/) y [Grid Garden](https://cssgridgarden.com/) para práctica interactiva.
+
+---
+
+### Filmina 10: Actividad Práctica – Proyecto de Estilizado Moderno
+- **Nombre de la Actividad:** Proyecto de Estilizado Moderno
+- **Duración:** 30 minutos
+- **Descripción:**
+  - Los estudiantes desarrollarán una página web simple que utilice:
+    - Variables CSS para definir un tema visual.
+    - Layout responsivo con Flexbox o Grid.
+    - Animaciones (hover, transiciones) para interacciones dinámicas.
+    - Opcionalmente, usarán un preprocesador (SASS o LESS) para organizar y compilar estilos.
+  - **Tareas:**
+    - Diseñar un layout atractivo.
+    - Implementar efectos interactivos y optimizar el código.
+    - Utilizar DevTools para inspeccionar y ajustar el diseño.
+- **Dinámica:**
+  - Trabajo individual o en pequeños grupos.
+  - Presentación y discusión de resultados, destacando ventajas y desafíos.
+
+---
+
+### Filmina 11: Consideraciones Finales
+- **Aspectos a Reforzar:**
+  - La integración de técnicas avanzadas de CSS para mejorar la experiencia visual.
+  - La utilidad de los preprocesadores para la mantenibilidad del código.
+  - La importancia de experimentar y adaptar diseños a diferentes dispositivos.
+- **Próximos Pasos:**
+  - Continuar practicando y aplicando estos conocimientos en proyectos reales.
+  - Investigar nuevas tendencias en diseño web y herramientas emergentes.
+
+---
+
+Estas dos clases adicionales amplían y profundizan en los contenidos teóricos y prácticos de HTML5 y CSS3, permitiendo a los estudiantes avanzar hacia un desarrollo web moderno, accesible y visualmente atractivo.
