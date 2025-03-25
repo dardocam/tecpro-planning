@@ -131,7 +131,8 @@ El proyecto abarca:
 - **Fase de Planificación:** 10/02/2025
 - **Instalación Física:** 17/02/2025
 - **Configuración y Pruebas:** 24/02/2025
-- **Capacitación y Puesta en Marcha:** 31/02/2025
+- **Puesta en Marcha:** 31/02/2025
+- **Capacitacion:**
 
 ### 10.2 Presupuesto
 - **Materiales:** Cableado, conectores, armarios y herramientas.
