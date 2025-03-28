@@ -635,3 +635,34 @@ En PHP moderno, la **sanitización efectiva contra inyección SQL** se logra con
 4. **Configuración robusta** del entorno.  
 
 **No existe una solución mágica**: La combinación de estas prácticas reduce el riesgo a niveles insignificantes, protegiendo tanto los datos como la integridad de tu aplicación.
+
+
+---
+
+'/^(?=.*[A-Z])(?=.*\d).{8,}$/'
+
+Esta expresión regular se usa comúnmente para validar contraseñas u otros datos donde se requieren ciertas condiciones de seguridad. Desglosemos cada parte:
+
+- **/^ ... $/**:  
+  - `^` indica el inicio de la cadena.  
+  - `$` indica el final de la cadena.  
+  Esto significa que toda la cadena completa debe cumplir con las condiciones definidas.
+
+- **(?=.*[A-Z])**:  
+  - Este es un *lookahead* positivo que busca, sin consumir caracteres, la existencia de al menos una letra mayúscula en cualquier parte de la cadena.  
+  - La parte `.*` permite que haya cualquier cantidad de caracteres (incluido ninguno) antes de encontrar una letra mayúscula (`[A-Z]`).
+
+- **(?=.*\d)**:  
+  - Similar al anterior, este *lookahead* verifica que en la cadena exista al menos un dígito (`\d` representa cualquier número del 0 al 9).
+
+- **.{8,}**:  
+  - El `.` coincide con cualquier carácter (excepto saltos de línea, dependiendo de la configuración).  
+  - `{8,}` indica que debe haber **al menos 8 caracteres** en total.
+
+En conjunto, la expresión asegura que la cadena:
+- Empiece y termine sin caracteres extra que no cumplan la regla.
+- Contenga **al menos una letra mayúscula**.
+- Contenga **al menos un dígito**.
+- Tenga **una longitud mínima de 8 caracteres**.
+
+Esta combinación de condiciones es útil para reforzar la complejidad de una contraseña. Cada parte del patrón colabora para asegurarse de que se cumplan los requisitos de seguridad definidos.
