@@ -506,4 +506,132 @@ echo htmlspecialchars($texto, ENT_QUOTES, 'UTF-8');
 - **Garantiza integridad** en la renderización de contenido.  
 - **Debe usarse sistemáticamente** al imprimir datos dinámicos en HTML.  
 
-**Nota final:** Siempre combine esta función con otras prácticas como validación de entrada, prepared statements y CSP (Content Security Policy) para una defensa en profundidad.
+---
+
+**Explicación Profesional: Sanitización contra Inyección SQL en PHP Actual**  
+La **inyección SQL** es una vulnerabilidad crítica que permite a atacantes ejecutar consultas maliciosas en tu base de datos. En PHP moderno, la prevención requiere un enfoque proactivo y estructurado. Aquí las estrategias clave:
+
+---
+
+### **1. Sentencias Preparadas (Prepared Statements)**  
+**Mecanismo de Defensa Principal:**  
+Las sentencias preparadas separan el código SQL de los datos, neutralizando la inyección. Se implementan mediante **PDO** (PHP Data Objects) o **MySQLi**.  
+
+#### **Ejemplo con PDO:**  
+```php
+// Conexión a BD con PDO (usar excepciones para errores)
+$pdo = new PDO('mysql:host=localhost;dbname=test;charset=utf8mb4', 'user', 'pass', [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_EMULATE_PREPARES => false // Desactiva preparación emulada
+]);
+
+// Consulta con placeholder
+$stmt = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email");
+$stmt->execute(['email' => $_POST['email']]);
+$resultados = $stmt->fetchAll();
+```  
+
+#### **Ejemplo con MySQLi:**  
+```php
+$mysqli = new mysqli("localhost", "user", "pass", "test");
+$stmt = $mysqli->prepare("SELECT * FROM usuarios WHERE email = ?");
+$stmt->bind_param("s", $_POST['email']); // "s" = string
+$stmt->execute();
+```  
+
+**Ventajas:**  
+- **Inmuniza** contra inyección al enlazar parámetros de forma segura.  
+- **Mejora el rendimiento** al reutilizar consultas preparadas.  
+
+---
+
+### **2. Evitar Prácticas Obsoletas y Riesgosas**  
+#### **Funciones Desaconsejadas:**  
+- `mysql_*` (extensión eliminada en PHP 7+).  
+- `mysqli_real_escape_string()`:  
+  - Solo útil si se combina con comillas en la consulta y el charset correcto.  
+  - **No es suficiente para todos los casos** (ej.: cláusula `LIKE` o `ORDER BY`).  
+
+#### **Código Vulnerable vs. Seguro:**  
+```php
+// ¡VULNERABLE! (concatenación directa)
+$query = "SELECT * FROM usuarios WHERE id = " . $_GET['id'];
+$result = $mysqli->query($query);
+
+// SEGURO (prepared statement)
+$stmt = $mysqli->prepare("SELECT * FROM usuarios WHERE id = ?");
+$stmt->bind_param("i", $_GET['id']); // "i" = integer
+```  
+
+---
+
+### **3. Validación de Entradas**  
+**Complemento (no reemplazo) a las Sentencias Preparadas:**  
+- **Filtra el tipo de dato esperado:**  
+  ```php
+  $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
+  if ($id === false) {
+      die("ID inválido");
+  }
+  ```  
+- **Usa "lista blanca"** para campos dinámicos (ej.: ordenar por columna):  
+  ```php
+  $columnasPermitidas = ['nombre', 'fecha_registro'];
+  $orden = in_array($_GET['orden'], $columnasPermitidas) ? $_GET['orden'] : 'id';
+  $query = "SELECT * FROM usuarios ORDER BY $orden";
+  ```  
+
+---
+
+### **4. ORMs y Query Builders**  
+**Capa de Abstracción Segura:**  
+Herramientas como **Eloquent (Laravel)**, **Doctrine**, o **Laminas Db** generan consultas parametrizadas automáticamente.  
+
+#### **Ejemplo con Eloquent:**  
+```php
+$usuarios = Usuario::where('email', $_POST['email'])->get();
+```  
+
+**Beneficios:**  
+- Reducen código manual y errores.  
+- Ofrecen métodos fluidos para consultas complejas.  
+
+---
+
+### **5. Configuración del Servidor y PHP**  
+- **Charset de la Conexión:**  
+  - Siempre usa `utf8mb4` (soporta emojis y evita caracteres corruptos).  
+  ```php
+  $pdo = new PDO('mysql:host=...;charset=utf8mb4', ...);
+  ```  
+- **Manejo de Errores:**  
+  - **No muestres errores SQL en producción:**  
+    ```php
+    ini_set('display_errors', 0);
+    ```  
+  - Registra errores en un archivo seguro:  
+    ```php
+    ini_set('log_errors', 1);
+    ini_set('error_log', '/ruta/segura/php-errors.log');
+    ```  
+
+---
+
+### **6. Defensa en Profundidad**  
+- **Permisos de la BD:**  
+  - Usa un usuario de BD con privilegios mínimos (solo `SELECT`, `INSERT`, etc., necesarios).  
+- **Actualizaciones:**  
+  - Mantén PHP, el servidor de BD y las bibliotecas actualizadas.  
+- **Firewalls/WAFs:**  
+  - Implementa un Web Application Firewall (ej.: ModSecurity) para bloquear patrones de ataque conocidos.  
+
+---
+
+### **Conclusión**  
+En PHP moderno, la **sanitización efectiva contra inyección SQL** se logra con:  
+1. **Sentencias preparadas** (PDO/MySQLi) como estándar absoluto.  
+2. **Validación estricta** de entradas.  
+3. **ORMs** para abstracción segura.  
+4. **Configuración robusta** del entorno.  
+
+**No existe una solución mágica**: La combinación de estas prácticas reduce el riesgo a niveles insignificantes, protegiendo tanto los datos como la integridad de tu aplicación.
