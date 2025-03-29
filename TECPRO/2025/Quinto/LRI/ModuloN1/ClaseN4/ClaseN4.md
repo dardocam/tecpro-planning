@@ -24,14 +24,11 @@
 
 ---
 
-A continuación se presenta un conjunto de filminas (slides) estructuradas profesionalmente para la **Clase 4 – Direccionamiento IP y Subnetting Básico**. La clase está dividida en 40 minutos de teoría y 40 minutos de práctica, permitiendo a los estudiantes entender la estructura de las direcciones IPv4, el uso de máscaras de subred y aplicar ejercicios prácticos de cálculo de subredes.
-
----
 
 ### Filmina 1: Portada
 - **Título:** Clase 4 – Direccionamiento IP y Subnetting Básico
 - **Subtítulo:** Comprendiendo IPv4, máscaras de subred y conceptos de red y host
-- **Instructor:** [Nombre del Instructor]
+- **Profesor:** Dardo Camaño
 - **Fecha:** [Fecha de la Clase]
 
 ---
