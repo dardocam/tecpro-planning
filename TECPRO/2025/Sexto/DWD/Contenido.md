@@ -24,74 +24,73 @@
   - **Actividades:**  
     - Ejercicios prácticos de asignación y manipulación de variables.
 
-- **Semana 2: Estructuras de Control – Condicionales**  
+- **Clase 3: Estructuras de Control – Condicionales**  
   - **Temas:**  
     - Uso de `if`, `else`, `elseif` y `switch` para la toma de decisiones.  
   - **Actividades:**  
     - Resolución de ejercicios de validación y condiciones lógicas.
 
-- **Semana 3: Estructuras de Repetición – Bucles**  
+- **Clase 4: Estructuras de Repetición – Bucles**  
   - **Temas:**  
     - Uso de `for`, `while`, `do-while` y `foreach` en arrays.  
   - **Actividades:**  
     - Creación de scripts que generen tablas, sumatorias y repitan tareas.
 
-- **Semana 4: Funciones en PHP**  
+- **Clase 5: Funciones en PHP**  
   - **Temas:**  
     - Creación y uso de funciones, parámetros, valores de retorno y alcance de variables.  
   - **Actividades:**  
     - Ejercicios de funciones para cálculos y modularización de código.
 
-- **Semana 5: Manejo de Arrays y Manipulación de Cadenas**  
+- **Clase 6: Manejo de Arrays y Manipulación de Cadenas**  
   - **Temas:**  
     - Arrays indexados y asociativos, y funciones básicas de manipulación.  
     - Operaciones con cadenas de texto (búsqueda, reemplazo, concatenación).  
   - **Actividades:**  
     - Ejercicios prácticos para crear y procesar estructuras de datos.
 
-- **Semana 6: Formularios HTML y Uso de Superglobales**  
+- **Clase 7: Formularios HTML y Uso de Superglobales**  
   - **Temas:**  
     - Creación de formularios en HTML y métodos GET/POST.  
     - Uso de superglobales (`$_GET`, `$_POST`, `$_SERVER`) en PHP.  
   - **Actividades:**  
     - Desarrollo de formularios simples que capturen y procesen datos.
 
-- **Semana 7: Validación y Sanitización de Datos**  
+- **Clase 8: Validación y Sanitización de Datos**  
   - **Temas:**  
     - Técnicas de validación de formularios y sanitización de entradas.  
     - Manejo de errores y retroalimentación al usuario.  
   - **Actividades:**  
     - Implementación de filtros y validaciones en formularios.
 
-- **Semana 8: Gestión de Sesiones y Cookies**  
+- **Clase 9: Gestión de Sesiones y Cookies**  
   - **Temas:**  
     - Inicio y manejo de sesiones (`session_start()`, `$_SESSION`) y gestión de cookies.  
   - **Actividades:**  
     - Desarrollo de una funcionalidad simple de login utilizando sesiones.
 
-- **Semana 10: Introducción a Bases de Datos y SQL**  
+- **Clase 10: Introducción a Bases de Datos y SQL**  
   - **Temas:**  
     - Conceptos básicos de bases de datos relacionales y lenguaje SQL (SELECT, INSERT, UPDATE, DELETE).  
     - Diseño básico de una base de datos.  
   - **Actividades:**  
     - Ejercicios prácticos utilizando phpMyAdmin o similar para crear y manipular bases de datos.
 
-- **Semana 11: Conexión de PHP con Bases de Datos**  
+- **Clase 11: Conexión de PHP con Bases de Datos**  
   - **Temas:**  
     - Conexión a bases de datos usando mysqli (o PDO).  
     - Ejecución y manejo de consultas.  
   - **Actividades:**  
     - Desarrollo de scripts que conecten y realicen operaciones CRUD en la base de datos.
 
-- **Semana 12: Desarrollo de una Aplicación CRUD Básica**  
+- **Clase 12: Desarrollo de una Aplicación CRUD Básica**  
   - **Temas:**  
     - Integración de formularios, PHP y bases de datos para gestionar registros.  
     - Uso de `include` y `require` para modularizar el código.  
   - **Actividades:**  
     - Desarrollo guiado de un mini sistema (por ejemplo, gestión de contactos o productos).
 
-
-- **Semana 13: Introducción a la Programación Orientada a Objetos (OOP) en PHP**  
+- **Clase 13: Introducción a la Programación Orientada a Objetos (OOP) en PHP**  
   - **Temas:**  
     - Conceptos de clases, objetos, propiedades, métodos, constructores, herencia y encapsulación.  
   - **Actividades:**  
