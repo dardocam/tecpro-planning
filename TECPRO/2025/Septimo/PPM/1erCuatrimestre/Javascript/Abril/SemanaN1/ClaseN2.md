@@ -196,3 +196,105 @@ A continuación se presenta un conjunto de filminas (slides) estructuradas profe
   - Recapitular los conceptos esenciales y resolver preguntas, consolidando el aprendizaje.
 
 ---
+
+Para abordar esta pregunta de manera profesional, debemos analizar tres aspectos clave: el alcance léxico en JavaScript, el comportamiento de `let` vs. `var`, y las técnicas para aislar variables. Aquí está el desglose:
+
+---
+
+### **1. Alcance léxico y closures**
+Las funciones en JavaScript capturan variables de su entorno léxico (donde fueron definidas, no donde se ejecutan). Esto explica por qué variables declaradas con `let` dentro de un bloque son accesibles en funciones internas:
+
+```javascript
+function ejemplo() {
+  if (true) {
+    let x = 10; // Alcance de bloque
+    var y = 20; // Alcance de función
+
+    function mostrar() {
+      console.log(x); // 10 (accede al bloque padre)
+      console.log(y); // 20 (accede a la función padre)
+    }
+
+    mostrar();
+  }
+}
+```
+
+- **`let` en bloques**: La variable `x` existe solo dentro del bloque `if`, pero `mostrar()` la accede porque la función se define en el mismo bloque (closure).
+- **`var` en funciones**: La variable `y` es accesible en toda la función `ejemplo()`.
+
+---
+
+### **2. Diferencias clave entre `let` y `var`**
+
+| Característica              | `let`                          | `var`                      |
+|------------------------------|--------------------------------|----------------------------|
+| **Alcance**                  | Bloque (`{}`)                  | Función                    |
+| **Hoisting**                 | No inicializado (TDZ*)         | Inicializado como `undefined` |
+| **Re-declaración**           | Error                          | Permitido                  |
+| **Contexto global**          | No es propiedad de `window`    | Sí es propiedad de `window` |
+
+*TDZ: Temporal Dead Zone (no accesible antes de su declaración).
+
+---
+
+### **3. Ejemplo crítico: Bucles y closures**
+La diferencia es evidente en bucles con funciones asíncronas:
+
+```javascript
+// Con var (problema clásico)
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i)); // Siempre imprime 3
+}
+
+// Con let (solución)
+for (let j = 0; j < 3; j++) {
+  setTimeout(() => console.log(j)); // 0, 1, 2
+}
+```
+
+- **`var`**: Hay una sola variable `i` compartida por todas las iteraciones.
+- **`let`**: Crea una nueva variable `j` en cada iteración (aislamiento automático).
+
+---
+
+### **4. ¿Cómo aislar variables del contexto de funciones?**
+
+#### **a. Bloques con `let`/`const`**
+Agrupar código en bloques `{}` para limitar el alcance:
+```javascript
+function ejemplo() {
+  // Variables no accesibles fuera del bloque
+  {
+    let a = 1;
+    const b = 2;
+  }
+  console.log(a); // Error: a is not defined
+}
+```
+
+#### **b. IIFE (Immediately Invoked Function Expression)**
+Crea un ámbito nuevo para variables con `var`:
+```javascript
+(function() {
+  var privada = "Solo aquí";
+})();
+console.log(privada); // Error
+```
+
+#### **c. Módulos ES6**
+Cada módulo tiene su propio ámbito:
+```javascript
+// archivo.js
+let secreto = "🤫";
+export function mostrar() { console.log(secreto); }
+```
+
+---
+
+### **5. Conclusión**
+- **`let`** aísla variables a bloques, pero las funciones internas pueden acceder a ellas mediante closures.
+- **`var`** es menos predecible por su alcance funcional y hoisting.
+- Para aislamiento avanzado, usa **bloques**, **IIFE**, o **módulos**.
+
+Este entendimiento es crucial para evitar bugs de alcance y gestionar correctamente el estado en aplicaciones complejas.
