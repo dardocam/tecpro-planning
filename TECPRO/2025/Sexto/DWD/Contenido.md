@@ -1,13 +1,13 @@
-## **Fase 1: Desarrollo de aplicaciones Web utilizando los lenguajes PHP y MySQL**
+## **Módulo N1: Desarrollo de aplicaciones Web utilizando los lenguajes PHP y MySQL**
 
-### **Objetivos Generales de la Fase 1**
+### **Objetivos Generales**
 - Conocer la arquitectura del desarrollo web y el rol de PHP en el entorno back-end.
 - Dominar la sintaxis, estructuras de control, funciones, manejo de arrays y manipulación de cadenas en PHP.
 - Comprender y aplicar el procesamiento de formularios, uso de superglobales y técnicas de validación y sanitización de datos.
 - Integrar PHP con bases de datos MySQL para desarrollar aplicaciones CRUD.
 - Implementar conceptos de seguridad en el desarrollo web y una primera aproximación a la Programación Orientada a Objetos (OOP).
 
-### **Cronograma Semanal y Contenidos**
+### **Cronograma y Contenidos**
 
 - **Clase 1: Introducción al Desarrollo Web y PHP**  
   - **Temas:**  
@@ -99,7 +99,7 @@
 
 
 ---
-## **Fase 2: Desarrollo Proyecto Integrador "Día del Programador"**
+## **Módulo N2: Desarrollo Proyecto Integrador "Día del Programador"**
 
 ### **Objetivos Generales de la Fase 2**
 - Aplicar de forma integral y autónoma los conocimientos adquiridos durante la fase de contenidos.
@@ -126,17 +126,17 @@
     - Configuración conjunta del entorno de desarrollo en aula (servidores locales, repositorios de código, control de versiones).  
     - Creación de la estructura base del proyecto (plantillas, archivos de configuración y conexión a la base de datos).
 
-- **Semana 1: Desarrollo de Funcionalidades Básicas**  
+- **Clase 4: Desarrollo de Funcionalidades Básicas**  
   - **Actividades:**  
     - Implementación de la estructura principal del proyecto: páginas base, navegación y conexión inicial a la base de datos.  
     - Creación de formularios y primeras pruebas de captura y validación de datos.
 
-- **Semana 2: Desarrollo de Funcionalidades Intermedias**  
+- **Clase 5: Desarrollo de Funcionalidades Intermedias**  
   - **Actividades:**  
     - Implementación de las operaciones CRUD en los módulos clave del proyecto.  
     - Integración de manejo de sesiones, cookies y funcionalidades de login/autenticación.
 
-- **Semana 3: Desarrollo Avanzado y Aplicación de Buenas Prácticas**  
+- **Clase 6: Desarrollo Avanzado y Aplicación de Buenas Prácticas**  
   - **Actividades:**  
     - Incorporación de medidas de seguridad (uso de consultas preparadas, sanitización de entradas).  
     - Refactorización y aplicación de conceptos de OOP para mejorar la estructura del código.  
