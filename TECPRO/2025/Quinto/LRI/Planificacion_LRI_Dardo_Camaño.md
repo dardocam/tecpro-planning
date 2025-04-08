@@ -225,8 +225,6 @@ desarrollo de los conocimientos y las aptitudes requeridas a nivel práctico.
 y hardware de redes en el laboratorio
 
 
-
-
 ## RECURSOS
 - Filminas 
 - Laboratorio
@@ -250,6 +248,7 @@ y hardware de redes en el laboratorio
 | ABRIL        | Módulo 1        | Fundamentos de Redes Locales                             | Clase expositiva + debate grupal + prácticos en máquina       |
 | MAYO         | Módulo 2        | Introducción a los Microcontroladores y Conectividad     | Clase expositiva + debate grupal + prácticos en máquina       |
 | JUNIO        | Módulo 3        | Integración con Node.js y Desarrollo del Servidor IoT    | Clase expositiva + debate grupal + prácticos en máquina       |
+| JULIO        | Módulo 3        | Integración con Node.js y Desarrollo del Servidor IoT    | Clase expositiva + debate grupal + prácticos en máquina       |
 | AGOSTO       | Módulo 4        | Proyecto Integrador – Articulación con “Proyecto de 6to año"    | Clase expositiva + debate grupal + prácticos en máquina       |
 | SEPTIEMBRE   | Módulo 4        | Proyecto Integrador – Articulación con “Proyecto de 6to año"    | Clase expositiva + debate grupal + prácticos en máquina       |
 | OCTUBRE      | Módulo 5        | Proyecto Integrador – Expo técnica                              | Clase expositiva + debate grupal + prácticos en máquina       |

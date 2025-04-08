@@ -253,3 +253,143 @@ A continuación se presentan dos nuevas clases, ampliando tanto el contenido te�
   - Ejemplos en CodePen y GitHub de sitios accesibles y multimedia.
 
 ---
+
+
+# Estructura Semántica en HTML5: Teoría y Práctica Profesional
+
+---
+
+## **Introducción a la Semántica en HTML5**
+La semántica en HTML5 se refiere al uso de etiquetas que **definen el significado del contenido**, no solo su presentación visual. A diferencia de elementos genéricos como `<div>` o `<span>`, las etiquetas semánticas describen su propósito tanto a navegadores como a desarrolladores y herramientas como lectores de pantalla o motores de búsqueda.
+
+---
+
+## **Etiquetas Clave y su Uso**
+
+### 1. `<header>`
+- **Función**: Define el encabezado de una página o sección.  
+- **Contenido típico**:  
+  - Logotipos.  
+  - Títulos principales (`<h1>`).  
+  - Menús contextuales o barras de búsqueda (en combinación con `<nav>`).  
+- **Ejemplo**:  
+  ```html
+  <header>
+    <img src="logo.png" alt="Logo de la empresa">
+    <h1>Bienvenido a Mi Sitio Web</h1>
+  </header>
+  ```
+
+### 2. `<nav>`
+- **Función**: Contiene **enlaces de navegación principales**.  
+- **Buenas prácticas**:  
+  - Usar para menús globales (ej: inicio, servicios, contacto).  
+  - No incluir todos los enlaces de la página, solo los esenciales.  
+- **Ejemplo**:  
+  ```html
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  ```
+
+### 3. `<section>`
+- **Función**: Agrupa contenido temáticamente relacionado.  
+- **Diferencias clave**:  
+  - No es un contenedor genérico (para eso se usa `<div>`).  
+  - Debe incluir un encabezado (`<h2>`, `<h3>`, etc.).  
+  - Se usa para partes como "Noticias", "Equipo", o capítulos de un artículo.  
+- **Ejemplo**:  
+  ```html
+  <section>
+    <h2>Nuestros Servicios</h2>
+    <p>Ofrecemos soluciones digitales innovadoras...</p>
+  </section>
+  ```
+
+### 4. `<footer>`
+- **Función**: Pie de página de la web o de una sección.  
+- **Contenido común**:  
+  - Información de contacto.  
+  - Enlaces legales (políticas de privacidad).  
+  - Redes sociales o créditos.  
+- **Ejemplo**:  
+  ```html
+  <footer>
+    <p>&copy; 2023 Mi Empresa</p>
+    <a href="mailto:info@miempresa.com">Contacto</a>
+  </footer>
+  ```
+
+---
+
+## **Beneficios de la Estructura Semántica**
+
+### 1. **Accesibilidad Mejorada**
+- Lectores de pantalla interpretan la estructura para usuarios con discapacidad visual.  
+- Ejemplo: Un `<nav>` permite saltar directamente al menú principal.
+
+### 2. **Optimización para SEO**
+- Motores de búsqueda priorizan contenido bien estructurado.  
+- Etiquetas como `<header>` o `<section>** ayudan a identificar jerarquías y temas relevantes.
+
+### 3. **Mantenimiento Simplificado**
+- Código más legible y autodocumentado.  
+- Ejemplo: Encontrar un `<footer>` es más eficiente que buscar un `<div id="footer">`.
+
+### 4. **Responsive Design Eficiente**
+- Facilita la adaptación a dispositivos móviles al asociar estilos CSS a secciones semánticas.
+
+---
+
+## **Ejemplo Práctico: Estructura Completa**
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Sitio Semántico</title>
+</head>
+<body>
+    <header>
+        <h1>Mi Empresa Tech</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Últimas Noticias</h2>
+        <article>
+            <h3>Lanzamiento del Nuevo Software</h3>
+            <p>Descubre nuestras innovadoras herramientas...</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Mi Empresa Tech</p>
+        <nav>
+            <a href="#privacidad">Política de Privacidad</a>
+        </nav>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+## **Mejores Prácticas**
+1. **Evitar el abuso de `<section>`**: No usar como reemplazo de `<div>`.  
+2. **Jerarquía de encabezados**: Mantener un orden lógico (ej: `<h1>` seguido de `<h2>`, no de `<h3>`).  
+3. **Validación**: Usar herramientas como [W3C Validator](https://validator.w3.org/) para verificar la estructura.
+
+---
+
+## **Conclusión**
+La semántica en HTML5 no es solo una tendencia, sino un estándar para crear sitios **accesibles, eficientes y escalables**. Su implementación mejora la experiencia de usuario y posicionamiento web, al tiempo que facilita el trabajo en equipo.
