@@ -249,4 +249,179 @@ A continuación se presenta un conjunto de filminas (slides) estructuradas profe
 
 ---
 
-Esta estructura de filminas ofrece una visión completa sobre el uso de arreglos en JavaScript, combinando teoría, ejemplos en vivo y una actividad práctica para que los estudiantes dominen las técnicas de manipulación y transformación de datos.
+# Mas ejemplos
+
+# Métodos Avanzados de Arreglos en JavaScript: Exprimiendo la potencia funcional
+
+## 1. `map()`: Transformación de elementos  
+**Definición**: Crea un nuevo arreglo aplicando una función a cada elemento del original, sin modificarlo.  
+**Sintaxis**:  
+```javascript
+const nuevoArray = array.map((elemento, índice, arregloOriginal) => { ... });
+```  
+**Retorna**: Nuevo arreglo con la misma longitud.  
+
+**Ejemplos**:  
+```javascript
+// Duplicar números
+const números = [2, 4, 6];
+const dobles = números.map(num => num * 2); // [4, 8, 12]
+
+// Extraer propiedades de objetos
+const usuarios = [
+  { id: 1, nombre: 'Ana' },
+  { id: 2, nombre: 'Luis' }
+];
+const nombres = usuarios.map(usuario => usuario.nombre); // ['Ana', 'Luis']
+```
+
+---
+
+## 2. `filter()`: Selección condicional  
+**Definición**: Filtra elementos que cumplan una condición, generando un nuevo arreglo.  
+**Sintaxis**:  
+```javascript
+const filtrado = array.filter((elemento, índice, arregloOriginal) => { ... });
+```  
+**Retorna**: Nuevo arreglo (posiblemente vacío).  
+
+**Ejemplos**:  
+```javascript
+// Números pares
+const números = [1, 2, 3, 4];
+const pares = números.filter(num => num % 2 === 0); // [2, 4]
+
+// Usuarios activos
+const usuarios = [
+  { id: 1, activo: true },
+  { id: 2, activo: false }
+];
+const activos = usuarios.filter(usuario => usuario.activo); // [{ id: 1, activo: true }]
+```
+
+---
+
+## 3. `reduce()`: Reducción a un valor único  
+**Definición**: Acumula elementos en un único valor mediante una función reductora.  
+**Sintaxis**:  
+```javascript
+const resultado = array.reduce((acumulador, elemento, índice, arregloOriginal) => { ... }, valorInicial);
+```  
+**Retorna**: Cualquier tipo de dato (número, objeto, arreglo, etc).  
+
+**Ejemplos**:  
+```javascript
+// Suma de elementos
+const números = [5, 10, 15];
+const suma = números.reduce((acc, num) => acc + num, 0); // 30
+
+// Conteo de ocurrencias
+const palabras = ['manzana', 'banana', 'manzana'];
+const frecuencia = palabras.reduce((acc, palabra) => {
+  acc[palabra] = (acc[palabra] || 0) + 1;
+  return acc;
+}, {}); // { manzana: 2, banana: 1 }
+
+// Máximo valor (con manejo de arreglos vacíos)
+const máximo = números.reduce((acc, num) => Math.max(acc, num), -Infinity);
+```
+
+---
+
+## 4. `find()`: Búsqueda de elementos  
+**Definición**: Retorna el **primer elemento** que cumple una condición.  
+**Sintaxis**:  
+```javascript
+const encontrado = array.find((elemento, índice, arregloOriginal) => { ... });
+```  
+**Retorna**: Elemento encontrado o `undefined`.  
+
+**Ejemplo**:  
+```javascript
+const inventario = [
+  { nombre: 'manzana', stock: 5 },
+  { nombre: 'banana', stock: 0 }
+];
+const disponible = inventario.find(item => item.stock > 0); 
+// { nombre: 'manzana', stock: 5 }
+```
+
+---
+
+## 5. `forEach()`: Iteración con efectos secundarios  
+**Definición**: Ejecuta una función por cada elemento. **No retorna** un valor.  
+**Sintaxis**:  
+```javascript
+array.forEach((elemento, índice, arregloOriginal) => { ... });
+```  
+**Retorna**: `undefined`.  
+
+**Ejemplo**:  
+```javascript
+// Modificar objetos (¡cuidado con las mutaciones!)
+const productos = [
+  { nombre: 'Camisa', precio: 20 },
+  { nombre: 'Pantalón', precio: 30 }
+];
+productos.forEach(producto => producto.precio *= 1.1); // Aumenta precios 10%
+
+// Logging
+['a', 'b'].forEach((letra, índice) => console.log(`Índice ${índice}: ${letra}`));
+```
+
+---
+
+## 6. `some()`: Existencia condicional  
+**Definición**: Verifica si **al menos un elemento** cumple una condición.  
+**Sintaxis**:  
+```javascript
+const cumple = array.some((elemento, índice, arregloOriginal) => { ... });
+```  
+**Retorna**: `true` o `false`.  
+
+**Ejemplo**:  
+```javascript
+// Verificar si hay números negativos
+const temperaturas = [25, 12, -5, 8];
+const hayNegativos = temperaturas.some(temp => temp < 0); // true
+```
+
+---
+
+## 7. `every()`: Validación universal  
+**Definición**: Verifica si **todos los elementos** cumplen una condición.  
+**Sintaxis**:  
+```javascript
+const todosCumplen = array.every((elemento, índice, arregloOriginal) => { ... });
+```  
+**Retorna**: `true` o `false`.  
+
+**Ejemplo**:  
+```javascript
+// Validar campos requeridos
+const formulario = [
+  { campo: 'email', valor: 'test@example.com' },
+  { campo: 'nombre', valor: '' }
+];
+const válido = formulario.every(input => input.valor.trim() !== ''); // false
+```
+
+---
+
+## Buenas Prácticas y Consideraciones:  
+1. **Inmutabilidad**: `map`, `filter`, `reduce` retornan nuevos arreglos, preservando el original.  
+2. **Optimización**: Evita anidar múltiples métodos (ej: `map().filter()`) en arreglos grandes; considera `reduce` para operaciones complejas.  
+3. **Manejo de vacíos**: En `reduce`, provee un valor inicial para evitar errores en arreglos vacíos.  
+4. **Rendimiento**: `forEach` no es abortable; usa `for...of` con `break` si necesitas interrumpir la iteración.  
+
+```javascript
+// Ejemplo combinando métodos: Total de productos en stock
+const tiendas = [
+  { productos: [{ stock: 3 }, { stock: 5 }] },
+  { productos: [{ stock: 2 }] }
+];
+
+const totalStock = tiendas
+  .flatMap(tienda => tienda.productos)
+  .reduce((acc, producto) => acc + producto.stock, 0); // 10
+```
