@@ -11,7 +11,7 @@
 - Casos de uso:  
   - APIs REST, blogs, aplicaciones web simples.  
 
-**Visual**: Logo de F3 + captura de código simple.  
+
 
 ---
 
