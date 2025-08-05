@@ -1,7 +1,3 @@
-A continuación se presenta una ampliación profesional de cada uno de los puntos clave para gestionar el equipo de trabajo en el repositorio GitHub, acompañada de ejemplos prácticos:
-
----
-
 ## 1. Organización del Repositorio
 
 **Objetivo:**  
