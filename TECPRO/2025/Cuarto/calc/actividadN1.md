@@ -158,3 +158,10 @@ La **referencia relativa** es el comportamiento predeterminado de Excel.
 - Por ejemplo, si una fórmula en la celda C2 es =A2+B2 y se copia a la celda C3, la fórmula se convierte automáticamente en =A3+B3.
 
 - Este tipo de referencia es útil cuando se desea que la fórmula se adapte a diferentes filas o columnas al ser copiada
+
+
+En contraste, una **referencia absoluta** 
+- Siempre hace referencia a una celda específica en una ubicación fija, sin importar dónde se copie la fórmula.
+- Esto se logra añadiendo el símbolo de dólar ($) antes de la letra de la columna y el número de la fila, como $A$1.
+- Por ejemplo, si se tiene una fórmula =A2*$B$1 y se copia hacia abajo, la referencia $B$1 permanecerá constante, mientras que A2 cambiará a A3, A4, etc., manteniendo el valor de la celda B1 fijo en todos los cálculos.
+- Las referencias absolutas se utilizan cuando se necesita fijar un valor constante, como una tasa de impuesto o un precio unitario, en una fórmula.
