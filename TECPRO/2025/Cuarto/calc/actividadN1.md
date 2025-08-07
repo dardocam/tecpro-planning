@@ -119,7 +119,17 @@ En una sección al final (por ejemplo, fila 20), agrega:
   * 21%
 * Así evitas errores de tipeo.
 
----
+- ✅ Paso 2: Seleccionar la celda
+  Haz clic en la celda donde quieres que aparezca la lista desplegable (por ejemplo, B1).
+
+- ✅ Paso 3: Abrir Validación de datos
+  Ve a la pestaña Datos en la cinta de opciones.
+  Haz clic en Validación de datos (en el grupo "Herramientas de datos").
+- ✅ Paso 4: Configurar la lista
+  En la ventana que aparece:
+  En la pestaña Configuración, haz clic en el menú desplegable de Permitir y selecciona Lista.
+
+- En el campo Origen, escribe los valores separados por ():
 
 ## 📂 Resultado final (ejemplo visual)
 
@@ -165,3 +175,4 @@ En contraste, una **referencia absoluta**
 - Esto se logra añadiendo el símbolo de dólar ($) antes de la letra de la columna y el número de la fila, como $A$1.
 - Por ejemplo, si se tiene una fórmula =A2*$B$1 y se copia hacia abajo, la referencia $B$1 permanecerá constante, mientras que A2 cambiará a A3, A4, etc., manteniendo el valor de la celda B1 fijo en todos los cálculos.
 - Las referencias absolutas se utilizan cuando se necesita fijar un valor constante, como una tasa de impuesto o un precio unitario, en una fórmula.
+
