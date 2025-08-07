@@ -11,7 +11,7 @@
 
 ## 1. Resumen Ejecutivo
 
-Este proyecto propone la puesta en marcha de un servidor local basado en GNU/Linux (Debian) utilizando un equipo antiguo disponible en la institución. El servidor será empleado para alojar entornos de desarrollo de aplicaciones web y móviles para alumnos de 7mo año. Cabe destacar que la viabilidad de este proyecto está directamente relacionada con el éxito previo del proyecto de instalación de la **red cableada**, que proporciona la infraestructura de conectividad esencial.
+Este proyecto propone la puesta en marcha de un servidor local basado en GNU/Linux (Debian) utilizando un equipo antiguo disponible en la institución. El servidor será empleado para alojar entornos de desarrollo de aplicaciones web y móviles.
 
 ---
 
@@ -26,7 +26,7 @@ Este proyecto propone la puesta en marcha de un servidor local basado en GNU/Lin
 
 ## 3. Antecedentes
 
-El proyecto de red cableada implementado previamente en la EESTN3 fue fundamental para establecer una infraestructura confiable y segura. Gracias a ese despliegue, el servidor podrá integrarse desde el primer día, aprovechando la infraestructura física (cableado, switches, conectividad LAN) existente.
+El proyecto de red cableada implementado previamente en la institución fue fundamental para establecer una infraestructura confiable y segura. Gracias a ese despliegue, el servidor podrá integrarse desde el primer día, aprovechando la infraestructura física (cableado, switches, conectividad LAN) existente.
 
 ---
 
@@ -34,7 +34,7 @@ El proyecto de red cableada implementado previamente en la EESTN3 fue fundamenta
 
 ### 4.1 Objetivo General
 
-Instalar y configurar un servidor Debian en un equipo antiguo, optimizado para ser plataforma de desarrollo de aplicaciones web y móviles para alumnos de 7mo año de la institución.
+Instalar y configurar un servidor Debian en un equipo antiguo, optimizado para ser plataforma de desarrollo de aplicaciones web y móviles.
 
 ### 4.2 Objetivos Específicos
 
@@ -110,7 +110,6 @@ Instalar y configurar un servidor Debian en un equipo antiguo, optimizado para s
 * **Actualizaciones periódicas** (apt‑get update/upgrade).
 * **Backups diarios o semanales** de proyectos y configuraciones.
 * **Documentación activa**, diagramas de red, usuarios, licencias.
-* **Capacitación técnica** para docentes/tutores en uso y mantenimiento.
 
 ---
 
@@ -128,14 +127,3 @@ La instalación de un servidor local Debian en un equipo antiguo promueve la exp
 * **Historial de pruebas y logs**.
 
 ---
-
-¿Te gustaría que agreguemos un ejemplo de plantilla editable o un cronograma detallado en formato Word/LibreOffice?
-
-[1]: https://www.debian.org/doc/manuals/debian-handbook/installation.es.html?utm_source=chatgpt.com "Capítulo 4. Instalación"
-[2]: https://debian-handbook.info/browse/es-ES/stable/sect.installation-steps.html?utm_source=chatgpt.com "4.2. Instalación, paso a paso"
-[3]: https://alt72.com.ar/guia-para-instalar-un-servidor-web-con-linux-debian/?utm_source=chatgpt.com "Guía para instalar un servidor web con Linux Debian - ALT72 - Soporte Informatico Confiable"
-[4]: https://www.elseniordeloslinux.com/debian-server/?utm_source=chatgpt.com "Guía completa de configuración y optimización de un servidor Debian: Todo lo que necesitas saber - El Senior De Los Linux"
-[5]: https://www.debianchile.org/ethernet.html?utm_source=chatgpt.com "[man-es] Configuraci�n de la red Ethernet en Debian"
-[6]: https://es.wikipedia.org/wiki/Documentaci%C3%B3n_de_red?utm_source=chatgpt.com "Documentación de red"
-[7]: https://www.debian.org/doc/manuals/debian-handbook/sect.installation-steps.es.html?utm_source=chatgpt.com "4.2. Instalación, paso a paso"
-[8]: https://jugandoaseringeniero.wordpress.com/category/debian/?utm_source=chatgpt.com "Debian – Jugando a ejercer la Ingeniería"
