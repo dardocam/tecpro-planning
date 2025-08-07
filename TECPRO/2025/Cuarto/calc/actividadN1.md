@@ -1,3 +1,4 @@
+# Planillas de cálculo - Actividad N1
 ## 🧾 Paso a Paso: Crear una Hoja de Cálculo tipo Factura (desde cero)
 
 > Compatible con **Google Sheets**, **Excel**, y **LibreOffice Calc**
@@ -35,7 +36,8 @@ En fila 8, por ejemplo, escribe lo siguiente en cada columna:
 
 ### 📌 Paso 3: Cargar datos simulados
 
-Debajo del encabezado (fila 9 en adelante), completa algunos ejemplos:
+Debajo del encabezado (fila 9 en adelante), completa algunos ejemplos: 
+ - 📌   Asegurate de que cada celda tenga el formato de dato correcto
 
 | Producto | Cantidad | Precio Unitario | Subtotal  | Impuesto (%) |
 | -------- | -------- | --------------- | --------- | ------------ |
@@ -59,7 +61,7 @@ Arrastra hacia abajo según la cantidad de filas de productos.
 
 ---
 
-### 📌 Paso 5: Calcular el impuesto individual (columna F opcional)
+### 📌 Paso 5: Calcular el impuesto individual (columna F)
 
 Agrega una columna **F**: `Impuesto Total`
 Coloca la fórmula en **F9**:
@@ -147,3 +149,12 @@ Total impuestos: 892.5
 
 ---
 
+### 😙 Referencias
+
+La **referencia relativa** es el comportamiento predeterminado de Excel. 
+
+- Cuando se copia una fórmula que contiene referencias relativas, estas se ajustan automáticamente según la posición relativa de la celda que contiene la fórmula respecto a la celda referenciada.
+
+- Por ejemplo, si una fórmula en la celda C2 es =A2+B2 y se copia a la celda C3, la fórmula se convierte automáticamente en =A3+B3.
+
+- Este tipo de referencia es útil cuando se desea que la fórmula se adapte a diferentes filas o columnas al ser copiada
