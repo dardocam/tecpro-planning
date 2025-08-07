@@ -2,30 +2,11 @@
 # 🟦 **Clase 1: Presentación e Instalación del Entorno**
 
 
-## 📘 PARTE TEÓRICA (40 min)
+## 📘 PARTE TEÓRICA 
 
-### 🎯 1. Bienvenida e Introducción al Curso (10 min)
+### 🎯 1. Desarrollo Móvil 
 
-#### ✅ Contenido
-
-* Presentación del docente y estudiantes.
-* Expectativas del curso:
-
-  * ¿Qué aprenderán?
-  * ¿Qué se espera que entreguen?
-* Objetivo del Proyecto Final:
-
-  * Desarrollo de una app móvil funcional.
-  * Evaluación de componentes, navegación, conexión con datos, UI/UX.
-
-#### 🧠 Recurso Didáctico
-
-* Presentación con cronograma, unidades, entregables.
-* Muestra de una app desarrollada con React Native (video corto o demostración en dispositivo real).
-
----
-
-### 📱 2. Introducción al Desarrollo Móvil (10 min)
+### 📱 2. Introducción al Desarrollo Móvil 
 
 #### ✅ Contenido
 
@@ -46,13 +27,13 @@
 
 | Tipo de App  | Lenguaje       | Acceso nativo | Desempeño | Código compartido |
 | ------------ | -------------- | ------------- | --------- | ----------------- |
-| Nativa       | Swift, Kotlin  | ✅             | ✅         | ❌                 |
-| Híbrida      | HTML/CSS/JS    | ⚠️ limitado   | ⚠️        | ✅                 |
-| React Native | JavaScript/JSX | ✅             | ✅         | ✅                 |
+| Nativa       | Swift, Kotlin  | ✅            | ✅        | ❌                |
+| Híbrida      | HTML/CSS/JS    | ⚠️ limitado   | ⚠️        | ✅                |
+| React Native | JavaScript/JSX | ✅            | ✅        | ✅                |
 
 ---
 
-### 🧰 3. Herramientas del Entorno (10 min)
+### 🧰 3. Herramientas del Entorno 
 
 #### ✅ Contenido
 
@@ -70,7 +51,7 @@
 
 ---
 
-### 🌐 4. Flujo de trabajo con Expo (10 min)
+### 🌐 4. Flujo de trabajo con Expo
 
 #### ✅ Contenido
 
@@ -97,11 +78,11 @@ Expo Go (dispositivo real escanea el QR y ejecuta el código)
 
 ---
 
-## 🧪 PARTE PRÁCTICA (40 min)
+## 🧪 PARTE PRÁCTICA
 
-> 💡 *Objetivo: dejar a todos los estudiantes con el entorno completamente instalado y la estructura de proyecto funcionando.*
+> 💡 *Objetivo: Instalar el entorno de desarrollo y dejar la estructura de proyecto funcionando.*
 
-### 🛠 1. Instalación del Entorno (15 min)
+### 🛠 1. Instalación del Entorno
 
 #### 📝 Pasos guiados
 
@@ -140,7 +121,7 @@ Expo Go (dispositivo real escanea el QR y ejecuta el código)
 
 ---
 
-### 🧪 2. Crear primer proyecto con Expo (20 min)
+### 🧪 2. Crear primer proyecto con Expo
 
 #### 🎯 Objetivo
 
@@ -179,12 +160,12 @@ Crear una app "Hola Mundo" y visualizarla en un dispositivo real.
 
 ---
 
-### 🧪 3. Validación del Entorno (5 min)
+### 🧪 3. Validación del Entorno
 
 #### ✅ Checklist para cada estudiante
 
-| Elemento                        | Estado |
-| ------------------------------- | ------ |
+| Elemento                        | Estado   |
+| ------------------------------- | -------- |
 | Node.js instalado               | ✅ / ❌  |
 | Expo CLI funcionando            | ✅ / ❌  |
 | VSCode instalado y configurado  | ✅ / ❌  |

@@ -6,7 +6,7 @@ Comprender el concepto de **estado local** en React y cómo gestionarlo utilizan
 
 ---
 
-## 🧠 Parte Teórica (40 minutos)
+## 🧠 Parte Teórica 
 
 ### 1. ¿Qué es el estado en React? 
 
@@ -55,7 +55,7 @@ export default function App() {
 
 ---
 
-### 3. Estado vs Props (5 min)
+### 3. Estado vs Props 
 
 | Propiedad          | Estado (`useState`)  | Propiedades (`props`) |
 | ------------------ | -------------------- | --------------------- |
@@ -65,7 +65,7 @@ export default function App() {
 
 ---
 
-### 4. Renderizado reactivo (10 min)
+### 4. Renderizado reactivo 
 
 * Cuando se actualiza el estado con `setValor`, React vuelve a renderizar el componente para reflejar el nuevo estado.
 * Esta característica permite que la interfaz se mantenga sincronizada con los datos del usuario o del sistema.
@@ -78,7 +78,7 @@ export default function App() {
 
 ---
 
-## 💻 Parte Práctica (40 minutos)
+## 💻 Parte Práctica 
 
 > Requiere: Expo CLI y emulador o dispositivo real (mediante QR).
 

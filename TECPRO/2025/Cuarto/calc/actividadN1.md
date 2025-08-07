@@ -11,12 +11,12 @@
 
 En la parte superior, deja espacio para los datos del emisor y cliente:
 
-| A              | B                       |
-| -------------- | ----------------------- |
-| **Factura Nº** | `0001-000001`           |
-| **Fecha**      | `=TODAY()` (automático) |
-| **Cliente**    | `Nombre del cliente`    |
-| **CUIT/DNI**   | `Documento del cliente` |
+| A              | B                                   |
+| -------------- | ----------------------------------- |
+| **Factura Nº** | `0001-000001`                       |
+| **Fecha**      | `=TODAY()` o `=HOY()`  (automático) |
+| **Cliente**    | `Nombre del cliente`                |
+| **CUIT/DNI**   | `Documento del cliente`             |
 
 💡 Usa formato negrita y bordes para destacarlos.
 

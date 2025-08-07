@@ -1,11 +1,10 @@
 # 🟦 **Clase 3: Fundamentos de React — JSX, Componentes Funcionales y Props**
 
-**Duración total:** 80 minutos
 **Objetivo de la clase:** Entender qué es JSX, cómo se construyen componentes funcionales y cómo se comunican mediante props. Aplicar esos conceptos creando componentes reutilizables y parametrizables.
 
 ---
 
-## 📘 PARTE TEÓRICA (40 min)
+## 📘 PARTE TEÓRICA 
 
 ### 1. Activación y repaso rápido 
 
@@ -151,7 +150,7 @@ const Caja = ({ children }) => (
 
 ---
 
-## 🧪 PARTE PRÁCTICA (40 min)
+## 🧪 PARTE PRÁCTICA
 
 ### 🕒 **Distribución sugerida (práctica)**
 
@@ -275,7 +274,7 @@ export default function App() {
 
 ---
 
-### Mini evaluación rápida
+### Autoevaluación
 
 Preguntas tipo “flash” para verificar comprensión:
 
@@ -284,13 +283,10 @@ Preguntas tipo “flash” para verificar comprensión:
 3. ¿Qué hace `{children}` dentro de un componente?
 4. ¿Por qué se recomienda dividir la UI en componentes pequeños?
 
-(Se puede hacer en voz alta o con una mini encuesta en papel)
-
 ---
 
-## 🏠 Tarea para el hogar
+## 🏠 Desafío
 
-**Desafío:**
 Crear una pantalla de “tarjetas de productos” donde cada tarjeta sea un componente que reciba via props:
 
 * Nombre del producto

@@ -1,13 +1,10 @@
 # 🟦 **Clase 2: Primeros Pasos con Expo y Estructura del Proyecto**
 
-**Duración total:** 80 minutos
 **Objetivo de clase:** Comprender el ciclo básico de desarrollo con Expo y analizar la estructura de un proyecto React Native para adquirir una visión clara de cómo funciona la plataforma desde el primer momento.
 
----
+## 📘 PARTE TEÓRICA 
 
-## 📘 PARTE TEÓRICA (40 min)
-
-### 🎯 1. Recordatorio de la clase anterior (5 min)
+### 🎯 1. Recordatorio de la clase anterior
 
 > **Objetivo:** Activar conocimientos previos y verificar que el entorno esté listo.
 
@@ -25,7 +22,7 @@
 
 ---
 
-### 📦 2. ¿Qué es un Proyecto en React Native con Expo? (15 min)
+### 📦 2. ¿Qué es un Proyecto en React Native con Expo? 
 
 #### ✅ Contenido
 
@@ -86,7 +83,7 @@ const styles = StyleSheet.create({
 
 ---
 
-### 📖 3. ¿Qué hace Expo por detrás? (10 min)
+### 📖 3. ¿Qué hace Expo por detrás?
 
 #### ✅ Contenido
 
@@ -102,7 +99,7 @@ const styles = StyleSheet.create({
 
 ---
 
-### ❓ 4. Preguntas frecuentes y errores comunes (10 min)
+### ❓ 4. Preguntas frecuentes y errores comunes
 
 | Problema                      | Posible solución                         |
 | ----------------------------- | ---------------------------------------- |
@@ -113,27 +110,13 @@ const styles = StyleSheet.create({
 
 ---
 
-## 🧪 PARTE PRÁCTICA (40 min)
+## 🧪 PARTE PRÁCTICA
 
 > 💡 *Objetivo: familiarizarse con el flujo de trabajo básico y explorar la estructura del proyecto mediante ejercicios guiados.*
 
 ---
 
-### 🛠 1. Revisión guiada del proyecto (10 min)
-
-* Abrir el proyecto creado en la clase anterior con VSCode.
-* Analizar:
-
-  * `App.js`
-  * `package.json`
-  * `assets/`
-  * `app.json`
-
-📝 Tarea: Agregar un comentario explicativo sobre cada uno en `README.md` (opcional).
-
----
-
-### 🛠 2. Modificar el contenido del componente raíz (15 min)
+### 🛠 2. Modificar el contenido del componente raíz
 
 #### Actividad 1: Cambiar el texto del componente `Text`
 
@@ -160,7 +143,7 @@ container: {
 
 ---
 
-### 🛠 3. Práctica de estructura de carpetas y assets (10 min)
+### 🛠 3. Práctica de estructura de carpetas y assets
 
 #### Actividad: Agregar una imagen desde la carpeta `assets`
 
@@ -181,7 +164,7 @@ import { Image } from 'react-native';
 
 ---
 
-### 🛠 4. Validación del flujo completo (5 min)
+### 🛠 4. Validación del flujo completo
 
 * Verificar cambios en tiempo real en el dispositivo con Expo Go.
 * Guardar todos los cambios y hacer commit inicial con Git (opcional):
@@ -194,7 +177,7 @@ git commit -m "Proyecto base listo"
 
 ---
 
-## 📚 Actividad para el hogar
+## 📚 Actividad final
 
 > **Objetivo:** Reforzar la comprensión del flujo de trabajo.
 

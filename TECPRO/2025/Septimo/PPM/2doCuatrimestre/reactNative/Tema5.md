@@ -8,7 +8,7 @@
 
 ---
 
-## 🧠 Parte Teórica (40 min)
+## 🧠 Parte Teórica 
 
 ### 1. ¿Qué es un efecto secundario en React?
 
@@ -58,7 +58,7 @@ useEffect(() => {
 }, []);
 ```
 
-#### 3.2. Con dependencias → Ejecuta cada vez que cambia alguna dependencia
+#### 3.2. Con dependencias → Ejecuta cada vez que cambia alguna dependencia (componentDidUpdate)
 
 ```jsx
 useEffect(() => {
@@ -98,7 +98,7 @@ useEffect(() => {
 
 ---
 
-## 🛠️ Parte Práctica (40 min)
+## 🛠️ Parte Práctica 
 
 ### 💡 Proyecto práctico: **“Contador con título dinámico y temporizador”**
 
@@ -172,16 +172,3 @@ useEffect(() => {
 ✅ Analizar en grupo: ¿Qué sucede si olvidamos el array de dependencias?
 
 ---
-
-## 📋 Evaluación y Cierre
-
-* Preguntas rápidas:
-
-  * ¿Cuándo se ejecuta un `useEffect`?
-  * ¿Por qué es importante la limpieza de efectos?
-* Demostración funcional del componente.
-* Revisión colaborativa del código.
-* Lectura anticipada: **Clase 6 - Estilizado y Flexbox en React Native**.
-
----
-
