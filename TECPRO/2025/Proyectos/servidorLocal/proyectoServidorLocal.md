@@ -11,14 +11,14 @@
 
 ## 1. Resumen Ejecutivo
 
-Este proyecto propone la puesta en marcha de un servidor local basado en GNU/Linux (Debian) utilizando un equipo antiguo disponible en la institución. El servidor será empleado para alojar entornos de desarrollo de aplicaciones web y móviles.
+Este proyecto propone la puesta en marcha de un servidor local basado en GNU/Linux (Debian) utilizando un equipo antiguo disponible en la institución junto con los estudiantes de 5to año Lab. de Redes. El servidor será empleado entre otras cosas para alojar entornos de desarrollo de aplicaciones web y servicios para dispositivos móviles.
 
 ---
 
 ## 2. Justificación
 
 * **Reutilización de recursos existentes**, impulsando la sustentabilidad y economía institucional.
-* **Entornos controlados para alumnos**, facilitando el desarrollo de aplicaciones web (por ejemplo ambientes LAMP) y móviles, sin depender de servicios en la nube.
+* **Entornos controlados para estudiantes**, facilitando el desarrollo de aplicaciones web (por ejemplo ambientes LAMP) y móviles, sin depender de servicios en la nube.
 * **Sólida base de conectividad**, ya habilitada por la red cableada en salones y laboratorios.
 * **Formación práctica para estudiantes**, al interactuar con tecnologías reales de servidores y redes.
 
@@ -26,7 +26,7 @@ Este proyecto propone la puesta en marcha de un servidor local basado en GNU/Lin
 
 ## 3. Antecedentes
 
-El proyecto de red cableada implementado previamente en la institución fue fundamental para establecer una infraestructura confiable y segura. Gracias a ese despliegue, el servidor podrá integrarse desde el primer día, aprovechando la infraestructura física (cableado, switches, conectividad LAN) existente.
+El proyecto de red cableada implementado previamente en la institución es fundamental para establecer una infraestructura confiable y segura. Gracias a ese despliegue, el servidor podrá integrarse desde el primer día, aprovechando la infraestructura física (cableado, switches, conectividad LAN) existente.
 
 ---
 
