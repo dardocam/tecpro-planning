@@ -91,7 +91,8 @@ CREATE TABLE contacts (
 
 ```php
 <?php
-$f3 = require('../lib/base.php');
+require 'vendor/autoload.php';
+$f3 = \Base::instance();
 
 $f3->set('AUTOLOAD', '../app/');
 $f3->set('UI', '../app/views/');
