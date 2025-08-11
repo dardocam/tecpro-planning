@@ -74,16 +74,13 @@ RewriteRule ^(.*)$ index.php [QSA,L]
 
 ```php
 <?php
-$f3 = require('../lib/base.php');
-
-// Config
-$f3->set('AUTOLOAD', '../app/');
-$f3->set('UI', '../app/views/');
-
-// Rutas
-$f3->route('GET /', 'HomeController->index');
-
-// Arrancar app
+require 'vendor/autoload.php';
+$f3 = \Base::instance();
+$f3->route('GET /',
+    function() {
+        echo 'Hello, world!';
+    }
+);
 $f3->run();
 ```
 
