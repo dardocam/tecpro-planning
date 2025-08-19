@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Día del Programador</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Fira+Code&display=swap" rel="stylesheet">
+<style>
+
+    /* ===== TIPOGRAFÍA Y COLORES ===== */
+:root {
+  --color-primario: #1e88e5;
+  --color-secundario: #00e676;
+  --color-fondo: #f9f9f9;
+  --color-texto: #333;
+  --color-header: #0d47a1;
+  --fuente-base: 'Roboto', sans-serif;
+  --fuente-mono: 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-base);
+  line-height: 1.6;
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-header);
+  padding: 15px 30px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-family: var(--fuente-mono);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--color-secundario);
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primario), #42a5f5);
+  height: 90vh;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-texto h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease;
+}
+
+.hero-texto p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  animation: fadeInUp 1.2s ease;
+}
+
+.btn {
+  background: var(--color-secundario);
+  color: #000;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #00c853;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HISTORIA ===== */
+.historia {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.historia h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-primario);
+}
+
+.historia p {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* ===== EVENTOS ===== */
+.eventos {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.eventos h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--color-primario);
+}
+
+.grid-eventos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--color-header);
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card:hover {
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: var(--color-header);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .grid-eventos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-texto h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-eventos {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-texto p {
+    font-size: 1rem;
+  }
+}
+
+</style>
+
+
+
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">&lt;/&gt; CoderFest</div>
+    <nav class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#historia">Historia</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-texto">
+      <h1>¡Feliz Día del Programador!</h1>
+      <p>Innovación, creatividad y código que transforma el mundo</p>
+      <a href="#eventos" class="btn">Explorar Eventos</a>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="historia" id="historia">
+    <h2>Historia del Día del Programador</h2>
+    <p>
+      Cada 13 de septiembre (o el día 256 en años bisiestos) celebramos el 
+      <strong>Día del Programador</strong>. 
+      El número 256 fue elegido porque es la cantidad de valores que puede representar un byte, 
+      un número fundamental en el mundo de la informática.  
+      Esta fecha rinde homenaje a quienes transforman ideas en realidad a través del código.
+    </p>
+  </section>
+
+  <!-- EVENTOS -->
+  <section class="eventos" id="eventos">
+    <h2>Eventos Destacados</h2>
+    <div class="grid-eventos">
+      <div class="card">
+        <h3>💻 Hackathon</h3>
+        <p>24 horas de programación sin límites para resolver desafíos del mundo real.</p>
+      </div>
+      <div class="card">
+        <h3>🤖 Charla de IA</h3>
+        <p>Explora el futuro de la inteligencia artificial y sus aplicaciones en la vida diaria.</p>
+      </div>
+      <div class="card">
+        <h3>🌐 Taller Web</h3>
+        <p>Aprende a crear sitios modernos con las últimas tecnologías de desarrollo web.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <p>&copy; 2025 Día del Programador | Creado con 💙 por estudiantes</p>
+  </footer>
+</body>
+</html>
