@@ -1,184 +1,129 @@
-## ✅ Clase 8: Sesión práctica de repaso
+# 📚 Clase 8: Sesión práctica de repaso e integración
 
-### 🧠 Objetivo general:
+## 🎯 Objetivos de aprendizaje
 
-Consolidar los conocimientos adquiridos en las clases anteriores a través de la integración de los distintos conceptos: componentes, props, hooks (`useState`, `useEffect`), estilizado con `StyleSheet` y uso de componentes básicos. Resolver dudas y reforzar los aprendizajes clave.
-
----
-
-## 🕒 Parte teórica (40 minutos)
-
-### 1. Repaso general de conceptos (20 minutos)
-
-#### 📌 Componentes funcionales
-
-* Qué son y cómo se declaran.
-* Reutilización y composición de componentes.
-
-#### 📌 Props
-
-* Paso de información entre componentes padres e hijos.
-* Inmutabilidad de las props.
-
-#### 📌 `useState`
-
-* Hook para manejar el estado local.
-* Casos de uso: contadores, toggles, formularios.
-
-#### 📌 `useEffect`
-
-* Hook para efectos secundarios.
-* Sincronización con eventos externos: timers, fetch, cambios de estado.
-
-#### 📌 Estilizado con `StyleSheet`
-
-* Declaración de estilos.
-* Uso de Flexbox para layout responsivo.
-* Estilos condicionales.
-
-#### 📌 Componentes básicos
-
-* `View`, `Text`, `Image`, `ScrollView`, `TextInput`, `Button`.
-* Buenas prácticas para composición de la UI.
+* Reforzar los conceptos trabajados en las clases 1 a 7.
+* Integrar **componentes, estado, props, estilos y hooks** en una app práctica.
+* Consolidar el flujo de trabajo con Expo y React Native.
+* Resolver dudas frecuentes y preparar el terreno para la siguiente unidad.
 
 ---
 
-### 2. Buenas prácticas y patrones (10 minutos)
+## 🧩 Parte Teórica 
+### 1. Repaso general de contenidos previos
 
-#### 🧱 Separación de responsabilidades
+* **JSX**: la forma de describir la UI.
+* **Componentes funcionales**: bloques reutilizables.
+* **Props**: datos que viajan de padres a hijos.
+* **useState**: manejo de estado interno.
+* **useEffect**: efectos secundarios.
+* **StyleSheet y Flexbox**: diseño responsivo.
+* **Componentes básicos**: `View`, `Text`, `Image`, `ScrollView`, `TouchableOpacity`.
 
-* Separar lógica y presentación.
-* Componentes pequeños y reutilizables.
-
-#### 🧪 Pruebas simples manuales
-
-* Cómo verificar que los estados, props y efectos funcionan correctamente.
-
-#### 📦 Organización del proyecto
-
-* Revisión de la estructura: `components/`, `assets/`, `screens/`, etc.
+👉 Breve quiz o preguntas rápidas a los estudiantes para activar conocimientos previos.
 
 ---
 
-### 3. Resolución de dudas (10 minutos)
+### 2. Diseño de una mini aplicación integradora 
 
-* Espacio abierto para preguntas.
-* Ejemplos en vivo según dudas planteadas.
+Se propone construir una **App de Lista de Tareas (To-Do App)** que integre:
 
----
-
-## 🛠️ Parte práctica (40 minutos)
-
-### Desafío integrador: "Mi perfil"
-
-**Objetivo:** Crear una pequeña app que muestre un perfil de usuario con una imagen, nombre, descripción y un contador de seguidores con botón para aumentar.
+* Entrada de texto para escribir tareas (`TextInput`).
+* Botón para agregar la tarea (`Button` o `TouchableOpacity`).
+* Listado de tareas con scroll (`ScrollView` o `FlatList`).
+* Manejo de estado (`useState`) para la lista.
+* Pequeño efecto de inicialización (`useEffect`) para cargar tareas de ejemplo.
+* Estilos básicos con `StyleSheet` y Flexbox.
 
 ---
 
-### 🧩 Requisitos del proyecto
-
-#### Componentes a utilizar:
-
-* `View`, `Text`, `Image`, `Button`
-* `useState`, `StyleSheet`, `props`
-
-#### Estructura sugerida:
-
-```bash
-/App.js
-/components/UserProfile.js
-/assets/profile.jpg
-```
-
----
-
-### 👨‍💻 Paso a paso
-
-#### 1. Crear el componente `UserProfile`
+### 3. Ejemplo de estructura de la app (15 min)
 
 ```jsx
-// components/UserProfile.js
-import React, { useState } from 'react';
-import { View, Text, Image, Button, StyleSheet } from 'react-native';
+import { useState, useEffect } from "react";
+import { View, Text, TextInput, Button, FlatList, StyleSheet } from "react-native";
 
-export default function UserProfile({ name, description, image }) {
-  const [followers, setFollowers] = useState(100);
+export default function App() {
+  const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
+
+  // Efecto inicial
+  useEffect(() => {
+    setTasks(["Estudiar React Native", "Practicar hooks", "Revisar estilos"]);
+  }, []);
+
+  const addTask = () => {
+    if (task.trim() !== "") {
+      setTasks([...tasks, task]);
+      setTask("");
+    }
+  };
 
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image} />
-      <Text style={styles.name}>{name}</Text>
-      <Text style={styles.description}>{description}</Text>
-      <Text style={styles.followers}>Seguidores: {followers}</Text>
-      <Button title="Seguir" onPress={() => setFollowers(followers + 1)} />
+      <Text style={styles.title}>Mi Lista de Tareas</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Escribe una tarea..."
+        value={task}
+        onChangeText={setTask}
+      />
+      <Button title="Agregar" onPress={addTask} />
+      <FlatList
+        data={tasks}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => <Text style={styles.task}>{item}</Text>}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    padding: 20,
+  container: { flex: 1, padding: 20, marginTop: 40 },
+  title: { fontSize: 22, fontWeight: "bold", marginBottom: 10 },
+  input: {
+    borderWidth: 1, borderColor: "#ccc", padding: 10,
+    marginBottom: 10, borderRadius: 5
   },
-  image: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-  },
-  name: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 10,
-  },
-  description: {
-    fontSize: 14,
-    color: 'gray',
-    textAlign: 'center',
-  },
-  followers: {
-    marginVertical: 10,
-    fontSize: 16,
-  },
+  task: {
+    fontSize: 16, padding: 8, borderBottomWidth: 1, borderBottomColor: "#eee"
+  }
 });
 ```
 
 ---
 
-#### 2. Utilizar el componente en `App.js`
+## 🛠️ Parte Práctica 
 
-```jsx
-// App.js
-import React from 'react';
-import { SafeAreaView } from 'react-native';
-import UserProfile from './components/UserProfile';
+### **Actividad guiada paso a paso (30 min)**
 
-export default function App() {
-  return (
-    <SafeAreaView>
-      <UserProfile
-        name="Juan Pérez"
-        description="Desarrollador móvil y entusiasta de la tecnología"
-        image={require('./assets/profile.jpg')}
-      />
-    </SafeAreaView>
-  );
-}
-```
+1. **Crear un nuevo proyecto Expo**: `npx create-expo-app tareasApp`.
+2. **Construir la estructura básica** (`View` + `Text`).
+3. **Agregar un campo de texto (`TextInput`) y un botón para añadir tareas**.
+4. **Implementar `useState`** para manejar la entrada y la lista de tareas.
+5. **Mostrar la lista de tareas** usando `FlatList`.
+6. **Aplicar estilos con `StyleSheet`** para mejorar la presentación.
+7. **Integrar `useEffect`** para cargar algunas tareas iniciales.
 
 ---
 
-### 🧪 Verificación de funcionamiento:
+### **Actividad libre / desafío **
 
-* El perfil se muestra correctamente.
-* El contador aumenta al presionar el botón "Seguir".
-* El layout responde bien a diferentes tamaños de pantalla.
+* Añadir botón para **eliminar tareas**.
+* Estilizar la lista alternando colores en las filas.
+* Opcional: mostrar un mensaje si no hay tareas (“Lista vacía”).
+
+---
+
+## 🎤 Cierre y discusión
+
+* Preguntar:
+
+  * ¿Qué fue lo más difícil de integrar?
+  * ¿Qué parte se siente más clara después de este repaso?
+* Enfatizar que este tipo de app integra **todo lo aprendido hasta ahora**.
+* Introducir brevemente lo que vendrá en la **Unidad 2: Navegación y estructura de aplicaciones**.
 
 ---
 
-## 📝 Cierre de clase (últimos 5 minutos)
 
-* Preguntas finales.
-* Breve encuesta oral: ¿qué fue lo más útil de la unidad?
-* Introducción al próximo módulo: **Navegación y estructuras de pantallas**.
-
----
