@@ -453,9 +453,137 @@ Dale permisos `chmod 750` y propiedad root.
 
 ---
 
-Si querés, te genero **los archivos listos para copiar** — por ejemplo un `.tar.gz` con la estructura y todos los scripts y plantillas — o te los pego aquí uno por uno para que copies.
-También puedo añadir:
+# Configuración simplificada de usuario para despliegue web en Debian
 
-* Autenticación de usuarios del panel (SQLite).
-* Notificaciones (Telegram / email) al completar backups.
-* Soporte PHP-FPM pools por sitio (para aislar procesos PHP).
+Para crear un usuario con acceso SSH restringido para trabajar en una aplicación web local, sin necesidad de alta seguridad, sigue estos pasos simplificados:
+
+## 1. Crear el usuario y asignar directorio de trabajo
+
+```bash
+# Crear usuario
+sudo adduser deployer
+
+# Crear directorio para la aplicación y asignar permisos
+sudo mkdir -p /var/www/mi-aplicacion
+sudo chown -R deployer:deployer /var/www/mi-aplicacion
+```
+
+## 2. Configurar acceso SSH básico
+
+```bash
+# Asegurar que el usuario tiene shell de acceso
+sudo usermod -s /bin/bash deployer
+
+# Configurar acceso SSH con clave (opcional pero recomendado)
+sudo mkdir /home/deployer/.ssh
+sudo chmod 700 /home/deployer/.ssh
+sudo touch /home/deployer/.ssh/authorized_keys
+sudo chmod 600 /home/deployer/.ssh/authorized_keys
+sudo chown -R deployer:deployer /home/deployer/.ssh
+```
+
+## 3. Instalar herramientas necesarias
+
+```bash
+# Instalar git y otras herramientas necesarias
+sudo apt update
+sudo apt install -y git curl
+
+# Instalar Node.js (si es necesario para la aplicación)
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# O instalar Python/pip si es aplicación Python
+sudo apt install -y python3 python3-pip
+```
+
+## 4. Configurar permisos para instalación de dependencias
+
+```bash
+# Permitir que el usuario ejecute npm/pip sin problemas de permisos
+sudo chown -R deployer:deployer /var/www/mi-aplicacion
+
+# Configurar npm para usar directorio local (evitar problemas de permisos)
+sudo -u deployer npm config set prefix '/home/deployer/.npm-packages'
+```
+
+## 5. Script de despliegue simplificado
+
+```bash
+# Crear un script básico de despliegue
+sudo tee /home/deployer/deploy.sh << 'EOF'
+#!/bin/bash
+cd /var/www/mi-aplicacion
+
+# Actualizar desde repositorio
+git pull origin main
+
+# Instalar dependencias
+if [ -f "package.json" ]; then
+    npm install
+elif [ -f "requirements.txt" ]; then
+    pip3 install -r requirements.txt
+fi
+
+echo "Despliegue completado"
+EOF
+
+# Hacer ejecutable el script
+sudo chmod +x /home/deployer/deploy.sh
+sudo chown deployer:deployer /home/deployer/deploy.sh
+```
+
+## 6. Probar la configuración
+
+```bash
+# Conectarse como usuario deployer
+sudo su - deployer
+
+# Navegar al directorio de la aplicación
+cd /var/www/mi-aplicacion
+
+# Clonar el repositorio (ejemplo)
+git clone https://github.com/tu-usuario/tu-repositorio.git .
+
+# Instalar dependencias
+npm install  # o pip3 install -r requirements.txt
+
+# Verificar que todo funciona
+ls -la
+```
+
+## 7. (Opcional) Configurar acceso sin contraseña para mayor comodidad
+
+```bash
+# Generar clave SSH en tu máquina local (si no tienes una)
+ssh-keygen -t rsa
+
+# Copiar clave pública al servidor
+ssh-copy-id deployer@ip-del-servidor
+```
+
+## Uso diario
+
+Para trabajar con la aplicación:
+
+```bash
+# Conectarse al servidor
+ssh deployer@ip-del-servidor
+
+# Navegar al directorio de la aplicación
+cd /var/www/mi-aplicacion
+
+# Realizar cambios y actualizar
+git pull origin main
+npm install
+# Realizar otras tareas necesarias
+```
+
+## Notas importantes
+
+1. Esta configuración es para entornos locales o de desarrollo con seguridad reducida
+2. El usuario `deployer` tiene acceso completo a su directorio de aplicación
+3. No se han implementado restricciones estrictas de seguridad
+4. Para producción, se recomienda una configuración más segura
+
+Esta configuración simplificada permite al usuario desplegar y mantener su aplicación web fácilmente, con acceso SSH y capacidad para instalar dependencias, sin los privilegios completos de root.
