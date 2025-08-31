@@ -37,7 +37,7 @@ Se propone construir una **App de Lista de Tareas (To-Do App)** que integre:
 
 ---
 
-### 3. Ejemplo de estructura de la app (15 min)
+### 3. Ejemplo de estructura de la app
 
 ```jsx
 import { useState, useEffect } from "react";
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
 
 ## 🛠️ Parte Práctica 
 
-### **Actividad guiada paso a paso (30 min)**
+### **Actividad guiada paso a paso**
 
 1. **Crear un nuevo proyecto Expo**: `npx create-expo-app tareasApp`.
 2. **Construir la estructura básica** (`View` + `Text`).
