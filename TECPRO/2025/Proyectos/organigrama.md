@@ -1,0 +1,4 @@
+Para vincular una celda de una hoja de cálculo de Google a una lista de elementos en otra hoja de cálculo, puedes utilizar la función IMPORTRANGE para importar los datos desde la hoja de origen a la hoja de destino.
+ La sintaxis básica es =IMPORTRANGE("spreadsheet_url", "range_string"), donde spreadsheet_url es la URL completa de la hoja de cálculo de origen y range_string especifica el nombre de la hoja y el rango de celdas, como "Hoja1!A1:A10".
+ Es importante tener en cuenta que, al usar IMPORTRANGE, se debe otorgar permiso para acceder a los datos de la hoja de origen cada vez que se utiliza una nueva fuente, y este acceso puede afectar el rendimiento si se usan muchas fórmulas.
+ Para vincular una celda específica a una lista, puedes combinar IMPORTRANGE con otras funciones como FILTER o QUERY para filtrar o seleccionar solo los elementos deseados de la lista.
