@@ -63,12 +63,6 @@ Una mini página temática que celebre el **Día del Programador**:
 
 ---
 
-¡Muy buena idea! 🎉 El **Día del Programador** (13 de septiembre, día número 256 del año) es una excusa perfecta para que los estudiantes creen una **mini landing page temática** y practiquen **selectores, box model, Flexbox, Grid y animaciones**.
-
-Aquí te sugiero algunas **temáticas motivadoras** que pueden elegir para su proyecto:
-
----
-
 ## **Temáticas sugeridas para la mini landing page**
 
 1. **“Historia del Día del Programador”**
@@ -123,4 +117,55 @@ Tu sitio debe ser **responsivo y tener al menos una galería, un botón animado 
 
 ---
 
-¿Querés que te arme también una **rubrica especial** para este proyecto temático (creatividad, aplicación técnica, estética, responsividad) para que lo uses como evaluación en clase?
+# ✅ **Checklist de Autoevaluación – Mini Landing Page “Día del Programador”**
+
+### 🧑‍💻 **Aspectos Técnicos**
+
+* [ ] Usé **selectores variados** (elementos, clases, ids, descendentes).
+* [ ] Apliqué correctamente el **box model** (márgenes, bordes, paddings).
+* [ ] Organicé mi **layout con Flexbox** (alineaciones, distribuciones).
+* [ ] Incorporé al menos una **sección en Grid**.
+* [ ] Mi página es **responsiva** y se adapta en celulares, tablets y PC.
+
+---
+
+### 🎨 **Animaciones y Estética**
+
+* [ ] Incluí **efectos hover** en botones, imágenes o links.
+* [ ] Usé **transiciones suaves** para mejorar la experiencia visual.
+* [ ] Mi diseño tiene una **combinación de colores y tipografías clara**.
+* [ ] La página es **legible y fácil de navegar**.
+
+---
+
+### 📚 **Temática del Día del Programador**
+
+* [ ] Mi landing tiene un **tema claro** (historia, héroes, herramientas, memes, etc.).
+* [ ] El contenido está **relacionado con el Día del Programador**.
+* [ ] Añadí un **toque creativo o personal** (ej: iconos, frases, imágenes, gifs).
+
+---
+
+### 📝 **Código y Organización**
+
+* [ ] Mi código HTML está **indentado y semántico** (uso correcto de `<header>`, `<section>`, `<footer>`, etc.).
+* [ ] El CSS está **ordenado y comentado** en partes importantes.
+* [ ] Probé mi página en **distintos tamaños de pantalla** antes de entregarla.
+
+---
+
+### 🌟 **Revisión final**
+
+* [ ] Revisé que **no haya errores visibles** en la página.
+* [ ] Me aseguré de que el **tema elegido se entienda fácilmente**.
+* [ ] Estoy satisfecho/a con el **resultado final** de mi landing page.
+
+---
+
+📌 **Instrucciónes:**
+👉 Marca con una ✅ cada ítem que cumplas.
+👉 Si tienes 80% o más de las casillas completas, tu proyecto está listo para entregar.
+
+---
+
+
