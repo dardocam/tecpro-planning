@@ -1,4 +1,99 @@
-# 📘 Actividad Avanzada: **“Simulador de Finanzas del Hogar”**
+# 📘 Actividad N5: **“Dashboard Hogareño – El Desafío de los Gastos”**
+
+## 🎯 Objetivos de aprendizaje
+
+* Aplicar funciones (`SUMA`, `PROMEDIO`, `MAX`, `MIN`, `SI`) en un contexto real.
+* Construir **dashboards con estilo profesional** (KPIs + gráficos).
+* Usar lógica de negocios: descuentos condicionales según consumos.
+* Introducir un **juego de optimización**: descubrir cómo reducir gastos sin perder servicios clave.
+
+---
+
+## 🛠 Desarrollo de la actividad
+
+### 1️⃣ Preparación de la base de datos
+
+Cargar la planilla de gastos hogareños (enero a junio, luego completarla hasta diciembre).
+
+| Servicio   | Enero | Febrero | Marzo | Abril | Mayo | Junio | … |
+| ---------- | ----- | ------- | ----- | ----- | ---- | ----- | - |
+| UPC     | 84,35 | 98,32   | 96,70 | …     | …    | …     | … |
+| Cammuzi   | 20,65 | 21,37   | 39,35 | …     | …    | …     | … |
+| Telefónica | 65,95 | 78,90   | 88,70 | …     | …    | …     | … |
+| …          | …     | …       | …     | …     | …    | …     | … |
+
+---
+
+### 2️⃣ Construcción del Dashboard
+
+En una nueva hoja llamada **Dashboard**, crear:
+
+#### 📊 KPIs principales (tarjetas con formato atractivo)
+
+* **Gasto total mensual** → `=SUMA(B2:B10)`
+* **Servicio más caro del mes** → `=MAX(B2:B10)`
+* **Servicio más barato del mes** → `=MIN(B2:B10)`
+* **Promedio mensual** → `=PROMEDIO(B2:B10)`
+
+Cada KPI debe tener colores diferenciados (verde, rojo, azul, naranja).
+
+---
+
+#### 📈 Gráficos
+
+1. **Gráfico de sectores (circular):** Enero → participación de cada servicio en el gasto total.
+2. **Gráfico de barras:** evolución del gasto de **Tarjeta** mes a mes.
+3. **Gráfico de líneas:** evolución de **Expensas** a lo largo del semestre.
+
+💡 Personalizar con títulos, etiquetas y colores modernos.
+
+---
+
+### 3️⃣ Funciones lógicas (juego de descuentos)
+
+* **Edesur**: 10% de descuento si el gasto semestral > \$300.
+
+  ```excel
+  =SI(SUMA(B2:G2)>300,SUMA(B2:G2)*0,1,0)
+  ```
+* **Metrogas**: 15% de descuento si supera \$400 semestrales.
+
+  ```excel
+  =SI(SUMA(B3:G3)>400,SUMA(B3:G3)*0,15,0)
+  ```
+
+---
+
+### 4️⃣ Dinámica de Juego: **“El Hogar más Eficiente”**
+
+
+* **Proponer una estrategia de reducción de gastos** (ejemplo: bajar 10% “Varios”, negociar alquiler, usar menos tarjeta).
+* En el Dashboard hay una **columna editable “Ahorro propuesto”**, donde ingresan el % de reducción.
+* Excel recalcula automáticamente el **Total con ahorro**.
+
+💡 Se asigna un **ranking** en el dashboard:
+
+
+
+---
+
+## 🎨 Estilos sugeridos
+
+* Encabezado con fondo azul oscuro y fuente blanca.
+* KPIs en tarjetas tipo “cards” con colores suaves.
+* Gráficos con paleta corporativa moderna.
+* Tabla de datos con **formato condicional**:
+
+  * Rojo → gastos que aumentan más de 20% respecto al mes anterior.
+  * Verde → gastos que se reducen.
+
+---
+
+## 🎓 Resultado esperado
+
+Un **Dashboard de Excel atractivo y funcional**
+* Desarrollo de habilidades analíticas.
+* Refuerzo el uso de **funciones, gráficos y lógica en Excel**.
 
 ---
 
@@ -29,7 +124,6 @@
 
 ### 2️⃣ Dashboard mejorado
 
-Nueva hoja: **Dashboard Hogar**
 
 #### 📊 KPIs principales
 
@@ -48,31 +142,12 @@ Nueva hoja: **Dashboard Hogar**
 
 ### 3️⃣ Lógica avanzada de descuentos
 
-* **Edesur** → 10% descuento si supera \$300 semestrales.
-* **Metrogas** → 15% si supera \$400 semestrales.
+* **UPC** → 10% descuento si supera \$300 semestrales.
+* **Cammuzi** → 15% si supera \$400 semestrales.
 * **Seguro** → nunca cambia.
 * **Tarjeta** → si supera \$2000 anuales, sugerir cambio de plan (`SI`).
 
 💡 Usar `SI.CONJUNTO` para evaluar varios casos en una celda.
-
----
-
-### 4️⃣ Dinámica de Juego – **“El Gestor Financiero del Año”**
-
-Cada estudiante/equipo actúa como un **asesor financiero** que debe:
-
-1. Analizar el dashboard para detectar **qué servicio impacta más en el presupuesto**.
-2. Proponer **estrategias de ahorro**:
-
-   * Reducir consumo eléctrico.
-   * Negociar expensas.
-   * Ajustar gastos varios.
-3. Simular en una **columna editable “% Reducción”** cuánto bajan los costos.
-4. El dashboard recalcula automáticamente el:
-
-   * Nuevo total anual.
-   * % de ahorro logrado.
-   * Ranking de equipos.
 
 ---
 
@@ -90,7 +165,7 @@ Cada estudiante/equipo actúa como un **asesor financiero** que debe:
 
 💡 La TASA se coloca fija en una celda (ej: 8% anual).
 
-Esto convierte el juego en una **simulación de finanzas personales**: no solo ahorrar, sino **decidir si ahorrar o invertir**.
+Esto convierte la planilla en una **simulación de finanzas personales**: no solo ahorrar, sino **decidir si ahorrar o invertir**.
 
 ---
 
@@ -106,21 +181,11 @@ Esto convierte el juego en una **simulación de finanzas personales**: no solo a
 
 ---
 
-## 📋 Evaluación
-
-* **Nivel 1 (básico):** Completar los cálculos pedidos en el archivo original.
-* **Nivel 2 (intermedio):** Construir dashboard con KPIs y gráficos.
-* **Nivel 3 (avanzado):** Jugar al simulador: proponer un plan de ahorro + simular inversión.
-* **Nivel 4 (desafío):** Preparar una **presentación breve en clase** con el análisis del dashboard (como si fueran consultores financieros).
-
----
-
 ## 🎓 Resultado esperado
 
-Un **dashboard moderno y visual en Excel** que no solo muestra los gastos, sino que se convierte en:
+Un **dashboard moderno y visual en Excel** 
 
 * Una **herramienta analítica real**.
-* Un **juego de simulación financiera**.
-* Un **espacio de competencia en el aula** (ranking de asesores).
 
 ---
+
