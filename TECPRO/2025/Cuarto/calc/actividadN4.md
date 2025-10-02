@@ -51,12 +51,12 @@ Cada KPI debe tener colores diferenciados (verde, rojo, azul, naranja).
 
 ### 3️⃣ Funciones lógicas (juego de descuentos)
 
-* **Edesur**: 10% de descuento si el gasto semestral > \$300.
+* **UPC**: 10% de descuento si el gasto semestral > \$300.
 
   ```excel
   =SI(SUMA(B2:G2)>300,SUMA(B2:G2)*0,1,0)
   ```
-* **Metrogas**: 15% de descuento si supera \$400 semestrales.
+* **Cammuzi**: 15% de descuento si supera \$400 semestrales.
 
   ```excel
   =SI(SUMA(B3:G3)>400,SUMA(B3:G3)*0,15,0)
