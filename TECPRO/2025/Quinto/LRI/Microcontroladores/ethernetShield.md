@@ -27,62 +27,77 @@
 
 ## 4) Carga este sketch (DHCP con fallback a IP fija)
 
-Copia y sube este código. Si el DHCP falla, usará la IP fija que definas.
+    #include <SPI.h>
+    #include <Ethernet.h>
 
-```cpp
-#include <SPI.h>
-#include <Ethernet.h>
+    // MAC "localmente administrada" (cámbiala si tienes varios Arduinos en la misma red)
+    byte mac[] = { 0x02, 0x60, 0x94, 0x00, 0x00, 0x01 };
 
-// MAC "localmente administrada" (cámbiala si tienes varios Arduinos)
-byte mac[] = { 0x02, 0x60, 0x94, 0x00, 0x00, 0x01 };
+    // --- Ajusta estos valores si quieres usar IP fija ---
+    IPAddress ip(192, 168, 10, 245);
+    IPAddress gateway(192, 168, 10, 1);
+    IPAddress dns(192, 168, 10, 1);
+    IPAddress subnet(255, 255, 255, 0);
+    // -----------------------------------------------------
 
-// --- Ajusta estos valores si usarás IP fija ---
-IPAddress ip(192, 168, 1, 200);
-IPAddress gateway(192, 168, 1, 1);
-IPAddress dns(192, 168, 1, 1);
-IPAddress subnet(255, 255, 255, 0);
-// ----------------------------------------------
+    void printNetworkInfo() {
+      Serial.print(F("IP local: "));     Serial.println(Ethernet.localIP());
+      Serial.print(F("Gateway: "));      Serial.println(Ethernet.gatewayIP());
+      Serial.print(F("DNS: "));          Serial.println(Ethernet.dnsServerIP());
+      Serial.print(F("Subnet: "));       Serial.println(Ethernet.subnetMask());
+    }
 
-void printNetworkInfo() {
-  Serial.print(F("IP local: "));     Serial.println(Ethernet.localIP());
-  Serial.print(F("Gateway: "));      Serial.println(Ethernet.gatewayIP());
-  Serial.print(F("DNS: "));          Serial.println(Ethernet.dnsServerIP());
-  Serial.print(F("Subnet: "));       Serial.println(Ethernet.subnetMask());
-}
+    void setup() {
+      Serial.begin(9600);
+      while (!Serial) { /* espera en placas con USB nativo (ej: Leonardo) */ }
 
-void setup() {
-  Serial.begin(9600);
-  while (!Serial) { /* para placas con USB nativo */ }
+      Serial.println(F("\n=== Inicializando Ethernet W5100 ==="));
 
-  Serial.println(F("\nInicializando Ethernet..."));
-  int dhcp = Ethernet.begin(mac);  // Intenta DHCP
+      // Establecer pin CS (Chip Select) en 10 para UNO/MEGA con W5100
+      Ethernet.init(10);
 
-  if (dhcp == 0) {
-    Serial.println(F("DHCP falló. Usando IP fija."));
-    Ethernet.begin(mac, ip, dns, gateway, subnet);
-  } else {
-    Serial.println(F("DHCP exitoso."));
-  }
+      // Intentar DHCP con timeout de 10 segundos
+      int dhcp = Ethernet.begin(mac, 10000);
 
-  delay(1000);
-  printNetworkInfo();
+      if (dhcp == 0) {
+        Serial.println(F("⚠️ DHCP falló. Usando IP fija."));
+        Ethernet.begin(mac, ip, dns, gateway, subnet);
+      } else {
+        Serial.println(F("✅ DHCP exitoso."));
+      }
 
-  // Diagnóstico de hardware/enlace (requiere Ethernet >= 2.0)
-  #if defined(ETHERNET_LIB_VERSION)
-    auto hw = Ethernet.hardwareStatus();
-    if (hw == EthernetNoHardware) Serial.println(F("No se encontró Ethernet Shield."));
-    auto link = Ethernet.linkStatus();
-    if (link == LinkOFF) Serial.println(F("Sin enlace: ¿cable desconectado o puerto apagado?"));
-  #endif
-}
+      delay(1000);
+      printNetworkInfo();
 
-void loop() {
-  // No hace falta nada más: el chip WIZnet responde a ping por hardware
-  // una vez inicializado con Ethernet.begin(...)
-}
-```
+      // Diagnóstico de hardware/enlace (disponible en Ethernet >= 2.0)
+      #if defined(ETHERNET_LIB_VERSION)
+        Serial.print(F("Versión librería Ethernet: "));
+        Serial.println(ETHERNET_LIB_VERSION);
 
-> Nota: El chip WIZnet (W5100/W5500) responde **automáticamente** a ICMP Echo (ping) cuando está inicializado con `Ethernet.begin(...)`. No necesitas “server” ni manejar ICMP en tu sketch.
+        auto hw = Ethernet.hardwareStatus();
+        if (hw == EthernetNoHardware) {
+          Serial.println(F("❌ No se encontró Ethernet Shield."));
+        } else if (hw == EthernetW5100) {
+          Serial.println(F("Detectado: W5100"));
+        } else if (hw == EthernetW5200) {
+          Serial.println(F("Detectado: W5200"));
+        } else if (hw == EthernetW5500) {
+          Serial.println(F("Detectado: W5500"));
+        }
+
+        auto link = Ethernet.linkStatus();
+        if (link == LinkOFF) {
+          Serial.println(F("⚠️ Sin enlace: ¿cable desconectado o puerto apagado?"));
+        } else if (link == LinkON) {
+          Serial.println(F("✅ Enlace activo."));
+        }
+      #endif
+    }
+
+    void loop() {
+      // El chip W5100 responde a ping automáticamente una vez inicializado.
+      // Aquí podrías abrir un servidor TCP/HTTP si quieres.
+    }
 
 ## 5) Ver la IP del Arduino
 
