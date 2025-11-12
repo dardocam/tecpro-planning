@@ -15,5 +15,6 @@
 
 * PC + Monitor para presentación
 * QR para documentación
+* Maquetación realizada en colaboración con estudiantes de 4to 2da Grupo 1
 
 ---
