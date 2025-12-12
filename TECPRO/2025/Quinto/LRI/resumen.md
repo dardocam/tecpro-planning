@@ -212,7 +212,6 @@ Sirve para:
 * Ambos están en la **misma red** (ej.: 192.168.1.0/24).
 * Están conectados a través de switches Ethernet.
 
-*(Si deseas, te explico también el caso con router/router intermedio.)*
 
 ---
 
