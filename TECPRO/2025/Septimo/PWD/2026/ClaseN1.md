@@ -51,8 +51,6 @@ HTML significa:
 
 ![Image](https://images.openai.com/static-rsc-4/lp3oBz8eNr-O85A0yE_TKkDPvZnSRtUNe7a9i7d431Z_DHrxjs04YIh-bM-yWVy5Fb8ayzlYwzE7bhSH8udEJIb15vlSDsG9TB5A-FDGTyhJ7Smi74CyI7Q7caRdtj0VonSDlOLLPJ0Z3QvQDxmcCsU0mEaaGbycTCV57LjqbvYIpMmk_QwW6TozcHC85cdg?purpose=fullsize)
 
-![Image](https://images.openai.com/static-rsc-4/lp3oBz8eNr-O85A0yE_TKkDPvZnSRtUNe7a9i7d431Z_DHrxjs04YIh-bM-yWVy5Fb8ayzlYwzE7bhSH8udEJIb15vlSDsG9TB5A-FDGTyhJ7Smi74CyI7Q7caRdtj0VonSDlOLLPJ0Z3QvQDxmcCsU0mEaaGbycTCV57LjqbvYIpMmk_QwW6TozcHC85cdg?purpose=fullsize)
-
 ```html
 <!DOCTYPE html>
 <html>
