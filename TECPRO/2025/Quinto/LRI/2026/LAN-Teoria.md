@@ -1,7 +1,3 @@
-Excelente diapositiva: está **bien estructurada, clara y progresiva**, pero se puede potenciar mucho para que funcione como **clase base (no solo resumen)**. A continuación te la convierto en una **clase teórica completa lista para Classroom**, ampliando cada punto con ejemplos reales, explicación conceptual y conexión con la práctica.
-
----
-
 # 📚 Clase Teórica: Características y Ventajas de las Redes LAN
 
 ## 🎯 Objetivo de la clase
@@ -149,7 +145,7 @@ IoT (Internet de las Cosas) depende de LAN para funcionar localmente.
 
 ---
 
-## 🔗 5. Integración conceptual (muy importante)
+## 🔗 5. Integración conceptual
 
 👉 Una LAN:
 
@@ -163,56 +159,3 @@ IoT (Internet de las Cosas) depende de LAN para funcionar localmente.
 > “Antes de existir internet global (WAN), primero existe una red local (LAN) que conecta todo.”
 
 ---
-
-## 🧩 6. Puente hacia la práctica
-
-Después de esta clase, los estudiantes deberían poder:
-
-* Identificar una red LAN en su entorno
-* Reconocer sus componentes
-* Entender cómo se conectan los dispositivos
-
----
-
-## 🎯 Actividad rápida en clase (diagnóstico)
-
-Responder:
-
-1. ¿Tu casa tiene una LAN? ¿Por qué?
-2. ¿Qué dispositivos forman parte?
-3. ¿Usan Ethernet, Wi-Fi o ambos?
-4. ¿Qué ventaja notás al usar una red local?
-
----
-
-## 🧑‍🏫 Sugerencia didáctica (clave para vos)
-
-Durante la clase:
-
-* Mostrar un router real (si es posible)
-* Pedir a los alumnos que miren su Wi-Fi en el celular
-* Hacer preguntas constantes tipo:
-
-  * “¿Esto es LAN o WAN?”
-  * “¿Por qué?”
-
----
-
-## 🚀 Cierre de la clase
-
-Una LAN es la base de toda red moderna. Entenderla permite:
-
-* Diseñar redes
-* Resolver problemas
-* Crear aplicaciones conectadas
-
----
-
-Si querés, el siguiente paso ideal es:
-👉 armar una **actividad práctica tipo laboratorio (nivel técnico)** donde los alumnos:
-
-* armen una red
-* configuren IP
-* prueben conexión (ping)
-
-Eso ya sería nivel “técnico profesional” y te sirve muchísimo para TECPRO.

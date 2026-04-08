@@ -127,7 +127,7 @@ Responder:
 
 ---
 
-# 🧠 Parte 6: Reflexión técnica (nivel medio–alto)
+# 🧠 Parte 6: Reflexión técnica
 
 Responder:
 
@@ -157,7 +157,7 @@ Responder:
 
 ---
 
-# 🚀 Plus (para avanzados)
+# 🚀 Plus
 
 Agregar al esquema:
 
