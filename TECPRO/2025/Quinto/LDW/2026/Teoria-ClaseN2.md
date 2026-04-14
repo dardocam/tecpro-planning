@@ -1,6 +1,6 @@
-# 🎨 **Clase: Principios Básicos del Diseño Gráfico**
+# 📐 **Diseño de Layouts en la Web**
 
-## 🌐 Aplicado al Diseño Web
+## 🧩 Organización visual y tipos de estructuras
 
 ---
 
@@ -8,270 +8,278 @@
 
 Al finalizar esta clase vas a poder:
 
-* Comprender el uso del **color, la tipografía y el layout**
-* Aplicar reglas básicas de diseño visual
-* Entender cómo se representan los colores en la web (**HEX y RGB**)
-* Evitar errores comunes de diseño
-* Relacionar el diseño con **CSS**
+* Comprender qué es un **layout**
+* Identificar distintos **tipos de layouts**
+* Aplicar principios de organización visual
+* Reconocer qué tipo de layout usa un sitio web
+* Diseñar estructuras claras y ordenadas
 
 ---
 
-# 🎨 **1. EL COLOR EN EL DISEÑO WEB**
+# 🧠 **¿Qué es un Layout?**
 
-## 🌈 ¿Por qué es importante el color?
+El layout es la forma en que se **organizan y distribuyen los elementos** en una página web.
 
-El color permite:
+👉 Define:
 
-* Transmitir emociones
-* Llamar la atención
-* Organizar la información
-* Mejorar la legibilidad
-
----
-
-## 🎡 Teoría básica del color
-
-* 🔴 Colores primarios: rojo, azul, amarillo
-* 🟠 Colores secundarios: mezcla de primarios
-* 🎯 Colores complementarios: opuestos en la rueda (alto contraste)
+* Dónde va cada elemento
+* Cómo se relacionan entre sí
+* Qué ve primero el usuario
 
 ---
 
-## 🎨 Paleta de colores
+## 💡 Idea clave
 
-Una paleta es un conjunto de colores que se usa en todo el diseño.
-
-### ✅ Reglas básicas:
-
-* Usar **2 o 3 colores principales**
-* Mantener coherencia visual
-* Usar contraste para destacar elementos
+👉 Un buen layout guía la mirada del usuario y facilita la navegación.
 
 ---
 
-## 💻 Códigos de color en la web
+# 🧩 **Elementos básicos de un layout**
 
-En diseño web, los colores no se escriben como “rojo” o “azul”, sino mediante códigos.
+Todo diseño web suele tener:
 
----
-
-### 🔷 Formato HEX (Hexadecimal)
-
-Se escribe así:
-
-```
-#RRGGBB
-```
-
-Ejemplos:
-
-* Blanco → `#FFFFFF`
-* Negro → `#000000`
-* Rojo → `#FF0000`
-* Azul → `#0000FF`
-
-👉 Cada par de letras/números representa la intensidad de:
-
-* Rojo (RR)
-* Verde (GG)
-* Azul (BB)
-
-Valores van de:
-`00` (mínimo) a `FF` (máximo)
+* 🧭 **Header (encabezado)** → logo, título
+* 📑 **Menú de navegación**
+* 📦 **Contenido principal**
+* 🖼️ **Secciones o bloques**
+* 📉 **Footer (pie de página)**
 
 ---
 
-### 🔶 Formato RGB
-
-Se escribe así:
-
-```
-rgb(rojo, verde, azul)
-```
-
-Ejemplos:
-
-* Blanco → `rgb(255, 255, 255)`
-* Negro → `rgb(0, 0, 0)`
-* Rojo → `rgb(255, 0, 0)`
-
-👉 Cada valor va de **0 a 255**
+# 📊 **Principios de un buen layout**
 
 ---
 
-### 🔁 Relación HEX vs RGB
+## ⚖️ Equilibrio visual
 
-| Color  | HEX     | RGB              |
-| ------ | ------- | ---------------- |
-| Blanco | #FFFFFF | rgb(255,255,255) |
-| Negro  | #000000 | rgb(0,0,0)       |
-| Rojo   | #FF0000 | rgb(255,0,0)     |
+Distribuir los elementos de forma armónica.
 
 ---
 
-## 🧪 Uso en CSS
+## ⬜ Espacios en blanco (White Space)
+
+Permiten que el diseño “respire”.
+
+👉 Evitan saturación visual.
+
+---
+
+## 🎯 Jerarquía visual
+
+Indica qué es más importante.
+
+Ejemplo:
+
+* Títulos grandes
+* Botones destacados
+
+---
+
+## 📐 Alineación
+
+Ordena los elementos para que el diseño sea claro.
+
+---
+
+# 🧱 **Tipos de Layouts en Diseño Web**
+
+---
+
+## 📄 1. Layout de una sola columna
+
+👉 Todo el contenido está en una sola columna vertical.
+
+### ✅ Ventajas:
+
+* Simple
+* Ideal para móviles
+
+### ❌ Desventajas:
+
+* Puede ser largo
+
+### 💡 Ejemplo:
+
+Blogs, páginas personales
+
+---
+
+## 📑 2. Layout de dos columnas
+
+👉 Contenido principal + barra lateral (sidebar)
+
+### ✅ Ventajas:
+
+* Organiza mejor la información
+* Permite agregar contenido extra
+
+### 💡 Ejemplo:
+
+Noticias, blogs
+
+---
+
+## 🧩 3. Layout de múltiples columnas
+
+👉 Varias columnas organizando contenido
+
+### ✅ Ventajas:
+
+* Más contenido visible
+* Diseño más dinámico
+
+### ❌ Desventajas:
+
+* Puede ser complejo
+
+---
+
+## 🧱 4. Layout tipo Grid (rejilla)
+
+👉 Basado en filas y columnas organizadas
+
+### ✅ Ventajas:
+
+* Muy ordenado
+* Flexible
+* Profesional
+
+### 💡 Ejemplo:
+
+Tiendas online, dashboards
+
+---
+
+## 🧭 5. Layout tipo “F”
+
+👉 El usuario lee en forma de F (de arriba hacia abajo)
+
+### 📊 Características:
+
+* Título arriba
+* Texto alineado a la izquierda
+* Secciones horizontales
+
+👉 Basado en comportamiento real de lectura
+
+---
+
+## 🖼️ 6. Layout tipo “Z”
+
+👉 El usuario recorre la pantalla en forma de Z
+
+### 📊 Características:
+
+* Logo arriba izquierda
+* CTA (botón) arriba derecha
+* Contenido en diagonal
+
+### 💡 Ideal para:
+
+Landing pages
+
+---
+
+## 📱 7. Layout responsivo
+
+👉 Se adapta a distintos dispositivos:
+
+* Celular
+* Tablet
+* Computadora
+
+---
+
+### 📌 Importancia:
+
+Hoy en día es obligatorio
+
+---
+
+# 🧠 **Comparación rápida**
+
+| Tipo de Layout | Uso         |
+| -------------- | ----------- |
+| 1 columna      | Simplicidad |
+| 2 columnas     | Blogs       |
+| Grid           | E-commerce  |
+| F              | Lectura     |
+| Z              | Marketing   |
+| Responsivo     | Todos       |
+
+---
+
+# 💻 **Relación con CSS**
+
+Los layouts se construyen con:
+
+* Flexbox → distribución flexible
+* Grid → estructura en filas y columnas
+
+---
+
+## 🧪 Ejemplo simple
 
 ```css
-body {
-  background-color: #f4f4f4;
-  color: rgb(33, 33, 33);
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 ```
 
 ---
 
-## ❌ Errores comunes con el color
+# ❌ **Errores comunes en layouts**
 
-* Usar demasiados colores
-* Bajo contraste (no se lee)
-* Colores muy brillantes o molestos
-
----
-
-## 💡 Ejemplo práctico
-
-✔ Fondo blanco + texto negro → legible
-❌ Fondo amarillo + texto blanco → ilegible
+* Elementos desordenados
+* Falta de alineación
+* No usar espacios
+* Demasiada información
+* No adaptarse a celular
 
 ---
 
-# 🔤 **2. TIPOGRAFÍA EN DISEÑO WEB**
+# 💡 **Consejos para un buen layout**
+
+* Mantener simplicidad
+* Pensar en el usuario
+* Respetar jerarquías
+* Usar espacios
+* No sobrecargar
 
 ---
 
-## 📖 ¿Qué es la tipografía?
+# 🧠 **Analogía para entender el layout**
 
-Es el estilo visual del texto.
+👉 El layout es como el plano de una casa:
 
----
-
-## 📚 Conceptos clave
-
-* **Legibilidad** → facilidad de lectura
-* **Jerarquía** → títulos, subtítulos, párrafos
-* **Espaciado** → separación entre letras y líneas
-
----
-
-## 🛠️ Uso en web
-
-Ejemplo en CSS:
-
-```css
-h1 {
-  font-family: Arial, sans-serif;
-  font-size: 32px;
-}
-```
-
----
-
-## ✅ Buenas prácticas
-
-* Usar máximo **2 fuentes**
-* Diferenciar títulos y texto
-* Mantener tamaños adecuados
-
----
-
-## ❌ Errores comunes
-
-* Muchas fuentes diferentes
-* Texto muy pequeño
-* Todo el texto igual
-
----
-
-## 💡 Ejemplo
-
-✔ Título grande + texto más chico
-❌ Todo igual (confunde al usuario)
-
----
-
-# 📐 **3. LAYOUT (DISEÑO Y DISTRIBUCIÓN)**
-
----
-
-## 🧩 ¿Qué es el layout?
-
-Es la forma en que se organizan los elementos en la pantalla.
-
----
-
-## ✅ Buenas prácticas
-
-* Mantener orden visual
-* Separar elementos
-* Guiar la mirada del usuario
-
----
-
-## ❌ Errores comunes
-
-* Diseño desordenado
-* Elementos muy juntos
-* Pantallas saturadas
-
----
-
-## 💡 Ejemplo
-
-✔ Diseño limpio
-❌ Todo junto sin espacio
-
----
-
-# 🧠 **Regla de oro del diseño**
-
-👉 Para empezar bien:
-
-* 🎨 Máximo 3 colores
-* 🔤 Máximo 2 tipografías
-* ⬜ Usar espacios
-
----
-
-# ⚠️ **Errores comunes en diseño gráfico**
-
-* Demasiados colores
-* Muchas tipografías
-* Mala legibilidad
-* Falta de orden
-* No pensar en el usuario
-
----
-
-# 🧠 **Analogía para entender el diseño**
-
-👉 Diseñar es como organizar una habitación:
-
-* Color → decoración
-* Tipografía → carteles
-* Layout → ubicación de muebles
+* Cada elemento tiene su lugar
+* Todo debe estar organizado
+* Debe ser cómodo para quien lo usa
 
 ---
 
 # 🚀 **Conclusión**
 
-El diseño gráfico en la web no es solo estética.
+El layout es la base del diseño web.
 
-👉 Es lograr:
+👉 Un buen layout:
 
-* Claridad
-* Orden
-* Buena experiencia
-
----
-
-# ❓ **Preguntas para pensar**
-
-* ¿Por qué es importante el contraste?
-* ¿Qué colores usarías para una app educativa?
-* ¿Qué errores ves en páginas que usás?
+* Organiza
+* Facilita
+* Mejora la experiencia
 
 ---
 
-📌 **Importante:** Estos conceptos se usarán en la próxima actividad práctica donde vas a diseñar tu propia interfaz.
+# ❓ **Preguntas para reflexionar**
+
+* ¿Qué tipo de layout usa Instagram?
+* ¿Por qué los sitios usan diseño responsivo?
+* ¿Qué layout usarías para una tienda online?
 
 ---
+
+📌 **Importante:** Estos conceptos se aplicarán en actividades prácticas donde diseñarás tus propias interfaces.
+
+---
+
