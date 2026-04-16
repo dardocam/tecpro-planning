@@ -1,4 +1,4 @@
-# 📘 Clase 5: Manipulación del DOM
+# 📘 Clase 4: Manipulación del DOM
 
 ## 🎯 Objetivo
 

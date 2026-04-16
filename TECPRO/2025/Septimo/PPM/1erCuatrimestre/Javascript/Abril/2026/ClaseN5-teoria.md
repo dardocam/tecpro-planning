@@ -1,4 +1,4 @@
-# 📘 Clase 4: Estructuras de datos en JavaScript
+# 📘 Clase 5: Estructuras de datos en JavaScript
 
 ## 🎯 Objetivo
 
