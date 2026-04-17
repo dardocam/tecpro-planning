@@ -199,4 +199,34 @@ Este TP conecta dos pilares fundamentales:
 
 👉 Juntos permiten construir aplicaciones reales.
 
+
+
 ---
+
+📊 Rúbrica de Evaluación
+---
+
+| Criterio                     | Nivel Bajo (1)                            | Nivel Medio (2)            | Nivel Alto (3)                             | Puntaje |
+| ---------------------------- | ----------------------------------------- | -------------------------- | ------------------------------------------ | ------- |
+| **Estructuras de datos**     | No utiliza arrays u objetos correctamente | Usa array pero con errores | Usa correctamente arrays y objetos         | /3      |
+| **Manipulación del DOM**     | No logra mostrar datos                    | Muestra datos con errores  | Muestra dinámicamente sin errores          | /3      |
+| **Eventos (interacción)**    | No usa eventos                            | Usa eventos básicos        | Usa eventos correctamente y de forma clara | /3      |
+| **Recorrido de datos**       | No recorre estructuras                    | Recorre con errores        | Recorre correctamente (for o similar)      | /3      |
+| **Funcionalidad general**    | No funciona                               | Funciona parcialmente      | Funciona completamente                     | /3      |
+| **Eliminación de elementos** | No implementado                           | Implementado con errores   | Funciona correctamente                     | /3      |
+| **Validaciones**             | No valida datos                           | Validación parcial         | Valida correctamente entradas              | /3      |
+| **Código y organización**    | Desordenado                               | Medianamente claro         | Claro, ordenado y modular                  | /3      |
+| **Interfaz visual**          | Sin estilos                               | Estilo básico              | Buena presentación visual                  | /3      |
+
+---
+🧮 Puntaje total: /27
+
+📌 Escala sugerida:
+
+24 - 27 → Excelente 🌟
+
+18 - 23 → Muy Bueno 👍
+
+12 - 17 → A mejorar ⚠️
+
+< 12 → Insuficiente ❌
