@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama Pokémon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 50%, #ffd3b6 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #juego {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2a9d8f;
+            margin-bottom: 0.5rem;
+        }
+
+        .estadisticas {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .estadisticas span {
+            background: #e9f5db;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+        }
+
+        .tablero {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .carta {
+            aspect-ratio: 1;
+            background: transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            perspective: 500px;
+        }
+
+        .carta-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+
+        .carta.volteada .carta-inner {
+            transform: rotateY(180deg);
+        }
+
+        .carta-front,
+        .carta-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .carta-front {
+            background: #457b9d;
+            color: white;
+            /* Icono de Pokébola en el dorso */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='white' stroke='black' stroke-width='4'/%3E%3Cpath d='M2 50 H98' stroke='black' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='12' fill='white' stroke='black' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='6' fill='black'/%3E%3C/svg%3E");
+            background-size: 60%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .carta-back {
+            background: #f1faee;
+            transform: rotateY(180deg);
+        }
+
+        .carta-back img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+
+        .carta.acertada {
+            opacity: 0.7;
+            cursor: default;
+        }
+
+        button {
+            background: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.1s;
+            margin: 0.5rem;
+        }
+
+        button:hover {
+            background: #21867a;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #boton-reiniciar {
+            background: #e76f51;
+        }
+
+        #boton-reiniciar:hover {
+            background: #d65a3b;
+        }
+
+        .mensaje {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #2a9d8f;
+            margin: 0.5rem;
+            min-height: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main id="juego">
+        <h1>Memorama Pokémon</h1>
+        <div class="estadisticas">
+            <span>🤞 Movimientos: <span id="contador-movimientos">0</span></span>
+            <span>✔️ Pares: <span id="contador-pares">0</span>/8</span>
+        </div>
+        <div id="tablero" class="tablero"></div>
+        <div id="mensaje" class="mensaje"></div>
+        <button id="boton-reiniciar">🔄 Reiniciar Juego</button>
+    </main>
+
+    <script>
+        (function() {
+            // ======= VARIABLES Y REFERENCIAS AL DOM =======
+            const tableroDiv = document.getElementById('tablero');
+            const mensajeDiv = document.getElementById('mensaje');
+            const contadorMov = document.getElementById('contador-movimientos');
+            const contadorPares = document.getElementById('contador-pares');
+            const botonReiniciar = document.getElementById('boton-reiniciar');
+
+            // Array de cartas (objetos)
+            let cartas = [];
+            // Cartas volteadas actualmente (máximo 2)
+            let cartasVolteadas = [];
+            // Bloqueo para evitar clics mientras se comparan dos cartas
+            let bloqueado = false;
+            // Contador de movimientos
+            let movimientos = 0;
+            // Pares encontrados
+            let paresEncontrados = 0;
+
+            // Total de pares a encontrar (8 pares = 16 cartas)
+            const TOTAL_PARES = 8;
+
+            // ======= FUNCIÓN PARA CARGAR POKÉMON DESDE LA API =======
+            async function cargarPokemons() {
+                try {
+                    // Obtener los primeros 151 Pokémon
+                    const respuesta = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+                    if (!respuesta.ok) throw new Error('Error al conectar con la API');
+                    const datos = await respuesta.json();
+
+                    // Extraer id de cada URL y crear array de objetos {id, nombre}
+                    const listaCompleta = datos.results.map(pokemon => {
+                        const urlPartes = pokemon.url.split('/');
+                        const id = parseInt(urlPartes[urlPartes.length - 2]);
+                        return { id: id, nombre: pokemon.name };
+                    });
+
+                    // Seleccionar 8 Pokémon aleatorios (sin repetición)
+                    const seleccionados = [];
+                    const copiaLista = [...listaCompleta];
+                    for (let i = 0; i < TOTAL_PARES; i++) {
+                        const indiceAleatorio = Math.floor(Math.random() * copiaLista.length);
+                        seleccionados.push(copiaLista[indiceAleatorio]);
+                        copiaLista.splice(indiceAleatorio, 1); // Evitar duplicados
+                    }
+
+                    // Crear array de cartas: cada Pokémon aparece dos veces
+                    cartas = [];
+                    seleccionados.forEach(pokemon => {
+                        cartas.push({
+                            id: crypto.randomUUID(), // Identificador único para cada carta
+                            pokemonId: pokemon.id,
+                            sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`,
+                            nombre: pokemon.nombre,
+                            volteada: false,
+                            acertada: false
+                        });
+                        cartas.push({
+                            id: crypto.randomUUID(),
+                            pokemonId: pokemon.id,
+                            sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`,
+                            nombre: pokemon.nombre,
+                            volteada: false,
+                            acertada: false
+                        });
+                    });
+
+                    // Barajar las cartas (Fisher-Yates)
+                    barajar(cartas);
+                    return true;
+                } catch (error) {
+                    console.error('Error al cargar Pokémon:', error);
+                    mensajeDiv.textContent = 'Error al cargar datos. Intenta de nuevo.';
+                    mensajeDiv.style.color = 'red';
+                    return false;
+                }
+            }
+
+            // ======= ALGORITMO DE BARAJADO (FISHER-YATES) =======
+            function barajar(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            // ======= DIBUJAR EL TABLERO =======
+            function dibujarTablero() {
+                tableroDiv.innerHTML = '';
+                cartas.forEach(carta => {
+                    const cartaElem = document.createElement('div');
+                    cartaElem.classList.add('carta');
+                    cartaElem.dataset.id = carta.id;
+
+                    // Estructura interna para el flip 3D
+                    cartaElem.innerHTML = `
+                        <div class="carta-inner">
+                            <div class="carta-front"></div>
+                            <div class="carta-back">
+                                <img src="${carta.sprite}" alt="${carta.nombre}">
+                            </div>
+                        </div>
+                    `;
+
+                    cartaElem.addEventListener('click', () => manejarClick(cartaElem, carta));
+                    tableroDiv.appendChild(cartaElem);
+                });
+            }
+
+            // ======= LÓGICA DE VOLTEO DE CARTAS =======
+            function manejarClick(cartaElem, carta) {
+                // No hacer nada si el tablero está bloqueado, la carta ya está volteada o ya fue acertada
+                if (bloqueado || carta.volteada || carta.acertada) return;
+                // No permitir voltear la misma carta dos veces
+                if (cartasVolteadas.length === 2) return;
+
+                // Voltear la carta
+                carta.volteada = true;
+                cartaElem.classList.add('volteada');
+                cartasVolteadas.push({ elemento: cartaElem, carta: carta });
+
+                // Si hay dos cartas volteadas, comprobar si son pareja
+                if (cartasVolteadas.length === 2) {
+                    movimientos++;
+                    contadorMov.textContent = movimientos;
+                    comprobarPareja();
+                }
+            }
+
+            function comprobarPareja() {
+                bloqueado = true;
+                const [primera, segunda] = cartasVolteadas;
+
+                if (primera.carta.pokemonId === segunda.carta.pokemonId) {
+                    // ¡Pareja encontrada!
+                    primera.carta.acertada = true;
+                    segunda.carta.acertada = true;
+                    primera.elemento.classList.add('acertada');
+                    segunda.elemento.classList.add('acertada');
+                    paresEncontrados++;
+                    contadorPares.textContent = paresEncontrados;
+
+                    // Limpiar el array de cartas volteadas
+                    cartasVolteadas = [];
+                    bloqueado = false;
+
+                    // Verificar si ganó el juego
+                    if (paresEncontrados === TOTAL_PARES) {
+                        mensajeDiv.textContent = `¡Felicidades! Completaste el memorama en ${movimientos} movimientos.`;
+                        mensajeDiv.style.color = '#2a9d8f';
+                    }
+                } else {
+                    // No son pareja: voltearlas de nuevo tras un breve retraso
+                    setTimeout(() => {
+                        primera.carta.volteada = false;
+                        segunda.carta.volteada = false;
+                        primera.elemento.classList.remove('volteada');
+                        segunda.elemento.classList.remove('volteada');
+                        cartasVolteadas = [];
+                        bloqueado = false;
+                    }, 800);
+                }
+            }
+
+            // ======= REINICIAR JUEGO =======
+            async function iniciarJuego() {
+                // Resetear variables
+                movimientos = 0;
+                paresEncontrados = 0;
+                cartasVolteadas = [];
+                bloqueado = false;
+                contadorMov.textContent = '0';
+                contadorPares.textContent = '0';
+                mensajeDiv.textContent = 'Cargando Pokémon...';
+                mensajeDiv.style.color = '#333';
+
+                // Cargar datos y dibujar
+                const exito = await cargarPokemons();
+                if (exito) {
+                    dibujarTablero();
+                    mensajeDiv.textContent = 'Encuentra todas las parejas de Pokémon';
+                    mensajeDiv.style.color = '#2a9d8f';
+                }
+            }
+
+            // ======= EVENTO PARA REINICIAR =======
+            botonReiniciar.addEventListener('click', iniciarJuego);
+
+            // ======= INICIAR JUEGO AL CARGAR LA PÁGINA =======
+            window.addEventListener('load', iniciarJuego);
+        })();
+    </script>
+</body>
+</html>
