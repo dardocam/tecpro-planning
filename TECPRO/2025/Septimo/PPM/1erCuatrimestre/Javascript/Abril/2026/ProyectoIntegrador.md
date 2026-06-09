@@ -121,7 +121,7 @@ Sugerencias técnicas:
 
 ---
 
-### 📊 Rúbrica de evaluación (sugerencia)
+### 📊 Rúbrica de evaluación
 
 | Criterio                     | Insuficiente | Aceptable | Excelente |
 |------------------------------|--------------|-----------|-----------|
