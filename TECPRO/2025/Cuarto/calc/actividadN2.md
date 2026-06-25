@@ -230,15 +230,85 @@ Repite en otras columnas con `SENO` y `TAN`.
 
 ---
 
-### **Paso 14 – BDCONTAR**
+### Paso 14 – Conteo de registros con criterio (Adaptado para Google Sheets)
 
-1. En **B161\:C168** crea tabla con encabezado “CAMPO1” y valores.
-2. En **G161\:G162** crea tabla de criterios con encabezado “CAMPO1” y criterio `>100`.
-3. En **F172**:
+Como Google Sheets no suele incluir la función **BDCONTAR**, utilizaremos la función **CONTAR.SI**, que permite obtener el mismo resultado de forma más sencilla.
+
+---
+
+### 1. Crear la tabla de datos
+
+En el rango **B161:B168** ingresa los siguientes datos:
+
+| B      |
+| ------ |
+| CAMPO1 |
+| 50     |
+| 120    |
+| 80     |
+| 150    |
+| 200    |
+| 90     |
+| 110    |
+
+---
+
+### 2. Crear la tabla de criterios
+
+En el rango **G161:G162**:
+
+| G      |
+| ------ |
+| CAMPO1 |
+| >100   |
+
+---
+
+### 3. Aplicar la fórmula
+
+En la celda **F172** escribe:
 
 ```excel
-=BDCONTAR(B161:C168;"CAMPO1";G161:G162)
+=CONTAR.SI(B162:B168;G162)
 ```
+
+Si tu configuración regional utiliza comas:
+
+```excel
+=COUNTIF(B162:B168,G162)
+```
+
+---
+
+### 4. Resultado esperado
+
+La fórmula contará todos los valores mayores que 100:
+
+| Valor |
+| ----- |
+| 120   |
+| 150   |
+| 200   |
+| 110   |
+
+**Resultado: 4**
+
+---
+
+### Explicación
+
+* **B162:B168** contiene los datos a analizar.
+* **G162** contiene el criterio `>100`.
+* **CONTAR.SI** cuenta cuántas celdas cumplen dicho criterio.
+
+La ventaja de utilizar **G162** en lugar de escribir directamente `">100"` en la fórmula es que el criterio puede modificarse fácilmente:
+
+| G162 | Resultado |
+| ---- | --------- |
+| >50  | 6         |
+| >100 | 4         |
+| >150 | 1         |
+| <100 | 3         |
 
 ---
 
