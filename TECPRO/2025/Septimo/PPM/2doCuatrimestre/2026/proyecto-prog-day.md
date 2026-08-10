@@ -125,3 +125,30 @@ Al finalizar esta etapa serás capaz de:
 ---
 
 Esta ampliación une desarrollo web, consumo de APIs y hardware en un solo proyecto, dándote una visión completa de cómo una aplicación puede interactuar con el mundo físico. Presentaremos el proyecto para el evento "Día del Programador"
+
+
+---
+
+## Rúbrica de Evaluación – ¿Quién es ese Pokémon? (Quiz de Sombras + IoT)
+
+| Criterio | Insuficiente (1) | Aceptable (2) | Bueno (3) | Excelente (4) |
+|----------|------------------|---------------|------------|---------------|
+| **1. Consumo de la API y tratamiento de datos** | No se usa `fetch` o los datos no se cargan correctamente. | Se carga la lista, pero el array de Pokémon no está bien estructurado (falta el `id` o el nombre). | Se crea un array con `{id, nombre}`. Se extrae el `id` de la URL correctamente. | Además de lo anterior, se manejan errores de red (`try/catch`) y se muestra un mensaje si la API no responde. |
+| **2. Lógica de selección aleatoria** | No se baraja el array o se usan métodos incorrectos que no garantizan aleatoriedad. | Se baraja con `sort` aleatorio (no verdaderamente aleatorio). | Se implementa Fisher‑Yates correctamente. Se eligen 4 opciones y un correcto. | Se evita que el mismo Pokémon se repita en rondas consecutivas (estado de la partida). |
+| **3. Interfaz de usuario (HTML/CSS)** | No hay pantalla de inicio, no se ocultan/muestran secciones adecuadamente. | Las secciones se muestran/ocultan pero con poca estética. La silueta no funciona. | El diseño es limpio y funcional. La clase `.silueta` aplica `filter: brightness(0)` de forma correcta. | La interfaz es responsiva, visualmente atractiva, y el estado del juego es claro en todo momento. |
+| **4. Dinámica del juego (eventos y DOM)** | Los botones no responden o no se evalúa la respuesta. | Se evalúa la respuesta, pero no se desactivan los botones tras hacer clic. | Se desactivan los botones, se revela la imagen y se muestra mensaje de acierto/fallo. | Además, se muestra el Pokémon correcto incluso si se falla, y se gestiona el botón “Siguiente” correctamente. |
+| **5. Contador de aciertos y racha** | No implementado. | Muestra un contador de aciertos básico, pero no la racha o no se reinicia al fallar. | Muestra aciertos totales y racha actual; la racha se reinicia correctamente tras un fallo. | Incluye indicadores visuales (colores, animaciones) para la racha, y se persiste la máxima en `localStorage`. |
+| **6. Selector de generación** | No implementado. | Intenta cambiar la generación, pero no se actualizan los datos correctamente o se rompe el juego. | Al cambiar el selector, se vuelven a cargar los Pokémon de la generación elegida y se reinicia la partida. | Ofrece un menú claro con nombres de generaciones (Kanto, Johto, etc.) y maneja correctamente los límites y offsets de la API. |
+| **7. Estadísticas del Pokémon revelado** | No se muestran estadísticas. | Se intenta obtener datos pero no se maneja la segunda petición `fetch`. | Se realiza un `fetch` adicional a la URL del Pokémon y se muestran al menos tipo(s), altura y peso. | La información se presenta de forma ordenada, con los tipos formateados (posiblemente en español) y unidades (kg, m). |
+| **8. Efectos sonoros** | Sin sonido. | Sonidos implementados pero se reproducen erróneamente (se solapan, no se cargan). | Sonidos de acierto y fallo funcionan con `Audio` o Web Audio API; se reproducen sin errores. | Los sonidos están sincronizados con las animaciones de revelado, y el volumen es controlado. |
+| **9. Integración con ESP32 (hardware)** | El circuito no está montado o el ESP32 no responde. | El ESP32 se conecta a WiFi y ejecuta un servidor, pero no recibe comandos correctamente. | El ESP32 responde a `/acierto` y `/fallo` encendiendo LEDs de colores distintos. | Se añaden actuadores adicionales (zumbador, pantalla OLED) con comportamientos diferentes para cada resultado. |
+| **10. Comunicación web ↔ ESP32** | No se envían peticiones desde la página. | Se intenta `fetch` pero la IP es incorrecta o no se manejan errores. | La página envía la petición a la IP configurada y reacciona sin bloquear el juego. | Se permite al usuario configurar la IP desde la interfaz (campo de texto) y se indica visualmente si la conexión con el ESP32 falla. |
+| **11. Organización del código y buenas prácticas** | Código desordenado, sin comentarios, todo en una sola función. | Se usan funciones pero con nombres poco claros o lógica repetida. | Código modularizado, funciones con un solo propósito, variables bien nombradas. | Uso de constantes, comentarios explicativos, separación clara entre lógica y presentación (se evita `innerHTML` para construcción dinámica de gran tamaño). |
+| **12. Persistencia de puntuación máxima** | No se usa `localStorage`. | Se intenta guardar pero se lee/escribe incorrectamente. | Se almacena la máxima racha/aciertos y se recupera al cargar la página; se actualiza al superarse. | Se muestra un mensaje especial (p. ej., “¡Nuevo récord!”) cuando se bate la marca. |
+
+**Escala de puntuación**  
+- Cada criterio se valora de 1 a 4.  
+- Puntuación máxima: 48 puntos.  
+- Para aprobar el proyecto ampliado se requiere un mínimo de 30 puntos, siempre que los criterios 1, 4 y 9 no estén en nivel Insuficiente.
+
+---
