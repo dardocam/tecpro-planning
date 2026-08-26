@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header con Flexbox y Box Model</title>
+    <style>
+        /* Reset básico de márgenes y padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Contenedor principal del header */
+        .header {
+            display: flex;              /* Activa flexbox */
+            align-items: center;        /* Centra verticalmente los elementos */
+            justify-content: space-between; /* Distribuye: logo izquierda, nav centro, botón derecha */
+            padding: 15px 30px;         /* Box model: espacio interno */
+            background-color: #ffffff;
+            border-bottom: 2px solid #e0e0e0; /* Box model: borde inferior */
+            width: 100%;                /* Box model: ancho completo */
+            height: 80px;               /* Box model: altura fija */
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 5px 10px;          /* Espaciado interno del logo */
+            border: 1px solid #2c3e50;  /* Borde decorativo */
+            border-radius: 4px;         /* Esquina redondeada (opcional, sigue siendo box-model) */
+        }
+
+        /* Navegación */
+        .nav {
+            display: flex;              /* Flexbox para alinear los enlaces horizontalmente */
+            gap: 20px;                  /* Espacio entre elementos flex (equivale a margin entre hijos) */
+            padding: 10px 0;            /* Box model: padding vertical */
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #34495e;
+            font-size: 16px;
+            padding: 8px 12px;          /* Box model: área clicable */
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #ecf0f1;  /* Cambio de fondo al pasar el mouse */
+        }
+
+        /* Botón de acción */
+        .btn {
+            padding: 10px 20px;         /* Box model: relleno interno */
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Para pantallas pequeñas: colapsar elementos en columna */
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column; /* Cambia a columna en móvil */
+                height: auto;           /* Altura automática */
+                padding: 15px;
+                gap: 15px;              /* Espacio entre los tres bloques */
+            }
+            .nav {
+                flex-wrap: wrap;        /* Permite que los enlaces salten de línea */
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">MiSitio</div>
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Portafolio</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <button class="btn">Registrarse</button>
+    </header>
+</body>
+</html>
