@@ -1,4 +1,4 @@
-# Rúbrica de Evaluación – Etapa 3
+# Rúbrica de Evaluación
 
 ## Proyecto Final: Sitio Web Dinámico
 
