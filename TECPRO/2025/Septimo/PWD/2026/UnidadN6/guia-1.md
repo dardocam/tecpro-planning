@@ -41,19 +41,20 @@ Necesitás tener instalado un entorno de desarrollo.
 
 Para trabajar de manera sencilla podés utilizar:
 
-XAMPP
-Apache
-PHP
-MySQL/MariaDB
-phpMyAdmin
-Visual Studio Code
-Navegador web
+- XAMPP
+- Apache
+- PHP
+- MySQL/MariaDB
+- phpMyAdmin
+- Visual Studio Code
+- Navegador web
 
 En Linux también pueden utilizarse Apache, PHP y MariaDB instalados directamente.
 
 Para este proyecto vamos a suponer que el servidor web utiliza:
 
-http://localhost/
+- http://localhost/
+
 3. Crear el proyecto
 
 Dentro de la carpeta correspondiente al servidor web vamos a crear:
@@ -79,7 +80,7 @@ echo "Hola mundo";
 
 Abrimos:
 
-http://localhost/mi-proyecto/
+- http://localhost/mi-proyecto/
 
 Si aparece:
 
