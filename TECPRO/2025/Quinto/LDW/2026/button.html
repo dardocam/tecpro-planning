@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Botón Gradiente Animado</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: #121212;
+        }
+
+        .boton-gradiente {
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            background: linear-gradient(
+                90deg,
+                #ff006e,
+                #8338ec,
+                #3a86ff,
+                #06ffa5,
+                #ff006e
+            );
+            background-size: 300% 100%;
+            background-position: 0% 50%;
+            transition: 
+                background-position 0.8s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .boton-gradiente:hover {
+            background-position: 100% 50%;
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(131, 56, 236, 0.5);
+        }
+
+        .boton-gradiente:active {
+            transform: translateY(0) scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <button class="boton-gradiente">✨ GRADIENTE ✨</button>
+</body>
+</html>
