@@ -1,4 +1,4 @@
-# ESP32: Puerto Serial y conexión WiFi
+# Etapa N2: Puerto Serial y conexión WiFi
 
 ## 🎯 Objetivo
 
