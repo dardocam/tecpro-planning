@@ -158,8 +158,8 @@ void loop() {
   unsigned long t = millis() - ultimoCambio;
 
   if (estado == 0 && t >= T_ROJO)     cambiar(2); // ROJO -> VERDE
-  if (estado == 2 && t >= T_VERDE)    cambiar(1); // VERDE -> AMARILLO
-  if (estado == 1 && t >= T_AMARILLO) cambiar(0); // AMARILLO -> ROJO
+  else if (estado == 2 && t >= T_VERDE)    cambiar(1); // VERDE -> AMARILLO
+  else if (estado == 1 && t >= T_AMARILLO) cambiar(0); // AMARILLO -> ROJO
 }
 ```
 
