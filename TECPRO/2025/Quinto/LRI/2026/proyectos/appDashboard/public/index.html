@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semáforos 3D + MQTT (Express)</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0b0f14;
+                 font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+    #escena { display: block; width: 100vw; height: 100vh; cursor: grab; }
+    #escena:active { cursor: grabbing; }
+    #hud {
+      position: fixed; left: 14px; top: 14px; padding: 12px 16px;
+      background: rgba(8,12,18,.72); border: 1px solid rgba(255,255,255,.08);
+      border-radius: 10px; color: #9fb3c8; font-size: 13px; line-height: 1.7;
+      backdrop-filter: blur(6px); user-select: none; max-width: 340px;
+    }
+    #hud b { color: #e6edf3; font-weight: 600; }
+    .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+           background: #f85149; margin-right: 7px; vertical-align: middle;
+           transition: background .2s, box-shadow .2s; }
+    .dot.on { background: #3fb950; box-shadow: 0 0 8px #3fb950; }
+  </style>
+</head>
+<body>
+  <canvas id="escena"></canvas>
+
+  <div id="hud">
+    <div><span id="dot" class="dot"></span><span id="estadoMqtt">conectando…</span></div>
+    <div>Semáforos: <b id="total">0</b></div>
+    <div>Último: <b id="estadoSemaforo">—</b></div>
+    <div>Topic: <b id="topic">—</b></div>
+    <div>Payload: <b id="payload">—</b></div>
+    <div>Zoom: <b id="zoomInfo">—</b></div>
+  </div>
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>

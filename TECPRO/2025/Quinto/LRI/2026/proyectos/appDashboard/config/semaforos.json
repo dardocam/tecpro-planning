@@ -1,0 +1,29 @@
+[
+  {
+    "id": "semaforo1",
+    "topic": "semaforo/1/estado",
+    "posicion": [
+      -3.5,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "semaforo2",
+    "topic": "semaforo/2/estado",
+    "posicion": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "id": "semaforo3",
+    "topic": "semaforo/3/estado",
+    "posicion": [
+      3.5,
+      0,
+      0
+    ]
+  }
+]
