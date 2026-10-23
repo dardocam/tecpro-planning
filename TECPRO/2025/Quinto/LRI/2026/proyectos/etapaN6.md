@@ -50,3 +50,46 @@ else if (msg == "ROJO"     || msg == "RED")    cambiar(ROJO);
 else if (msg == "AMARILLO" || msg == "YELLOW") cambiar(AMARILLO);
 else if (msg == "VERDE"    || msg == "GREEN")  cambiar(VERDE);
 ```
+
+---
+
+## El problema de "arrancar al recibir"
+
+Si en el callback hacés:
+
+```cpp
+void onMqtt(char* topic, byte* payload, unsigned int len) {
+  NTP.update();          // ~100-300 ms
+  runMainSequence();     // arranca AHORA
+}
+```
+
+Cada ESP32 arranca en el instante en que **él** recibe el mensaje + el tiempo que le toma NTP. La variación entre nodos es típicamente **10–200 ms** (latencia WiFi + jitter del broker + tiempo de NTP). Para muchas aplicaciones alcanza, pero no es "al mismo tiempo" en sentido estricto.
+
+## La solución: transmitir el **instante objetivo**, no la orden de arrancar
+
+El mensaje MQTT no dice "arrancá ahora", sino **"arrancá a las `T_start`"**:
+
+```
+Topic:  esp32/sync
+Payload: 1760438400   (Unix timestamp del instante de arranque)
+```
+
+Cada nodo, al recibirlo:
+
+```cpp
+void onMqtt(char* topic, byte* payload, unsigned int len) {
+  long target = atol((char*)payload);  // instante absoluto de arranque
+  NTP.update();                         // aseguro que mi reloj es confiable
+  time_t now = time(nullptr);
+  long wait_ms = (target - now) * 1000 - millis_offset();
+  if (wait_ms > 0) delay(wait_ms);      // espero hasta T_start
+  runMainSequence();                     // todos arrancan en T_start
+}
+```
+
+Así, aunque el nodo A reciba el mensaje a las 10:00:00.050 y el nodo B a las 10:00:00.120, **ambos arrancan en 10:00:05.000** (o el `T_start` que definiste). La precisión pasa a ser la del reloj NTP local: **±1–5 ms** entre nodos.
+
+
+
+
